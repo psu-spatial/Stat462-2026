@@ -94,7 +94,7 @@ Try these steps to diagnose the issue. Dr G can also help.
 6.  Read the error message carefully. See if you can find the problem code chunk(s).
 7.  In the top part of any problem code chunks, type eval=FALSE (see screenshot below), then try pressing knit. You might find that you have to stop quite a few code chunks running. This will allow me to see your code and grade what you have.
 
-<img src="./index_images/im_01FAQ_evalFALSE.png" alt="" style="display: block; margin: auto;" />
+<img src="./index_images/im_01FAQ_evalFALSE.png" alt="" width="650" style="display: block; margin: auto;" />
 
 <br>
 

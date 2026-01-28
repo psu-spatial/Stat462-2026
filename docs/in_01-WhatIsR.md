@@ -44,7 +44,7 @@ R-studio is a program that's designed to make it easy to write R-commands. RStud
 There is a version you can download onto your own computer called R-Studio/Posit Desktop, and a version that runs on a website called 'R-Studio Cloud'.
 
 <div class="figure" style="text-align: center">
-<img src="./index_images/im_02Setup_2RStudioIntro.png" alt="*R-studio is much more sophisticated*"  />
+<img src="./index_images/im_02Setup_2RStudioIntro.png" alt="*R-studio is much more sophisticated*" width="766" />
 <p class="caption">(\#fig:Tut-Fig2)*R-studio is much more sophisticated*</p>
 </div>
 
@@ -59,7 +59,7 @@ There is a version you can download onto your own computer called R-Studio/Posit
 #### R-Markdown is a markdown file that uses R code {.unnumbered}
 
 
-<img src="./index_images/im_02Setup_3AboutMarkdown.png" alt="" style="display: block; margin: auto;" />
+<img src="./index_images/im_02Setup_3AboutMarkdown.png" alt="" width="1424" style="display: block; margin: auto;" />
 
 <br>
 

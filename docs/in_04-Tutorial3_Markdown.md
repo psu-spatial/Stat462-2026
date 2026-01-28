@@ -2,68 +2,66 @@
 
 # R-Markdown {#T3_Markdown}
 
-## What is markdown? {#T31_Basics}
+## What is markdown {#T31_Basics}
 
-Remind yourself of what Rmarkdown is here <https://rmarkdown.rstudio.com>, or via this short video
+Remind yourself of what Rmarkdown is here <https://rmarkdown.rstudio.com> via this short video
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/846773750?h=7cb3871e91" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
 
 
-<br>
 
-## Creating a new markdown file.  {#T31_NewMarkdown}  
+### What are R-SCripts?
 
-1.  MAKE SURE YOU ARE RUNNING YOUR PROJECT\
-    <br>
-    
-2.  Make sure that you have installed the `rmdformats` package. If you're using posit cloud online to do your labs, you will need to install it every lab
-br>
+Read more here: https://rmarkdown.rstudio.com
 
+Typing in console is like a having phone call with the computer, you're talking but you're not keeping records of what you say.  When you close R-studio you lose your analysis.
 
-3.  Go to File/New File/[**R-Markdown**]{.underline} (it's the 5th menu option down)\
-    <br>
+What we need instead is a way to save the commands for future use - we can do this using scripts. There are several types of document, or script that you can create and save in R-Studio.
 
-4.  Don't be tempted to fill in the title. Instead IMMEDIATELY click on the template button on the left.\
-    <br>
+-   A basic script (the filetype is .r).  This is simply just a blank notepad where you can save code commands.  When you "run" the commands in the script, R simply copy/pastes the commands over to the console.  This is probably how you have done previous labs.
+ 
+-   An R-Notebook or R-Markdown document (the filetype is .Rmd).  These are much more interesting - and are how I wrote this lab book.  This is what we will be using in our labs.
+ 
+In this course we are going to focus on the R-Markdown format and you are going to submit your labs as websites/html files along with your code. 
 
-5.  This will bring up a list of templates. Choose one you like. If you're not sure, have a look here: <https://github.com/juba/rmdformats?tab=readme-ov-file#readme>
-
-    <br>
-
-Now there are two things you might see (I'm not sure why - Mac vs PC?)
-
-**OPTION A:** If you see something like this, where the bottom bit is blank.
-
-<img src="index_images/im_T3Rmdformats.png" alt="" width="100%" style="display: block; margin: auto;" />
-
--   Choose your template, press OK and it will make a file called untitled.RmD. Click either knit or save and save it as your labnumber_emailID.RmD.
 
 <br>
 
-**OPTION B:** On some computers (including mine), it says that these files need to be put into a new directory.
+### What is R-Markdown?
+ 
 
-<img src="index_images/im_T3RmdformatsPlus.png" alt="" width="100%" style="display: block; margin: auto;" />
-
-
--   In that case, name the file here as your labnumber_emailID.Rm and click OK.
-
--   It will make a new file named correctly. BUT there's a (mini) issue. It puts the file in a subfolder inside your lab folder. Close the file.
-
--   You can either close Rstudio and on your computer, move the RmD up a level to the main lab folder and delete the subfolder. OR.. you can do it inside R studio.
-
-    -   And now, go to the files quadrant. If you are running your project, you should see a new subfolder named whatever you named your RmD file. Click on its name to open.
-
-    -   Then click on the tickbox by your lab report file, click on the cogwheel on the right (this gets hidden if your R-Studio isn't full screen) and click move. Move it up one-level to your main lab folder.\
-        ![](index_images/im_T3MoveLabReport.png)\
-        
-<img src="index_images/im_T3MoveLabReport.png" alt="" width="100%" style="display: block; margin: auto;" />
-
-    -   Then move up a level to your main lab 4, click the tickbox by the sub-folder and press delete.
-
-<img src="index_images/im_T3DeleteFolder.png" alt="" width="100%" style="display: block; margin: auto;" />
+What is an R-Markdown Document?  imagine a normal Microsoft Word document, but halfway through you can press a button and a mini R console appears....   You type your code inside the mini console, and click run.  The computer runs the code and puts the plots/output directly into your report - then you leave the console and  write about the results below the plot.  
+ 
+As described in the video, Rmd files are also flexible.  You can turn them into reports, websites, blogs, presentations or applications with a few short commands.
+ 
 
 
-Now reopen the RmD file and carry on with your lab.
+
+<br>
+
+
+## Creating a markdown document {#T31_NewMarkdown}
+
+Go to the File menu on the top left, then click New File - R-Markdown. If this is your first time ever doing this, it might ask to download some packages to be able to do this (look for a little yellow bar at the top of the screen and say yes)
+
+Eventually a window will open up:
+
+<img src="./index_images/pg_Tut4_markdown_fig1.png" alt="" width="80%" style="display: block; margin: auto;" />
+
+-   It will ask you to name and save your file.  Give it a relevant name.  
+
+-   A new file should appear on your screen.  
+
+-   At the top of that window (by the knit button, there is a save button. Save it as something relevant INSIDE YOUR PROJECT FOLDER!
+
+
+<div class="figure" style="text-align: center">
+<img src="./index_images/pg_Tut4_markdown_fig2.png" alt="Yours will say STAT462 rather than GEOG364" width="80%" />
+<p class="caption">(\#fig:tut4fig2)Yours will say STAT462 rather than GEOG364</p>
+</div>
+
+The new file on your screen is your first markdown script. 
+
 
 <br><br>
 
@@ -72,9 +70,13 @@ Now reopen the RmD file and carry on with your lab.
 
 ## Important things to know {#T32_MarkdownImportant}
 
-### What is a markdown document? {#T32A_whatisit?}
+<br> 
 
-<br> All markdown documents have three components.
+### All markdown documents have three components. {#T32A_whatisit?}
+
+<br> 
+
+All markdown documents have three components.
 
 -   There is a space at the top of the file where we can add information about themes/styles etc called "YAML". This determines what type/style of document your work will become <br>
 -   There is space to add text (white), <br>
@@ -85,6 +87,7 @@ Now reopen the RmD file and carry on with your lab.
 <p class="caption">(\#fig:im-T3-Markdown)Markdown Components</p>
 </div>
 
+<br><br> 
 
 ### Visual mode {#T32A_visualmode}
 
@@ -98,18 +101,123 @@ It is MUCH easier to edit markdown documents in the new visual mode. Essentially
 
 <br>
 
-------------------------------------------------------------------------
+
+### Editing YAML Code {#Tut4E_YAML}
+
+Your YAML code is the code at the top of your file in between the --- lines. (see \@ref(fig:tut4fig4))).  Let's zoom in
+
+<img src="./index_images/pg_Tut4_markdown_fig5.png" alt="" width="80%" style="display: block; margin: auto;" />
+
+<br>
+
+Your YAML code controls how your final output looks and which type of output it becomes. For example, your document could become a website, a pdf, a presentation or app.. 
+
+The basic version is very simple with a title, an author and a self entered date. Let's add in more options. 
+
+YAML code is annnoying to edit, because here, *spaces really do matter*. Everything has to be perfect or it won't knit.  
+
+**Select everything in my code chunk here and replace your YAML with this (remember the --- on line 1 and at the end).**
+
+
+``` r
+---
+title: "GEOG-364 - Lab 2"
+author: "hlg5155"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: yes
+    number_sections: yes
+    theme: lumen
+    df_print: paged
+---
+```
+
+Replace the author ID with your user name, change the title if appropriate. 
+
+The elements we just added are:
+
+ - The title
+ - The author (note,use your ID not your name)
+ - Automatically created today's date
+ - A floating table of contents
+ - Numbered sections (this won't appear until you start typing section headings)
+ - The document is now in the lumen theme. 
+ 
+<br> 
+ 
+### Troubleshooting
+
+ - Note, if you copy/paste this and it doesn't work, sometimes the quote marks copy weirdly from the internet - try deleting and retyping the quotes.  
+
+- If it still doesn't work.. this might be because a space is missing (especially if you typed it out). 
+   +  Editing  YAML code can be a pain.  It is very case and space sensitive.<br>For example, the spaces at the start of some lines are important and are created using the TAB KEY, not the space bar.  There is one TAB key before html_notebook (which is now on a new line). There are two TAB KEYS before toc, toc_float, number_sections and theme.
+
+*Don't continue until you can make and view your html when you press knit. If it doesn't work, ask for help before moving on*
+
+<br>
+
+### Changing the theme
+
+You don't need to choose the lumen theme.  There are many other ways you can edit your markdown documents here: https://www.datadreaming.org/post/r-markdown-theme-gallery/
+
+To edit, replace the word lumen with the name of your chosen theme (THIS IS CASE SENSITIVE). Now click knit and see if it works.Some themes are buggy. Try a different one if it doesn't work.  
+
+The themes in "Even More Themes" on the website, requre you to install/load some new packages, so they need some extra work. You're welcome to try if you have one you fell in love with!
+ 
+<nr> 
+ 
+### Adding other YAML options
+ 
+There are many more details about different options on these websites:
+
+ - https://bookdown.org/yihui/rmarkdown/html-document.html
+ - https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf
+
+If you want to get really fancy, there is an interesting package to help you design YAML code here: https://education.rstudio.com/blog/2019/10/tools-for-teaching-yaml-with-ymlthis/
+
+<br>
+<br>
+
+
+## Knitting {#T32E_Knitting}
+
+
+<img src="./index_images/im_T3_knit.png" alt="" width="100%" style="display: block; margin: auto;" />
+
+The file on your screen isn't the finished article. To see how it will look as a final version, we need to "knit" it. Go to the top of the .Rmd file, find the `knit` button. Press it (you might have to first save your script if you haven't already, then press it again)
+
+You should see that the Markdown tab "builds" your document and you get an output as a website. The html should also be saved into your project folder.
+
+For example, here is a file with markdown and knitted output.
+
+<img src="./index_images/im_T3_AllMarkdownElements.png" alt="" width="100%" style="display: block; margin: auto;" />
+
+<br><br>
+
+
+
+
+## Editing the report text
+
+You can type anywhere inside the white report area. R will ignore it.
+
+<br>
+
 
 ### Inserting images/tables and formatting {#T32B_formatting}
 
 In visual mode, look at the menu at the top. It's very easy to insert images, tables and other formatting. Pay special attention to the Normal/Heading 1/Heading 2 buttons..
 
-You can also do this in source mode, but you have to learn the keyboard shortcuts. For example to make something *bold* you put stars around it e.g. `*bold*` 
+You can also do this in source mode, but you have to learn the keyboard shortcuts. For example to make something *bold* you put stars around it e.g. `*bold*` .  You can see more examples in the pic above and here
 
 For more, see this link: <https://zsmith27.github.io/rmarkdown_crash-course/lesson-3-basic-syntax.html>
 
 
-<br>
+<br><br>
+
+
 
 ------------------------------------------------------------------------
 
@@ -139,23 +247,6 @@ When you press enter, the code won't run. INSTEAD, click the little green arrow
 
 ------------------------------------------------------------------------
 
-### Knitting {#T32E_Knitting}
-
-<img src="./index_images/im_T3_knit.png" alt="" width="100%" style="display: block; margin: auto;" />
-
-The file on your screen isn't the finished article. To see how it will look as a final version, we need to "knit" it. Go to the top of the .Rmd file, find the `knit` button. Press it (you might have to first save your script if you haven't already, then press it again)
-
-You should see that the Markdown tab "builds" your document and you get an output as a website. The html should also be saved into your project folder.
-
-**Yours will not knit if you haven't yet installed the rmdformats package**
-
-For example, here is a file with markdown and knitted output.
-
-<img src="./index_images/im_T3_AllMarkdownElements.png" alt="" width="100%" style="display: block; margin: auto;" />
-
-<br><br>
-
-------------------------------------------------------------------------
 
 
 

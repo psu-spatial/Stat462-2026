@@ -30,6 +30,6 @@ We ALSO need to update the packages you have. So once you are done, make sure yo
 R might also need to re-install some packages, so don't panic if you see the little yellow "install banner", just click yes.
 
 <div class="figure" style="text-align: center">
-<img src="./index_images/im_02Setup_10UpdatePackages.png" alt="*Click this to update the packages*"  />
+<img src="./index_images/im_02Setup_10UpdatePackages.png" alt="*Click this to update the packages*" width="1354" />
 <p class="caption">(\#fig:Setup-Fig7)*Click this to update the packages*</p>
 </div>

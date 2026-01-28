@@ -4,15 +4,27 @@
 
 
 
-# Projects/Starting a lab {#T1_Projects}
+# Projects/Starting each lab {#T1_Projects}
 
-An R project typically refers to a collection of files, data, and code organized within the R programming language environment for a specific analysis, research, or statistical project.
+An R project  refers to a collection of files, data, and code organized within the R programming language environment for a specific analysis, research, or statistical project. 
 
--   On the Posit Cloud, a new project means a 'new version of R opens'
+An R Project is a home folder the files, scripts, and data connected to one piece of work like Lab 1. Instead of saving files in lots of different places and then struggling to tell R where to look, the Project keeps everything together. 
 
--   On the Desktop, you will have a single folder for each lab. Inside that will be your code, your data/images etc and a special .RProj file that you will use to open R.
+-   On the Posit Cloud, "a project" means a 'new version of R opens'
 
-Watch this short video to learn why we are using them (4 minutes)
+-   On the Desktop, "a project" you will have a single folder for each lab. Inside that will be your code, your data/images etc and a special .RProj file that you will use to open R.
+
+Here’s why projects are so useful:
+
+-   Consistency across computers: If you move from Posit Cloud to a lab computer or your own laptop, you only need to copy the Project folder. Open it, and everything inside will still “know where it lives.”
+
+-   No messy file paths: You won’t have to keep typing or updating long folder names. R will automatically treat your Project folder as the starting point.
+
+-   Everything is organised: Each lab, assignment, or project has its own container, so your work never gets tangled.
+
+-   Easy to share or back up: You can zip up the folder, send it, or store it in GitHub/OneDrive, and it will still work when reopened.
+
+Watch this video to find out more: (4 mins)
 
 ![](./index_images/im_T1_ProjectVideo.png){width="600"}*(link here if it's not working: <https://www.linkedin.com/learning/learning-the-r-tidyverse/why-should-you-use-projects-in-rstudio?u=76811570>, you will need to log into Penn State)*
 
@@ -55,17 +67,17 @@ Steps 3-7 are shown graphically in the figures below. If you are new to this, fo
 
 4.  Select `New Directory`, then `New Project`, then click `Existing Directory` <br>\
 
-![](./index_images/im_T1_Projectcreation1.png)<!-- -->
+<img src="./index_images/im_T1_Projectcreation1.png" alt="" width="1273" />
 
 5.  You will be asked to find your Lab 1 folder on your computer. Find it and click open,
 
-![](./index_images/im_T1_Projectcreation2.png)<!-- -->
+<img src="./index_images/im_T1_Projectcreation2.png" alt="" width="1270" />
 
 6.  Check that the address looks right.
 
 7.  Finally, press `Create Project`.  Your screen should subtly change (see below) <br>\
 
-![](./index_images/im_T1_Projectcreation3.png)<!-- -->
+<img src="./index_images/im_T1_Projectcreation3.png" alt="" width="1272" />
 
 ### How to check you are running your project
 
@@ -78,7 +90,7 @@ If you have any errors, this will be the first thing I check, so you may as well
 - The icon at the bottom of your screen will have changed.
 
 <div class="figure">
-<img src="./index_images/im_T1_Projectcheck.png" alt="How to check you are in a project"  />
+<img src="./index_images/im_T1_Projectcheck.png" alt="How to check you are in a project" width="1049" />
 <p class="caption">(\#fig:im-T1-Projectcheck)How to check you are in a project</p>
 </div>
 
@@ -107,7 +119,7 @@ There are two ways to reopen a lab
 
 This will reopen R-Studio for that specific lab, so you can continue where you left off. It means you can also open several versions of R studio for multiple labs, which can be very useful in staying sane
 
-![](./index_images/im_T1_Projectopen.png)<!-- -->
+<img src="./index_images/im_T1_Projectopen.png" alt="" width="961" />
 
 #### From inside R-studio.
 
@@ -116,8 +128,8 @@ Alternatively you can open R-Studio,
  - Then navigate to File/Open Projects and find your Lab 1 folder.
  - OR, look at File/Recent projects and you might just see Lab 1 there, especially if you have worked on it recently.
  
-![](./index_images/im_T1_Projectopen_inside1.png)<!-- -->
+<img src="./index_images/im_T1_Projectopen_inside1.png" alt="" width="1081" />
  
 Or 
 
-![](./index_images/im_T1_Projectopen_inside2.png)<!-- -->
+<img src="./index_images/im_T1_Projectopen_inside2.png" alt="" width="1113" />
