@@ -18,6 +18,7 @@ details > *:not(summary){
 }
 </style>
 ```
+
 # Course FAQ {#FAQ .unnumbered}
 
 <br>
@@ -26,17 +27,19 @@ details > *:not(summary){
 
 <details>
 
-![](./index_images/im_T1_ProjectVideo.png){width="600"}\*
-
 <summary>[Click here for the answer]{style="color: #1388aa;"}</summary>
 
-But in general, you need to submit two files; a `.Rmd` file containing your code and a `.html` file for viewing your finished document. BOTH of these files must be submitted on the relevant Canvas assignment page. Occasionally, you might also need to submit your dataset.
+You need to submit two files on canvas;
 
-This is explained in detail at the end of each lab.
+-   a `.Rmd` file containing your code and writing
+-   a `.html` file for viewing your finished document. This is what is created when you press knit - and you can find it in your project folder for that lab.
+-   Occasionally, you might also need to submit your dataset.
+
+I explain what to submit in detail at the end of each lab.
 
 You can also add comments to your submission as needed on the canvas page, or you can message Dr G.
 
-If you can't knit your final html (say the code isn't working), see [Question 2](#FAQ-2)
+If you can't knit your final html because the code isn't working, see [Question 2](#FAQ-2)
 
 <br>
 
@@ -65,10 +68,11 @@ Try these steps to diagnose the issue. Dr G can also help.
 
 <summary>[IF YOUR CODE STOPS (There was an error), click here]{style="color: #1388aa;"}</summary>
 
-5.  Read the error message really closely (try reading it out loud) and scroll to the code chunk it's referring to. See if you can fix the issue, starting with the first line that had an error.<br><br>I'll try to have a list of common issues on the help page, but in general, check for
+5.  Read the error message in the console or terminal closely (try reading it out loud) and scroll to the code chunk, or line of code it's referring to. See if you can fix the issue, starting with the first line that had an error.<br><br>Common issues are:
     -   Spelling mistakes (R is case sensitive)
+    -   You forgot to load a library (e.g. you get an error saying a command doesn't exist but it was previously working fine). In this case make sure you have the correct library() command at the top of your lab script.
     -   Whether you have tried to use a variable above the place in the code that you calculated it (double check, you might have accidentally deleted a line).
-    -   If you are running your project, or it won't be able to find your data/image files.
+    -   If you forget to load your project, when you press knit, R-studio won't be to find your data/image files.
 
 <br>
 
@@ -140,7 +144,8 @@ My grader and I will also provide as much feedback as possible, so please rememb
 Overall, here is what your lab should correspond to:
 
 ```{r, tab-main-rubric, echo=FALSE}
-rubric <- readxl::read_excel("in_G364_Lab0Rubric.xlsx")
+library(kableExtra)
+rubric <- readxl::read_excel("index_data/in_G364_Lab0Rubric.xlsx")
 knitr::kable(rubric,caption = 'Your overall grade') %>%   
   kable_classic_2() %>%
   kable_styling(bootstrap_options = c("striped", "hover", "responsive"))
@@ -158,25 +163,34 @@ knitr::kable(rubric,caption = 'Your overall grade') %>%
 
 <summary>[Click here for the answer]{style="color: #1388aa;"}</summary>
 
-#### **I rarely incur have late penalties for technical issues.** {.unnumbered}
+#### [**I never give late penalties for technical issues that we are working on together.**]{.underline} {.unnumbered}
 
 For example, imagine your code suddenly won't knit. If you send me canvas message with our code and a screenshot of the issue before the deadline, then all late penalties go away until we have fixed it (even if I'm not able to reply immediately).
 
-#### **In general, I prefer you submit late than not at all.** {.unnumbered}
+#### [**If the assignment is still open, you are welcome to submit to it, but there is a sliding scale if you are more than 24hrs late.**]{.underline} {.unnumbered}
 
-All assignments will be left open for you to submit all semester (unless worked answers have been provided). If you're a few hrs late, you will be absolutely fine, so if you're reading this at 4am, go to bed!
+There is a sliding scale of penalties attached to late work, but I am very generous about removing these if you come to office hours (in person)
 
-Beyond that, if you're going to be late for any reason then send Dr G a canvas message (you don't need to explain why).
+-   For each day you are late, you lose 1% for that assignment.\
+-   This is capped at 10% (e.g. if you are more than 10 days late, you can score a maximum of 90% for that assignment)
 
-#### [**BUT! Submitting late is a risk.**]{.underline} {.unnumbered}
+BUT! If you are already talking with me before the deadline, then no late penalties apply. Sometimes life happens and my aim for this class is to get you to learn regression! So if in doubt, talk to me.
 
-At any time past the deadline, I reserve the right to:
+#### [**In general, I prefer you submit late than not at all.**]{.underline} {.unnumbered}
 
-1.  Release worked answers and close canvas without warning. You cannot submit in that situation as you will already have the answers.
+All assignments will be left open for you to submit until I provide worked answers (unless worked answers have been provided). If you're a few hrs late you will be absolutely fine, so if you're reading this at 4am, go to bed!
+
+If you're struggling for any reason or late, send Dr G a canvas message and keep working on the assignment.
+
+#### [**BUT! Submitting later than 10 days late is a risk.**]{.underline} {.unnumbered}
+
+At any time past the 10 day deadline, I reserve the right to:
+
+1.  Release worked answers and close canvas without warning (unless we are talking via canvas message). You cannot submit in that situation as you will already have the answers.
 
 2.  Grade the labs at any time past the deadline without warning. If you miss the grading window, it will probably be several weeks until I am able to give you feedback.
 
-But, I will only start penalizing if you're consistently late and I have sent a written warning, or if I have stated otherwise for an individual assignment. See the course syllabus for more info.
+See the course syllabus for more info.
 
 <br><br>
 
@@ -198,11 +212,11 @@ For example:
 
 -   Working out together the right way to apply the `seq()` function, then each independently adding it to your own scripts is fine.
 
--   **Copy/pasting your friend's code/text is never OK**.
+-   **Copy/pasting your friend's code/text is [never]{.underline} OK**.
 
 So DISCUSS with friends, but then turn away to your own screen and write your own code and text. I will be randomly running lab reports through plagiarism software.
 
-You are also not allowed to get someone else to complete the lab for you, whether online or in person. See the syllabus for the full description.
+You are also not allowed to get someone else, or an AI to complete the lab for you, whether online or in person. See the syllabus for the full description.
 
 <br><br>
 
@@ -224,11 +238,29 @@ You are also not allowed to get someone else to complete the lab for you, whethe
 
 Your generation is in a weird spot. It’s like when google translate or Wikipedia started. ChatGPT is there, but it’s not yet perfect and society is still working out how it can help and how it can mislead.
 
-[**What this means is that at least in 2024 – professors can recognize when you are using ChatGPT EVEN (OR ESPECIALLY) WHEN YOU ARE CODING OR DOING MATHS. If you imagine coding is like a language, it’s like your handwriting changes.**]{style="color: red;"}
+[What this means is that professors can still recognize when you are using ChatGPT EVEN (OR ESPECIALLY) WHEN YOU ARE CODING OR DOING MATHS. ]{style="color: red;"}
 
-**I'm OK with you using ChatGPT, I use it! Here's how to use it without breaking any rules.**
+[If you imagine coding is like a language, it’s like your handwriting changes. Or to put it another way "ChatGPT voice" is real]{style="color: red;"}
+
+ChatGPT/Gemini/Generative AI does not appear in my grading rubrics. But I have often found that submissions which are clearly mostly ChatGPT score low grades anyway as they often don't do what I ask in the assignment.
 
 <br>
+
+[**STAT-462 Course Policy - based on your discussion results**]{.underline}
+
+-   **You can use ChatGPT/Gemini/Generative AI in the same way that you can get help from a family member or classmate**.
+
+    -   You can ask it to help explain things, or debug your code, or to help find datasets or to check your grammar.
+
+-   **You are forbidden from**
+
+    -   copy/pasting course questions or your work into it and then simply copy/pasting its answer into your reports.
+
+    -   You are also forbidden from referencing to ChatGPT (it's like saying in the references, my friend told me). Instead, ask it for a real reference/website/paper with that information in it, and reference that.
+
+<br>
+
+**This policy is MUCH easier to understand if you imagine ChatGPT (or your AI of choice) is a person.**
 
 Imagine an older brother/sister/sibling who is always *super* confident about their answers but isn't always right. Or if that doesn't work for you, imagine an older friend /undergrad-LA/ friend-who-took-the-course-last-year, or someone on TV.
 
@@ -236,7 +268,7 @@ Imagine an older brother/sister/sibling who is always *super* confident about th
 
 What do I mean?
 
--   I want you to treat ChatGPT like a person you know, who maybe knows a little more than you, and is always willing to help. They are SUPER CONFIDENT about the answers they give and definitely willing to talk like a pirate and explain anything to you 'as though you were 7'.
+-   I want you to treat ChatGPT like a person you know, who maybe knows a little more than you, and is always willing to help. They are SUPER CONFIDENT about the answers they give and definitely willing to talk like a pirate or explain anything to you 'as though you were 7'.
 
 -   But! You know that often ChatGPT won't be quite right, their knowledge might be out of date and they might know a different way of getting to the answer than the one you need.
 

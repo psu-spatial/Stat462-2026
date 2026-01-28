@@ -4,23 +4,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Welcome to STAT-462! | STAT462 Lab Book 2024</title>
+<title>Welcome to STAT-462! | STAT462 Lab Book 2026</title>
 <meta name="author" content="Dr Helen Greatrex">
 <meta name="description" content="This is the R-based lab book for Penn State STAT-462 on applied regression analysis. To see the accompnying textbook, go to https://online.stat.psu.edu/stat462">
-<meta name="generator" content="bookdown 0.37 with bs4_book()">
-<meta property="og:title" content="Welcome to STAT-462! | STAT462 Lab Book 2024">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Welcome to STAT-462! | STAT462 Lab Book 2026">
 <meta property="og:type" content="book">
+<meta property="og:url" content="https://psu-spatial.github.io/Stat462-2026/">
 <meta property="og:description" content="This is the R-based lab book for Penn State STAT-462 on applied regression analysis. To see the accompnying textbook, go to https://online.stat.psu.edu/stat462">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome to STAT-462! | STAT462 Lab Book 2024">
+<meta name="twitter:title" content="Welcome to STAT-462! | STAT462 Lab Book 2026">
 <meta name="twitter:description" content="This is the R-based lab book for Penn State STAT-462 on applied regression analysis. To see the accompnying textbook, go to https://online.stat.psu.edu/stat462">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.6.1/transition.js"></script><script src="libs/bs3compat-0.6.1/tabs.js"></script><script src="libs/bs3compat-0.6.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet">
-<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><script src="libs/plotly-binding-4.10.3/plotly.js"></script><script src="libs/typedarray-0.1/typedarray.min.js"></script><link href="libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
-<script src="libs/crosstalk-1.2.1/js/crosstalk.min.js"></script><link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><script src="libs/plotly-binding-4.11.0/plotly.js"></script><script src="libs/typedarray-0.1/typedarray.min.js"></script><link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+<script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script><link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
 <script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -34,7 +36,7 @@
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
-        <a href="index.html" title="">STAT462 Lab Book 2024</a>
+        <a href="index.html" title="">STAT462 Lab Book 2026</a>
       </h1>
       <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
@@ -56,14 +58,6 @@
 <li class="book-part">LAB INSTRUCTIONS</li>
 <li><a class="" href="Help.html">HELP!</a></li>
 <li><a class="" href="Lab_1.html">Lab 1</a></li>
-<li><a class="" href="Lab_2.html">Lab 2</a></li>
-<li><a class="" href="Lab_3.html">Lab 3</a></li>
-<li><a class="" href="Lab_4.html">Lab 4</a></li>
-<li><a class="" href="Lab_5.html">Lab 5A</a></li>
-<li><a class="" href="Lab_5B.html">Lab 5B</a></li>
-<li><a class="" href="lab-6.html">Lab 6</a></li>
-<li><a class="" href="final-project.html">Final Project</a></li>
-<li><a class="" href="final-project-example-movie-ratings.html">FINAL PROJECT EXAMPLE: Movie Ratings</a></li>
 <li class="book-part">.</li>
 <li class="book-part">TUTORIALS</li>
 <li><a class="" href="T1_Projects.html"><span class="header-section-number">1</span> Projects/Starting a lab</a></li>
@@ -72,17 +66,6 @@
 <li><a class="" href="T4_ReadingData.html"><span class="header-section-number">4</span> Reading in data</a></li>
 <li><a class="" href="probability-distributions.html"><span class="header-section-number">5</span> Probability distributions</a></li>
 <li><a class="" href="T6_plots.html"><span class="header-section-number">6</span> Plots</a></li>
-<li><a class="" href="correlation.html"><span class="header-section-number">7</span> Correlation</a></li>
-<li><a class="" href="T8_regression.html"><span class="header-section-number">8</span> Regression</a></li>
-<li><a class="" href="T9_wrangling.html"><span class="header-section-number">9</span> Data Wrangling</a></li>
-<li><a class="" href="T10_diagnostics.html"><span class="header-section-number">10</span> Assessing LINE</a></li>
-<li><a class="" href="outliers-high-leverage-influential-points.html"><span class="header-section-number">11</span> Outliers, high leverage &amp; influential points</a></li>
-<li><a class="" href="confidence-and-prediction-intervals.html"><span class="header-section-number">12</span> Confidence and Prediction Intervals</a></li>
-<li><a class="" href="S.Tutorial_Transformations.html"><span class="header-section-number">13</span> Transformations</a></li>
-<li><a class="" href="S.Tutorial_GLM.html"><span class="header-section-number">14</span> GLM - Logistic Regression</a></li>
-<li><a class="" href="basic-model-comparisons.html"><span class="header-section-number">15</span> Basic model comparisons</a></li>
-<li><a class="" href="multiple-regression-model-fitting-1.html"><span class="header-section-number">16</span> Multiple regression &amp; model fitting</a></li>
-<li><a class="" href="finding-the-optimal-model.html"><span class="header-section-number">17</span> Finding the “optimal model”</a></li>
 </ul>
 
         <div class="book-extra">
@@ -94,18 +77,19 @@
 <h1>Welcome to STAT-462!<a class="anchor" aria-label="anchor" href="#Home"><i class="fas fa-link"></i></a>
 </h1>
 <p><br></p>
-<p>Dr Greatrex has written this lab book to provide all the code and instructions you need for regression analysis. You will be conducting analysis using R and writing up your reports using R-Markdown.</p>
-<p><u>Unless I tell you otherwise, you can find all the code you need in this lab book</u></p>
+<p>Dr Greatrex has written this lab book to provide all the code and instructions you need for regression analysis.</p>
+<p>You will be conducting analysis using R and writing up your reports using R-Markdown.
+<u>Unless I tell you otherwise, you can find all the code you need in this lab book</u></p>
 <p>Don’t panic if you are new to this! We will start from scratch and you are expected to have zero programming experience.</p>
 <p><br></p>
 <div id="Home_UsefulLinks" class="section level2 unnumbered">
 <h2>Useful Links<a class="anchor" aria-label="anchor" href="#Home_UsefulLinks"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
-<li><p><u>The course canvas page:</u> <a href="https://psu.instructure.com/courses/2312605" class="uri">https://psu.instructure.com/courses/2312605</a></p></li>
+<li><p><u>The course canvas page:</u> <a href="https://psu.instructure.com/courses/2450096" class="uri">https://psu.instructure.com/courses/2450096</a></p></li>
 <li><p><u>Have a question?</u> (I’m late! Can I work with friends? What about ChatGPT? etc), see <a href="FAQ.html#FAQ" title="Lab FAQs">Lab FAQs</a></p></li>
 <li><p><u>Brand new?</u> Start here: <a href="WhatIsR.html#WhatIsR">What is R</a>, then go here if you want to use it on your own computer <a href="WhatIsR.html#WhatIsR">Installing for the first time</a> or here if you want to use it online.</p></li>
-<li><p><u>Used R before?</u> Please update your version. Instructions and the reason why here: <a href="Setup_UpdateDesktop.html#Setup_UpdateDesktop">Updating R and R-Studio</a>, Click here to read here for more on a tool you might not have used, <a href="WhatIsR.html#WhatisMarkdown">R-Markdown</a>.</p></li>
+<li><p><u>Used R before?</u> Please update your version. Instructions and the reason why here: <a href="Setup_UpdateDesktop.html#Setup_UpdateDesktop">Updating R and R-Studio</a>.</p></li>
 </ul>
 <p><br></p>
 </div>
@@ -113,7 +97,6 @@
 <h2>How to use this website<a class="anchor" aria-label="anchor" href="#Home_howtouse"><i class="fas fa-link"></i></a>
 </h2>
 <p>This website has been written using R-bookdown and uploaded to github. The format has been tweaked using the excellent bookdown example of <a href="https://mastering-shiny.org/">Mastering Shiny</a>.</p>
-<p>Expand here to see how to navigate:</p>
 <p><br></p>
 
 <style>
@@ -148,7 +131,7 @@ details > *:not(summary){
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>STAT462 Lab Book 2024</strong>" was written by Dr Helen Greatrex. It was last built on 2024-04-25.</p>
+    <p>"<strong>STAT462 Lab Book 2026</strong>" was written by Dr Helen Greatrex. It was last built on 2026-01-27.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

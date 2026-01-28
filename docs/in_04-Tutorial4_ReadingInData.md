@@ -35,7 +35,7 @@ R will automatically look there first without you needing to tell it any locatio
 CSV files are like basic spreadsheets without formatting. E.g. comma separated values. The easiest way to read in a csv file is using the read.csv() command. This is built into R, you don't need to install any packages.
 
 
-```r
+``` r
 mydata <- read.csv("FILENAME.csv")
 ```
 
@@ -56,7 +56,7 @@ If you get an error, it means that either you have typed the filename in wrongly
 If your data doesn't have column names, you can tell R that it doesn't like this:
 
 
-```r
+``` r
 mydata <- read.csv("FILENAME.csv",header=FALSE)
 ```
 
@@ -75,14 +75,14 @@ More complex spreadsheets are easily read in using the `read_excel()` command fr
 First, go to the packages tab, click install and download/install the readxl package. Then add `readxl` to your library code chunk and run (e.g. `library(readxl)` )
 
 
-```r
+``` r
 library(readxl)
 ```
 
 Now you can read in excel files using this command
 
 
-```r
+``` r
 mydata2 <- read_excel("FILENAME.xlsx")
 ```
 
@@ -113,7 +113,7 @@ R also has many built-in datasets. To load them into R:
 For example, to load the palmer penguins data.
 
 
-```r
+``` r
 library(palmerpenguins) #normally this would be at the top of the code chunk
 data("penguins")
 glimpse(penguins)

@@ -45,117 +45,14 @@ Here's a video where I install R/R-Studio on my mac. It should take less than 10
 
 ## Written Instructions
 
-If you're not a video sort of person, here are written instructions:
+If you're not a video sort of person, here are written instructions that were also included in homework 1. You can see the pdf below or download it here: [Open the full diagnostics guide (PDF)](index_pdfs/InstallingRRstudio2026.pdf)
 
-### 1. Installing R. {#Setup_R .unnumbered}
 
-First, we teach the computer to 'speak R'.
+<iframe 
+  src="index_pdfs/InstallingRRstudio2026.pdf#view=FitH&navpanes=0"
+  width="100%"
+  height="800px"
+  style="border: none;">
+</iframe>
 
-Go here: <https://posit.co/download/rstudio-desktop/>. Click the Install R button <br>
 
-<div class="figure" style="text-align: center">
-<img src="./index_images/im_02Setup_4InstallR.png" alt="Click here!" width="698" />
-<p class="caption">(\#fig:Setup_Fig1)Click here!</p>
-</div>
-
-Click the link and you will go to a terrifying website called CRAN R.
-
-<div class="figure" style="text-align: center">
-<img src="./index_images/im_02Setup_5CranR.png" alt="*Choose your computer type*" width="1025" />
-<p class="caption">(\#fig:Setup_Fig2)*Choose your computer type*</p>
-</div>
-
-#### If you are on a WINDOWS/PC computer {#Setup_R_PC .unnumbered}
-
-<details>
-
-<summary>[Click to expand]{style="color: #1388aa;"}</summary>
-
-<br>
-
-<div class="figure" style="text-align: center">
-<img src="./index_images/im_02Setup_6WINDOWS.png" alt="*Choose your computer type*" width="1128" />
-<p class="caption">(\#fig:Setup_Fig3)*Choose your computer type*</p>
-</div>
-
-Click the "install for the first time" link and follow through to install R - EVEN IF YOU ALREADY HAVE R AND R STUDIO INSTALLED. <br><br>
-
-Say yes to all the default options. Send Dr G a message if you get stuck <br>
-
-<br>
-
-</details>
-
-#### If you are on a MAC/AppleMac {#Setup_R_Mac .unnumbered}
-
-<details>
-
-<summary>[Click to expand]{style="color: #1388aa;"}</summary>
-
-<br>
-
-If you are a MAC user, you will need [EITHER]{.underline} one of these two files. If your computer is new, try the top one, if it's older try the second - the wrong one simply won't work.
-
-<div class="figure" style="text-align: center">
-<img src="./index_images/im_02Setup_7MAC.png" alt="*Choose your computer type*" width="1437" />
-<p class="caption">(\#fig:Setup_Fig4)*Choose your computer type*</p>
-</div>
-
-1.  Click the filename to download <br>
-
-2.  MOVE THE DOWNLOAD OUTSIDE YOUR DOWNLOAD FOLDER (they have a weird bug.) Put it on your desktop
-
-3.  Open the download and follow the instructions. <br>
-
-4.  You can delete the download.
-
-If you have issues, try watching my video at the top and see if that solves it. Or talk to Dr G
-
-<br>
-
-</details>
-
-### 2. Installing R studio {#Setup_RStudio .unnumbered}
-
-Go back here: <https://posit.co/download/rstudio-desktop/>. Click the Install R-Studio button
-
-<img src="./index_images/im_02Setup_8InstallRstudio.png" width="739" style="display: block; margin: auto;" />
-
-#### If you are on a WINDOWS/PC computer {#Setup_RStudio_PC .unnumbered}
-
-<details>
-
-<summary>[Click to expand]{style="color: #1388aa;"}</summary>
-
-<br>
-
-Install the same way you install any new software
-
-<br>
-
-</details>
-
-#### If you are on a Mac computer {#Setup_RStudio_Mac .unnumbered}
-
-<details>
-
-<summary>[Click to expand]{style="color: #1388aa;"}</summary>
-
-<br>
-
-<div class="figure" style="text-align: center">
-<img src="./index_images/im_02Setup_9RstudioMacinstall.png" alt="*Will look different for windows*" width="428" />
-<p class="caption">(\#fig:Setup_Fig6)*Will look different for windows*</p>
-</div>
-
--   Download the dmg file, click to open, then DRAG it over to applications.
-
--   If it asks to overwrite, say yes.
-
-It might get angry at this stage if your mac is very out of date. Your choices are probably to backup your computer, update your operating system and reinstall R. OR! Just use RStudio online rather than downloading it at all. Feel free to chat with Dr G about options.
-
-<br>
-
-</details>
-
-<br>

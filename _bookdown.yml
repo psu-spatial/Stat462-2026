@@ -1,4 +1,4 @@
-book_filename: "STAT-462_SP24 Lab Book"
+book_filename: "STAT-462_SP26 Lab Book"
 output_dir: "docs"
 language:
   ui:
@@ -17,16 +17,6 @@ rmd_files:
 
     "in_01-HELP.Rmd",
     "in_02-Lab1.Rmd",
-    "in_02-Lab2.Rmd",
-    "in_02-Lab3.Rmd",
-    "in_02-Lab4.Rmd",
-    "in_02-Lab5.Rmd",
-    "in_02-Lab5b.Rmd",
-    "in_02-Lab6.Rmd",
-    "in_02-FinalProject.Rmd",
-    "in_05-FinalProjectExample.Rmd",
-
-
 
     "in_04-Tutorial1_Projects.Rmd",
     "in_04-Tutorial2_Libraries.Rmd",
@@ -34,15 +24,5 @@ rmd_files:
     "in_04-Tutorial4_ReadingInData.Rmd",
     "in_04-Tutorial5_NormalDistributionsTTests.Rmd",
     "in_04-Tutorial6_Plots.Rmd",
-    "in_04-Tutorial7_Correlation.Rmd",
-    "in_04-Tutorial8_Regression.Rmd",
-    "in_04-Tutorial9_Wrangling.Rmd",
-    "in_04-Tutorial10_Diagnostics.Rmd",
-    "in_04-Tutorial11_Outliers.Rmd",
-    "in_04-Tutorial12_ConfPred.Rmd",
-    "in_04-Tutorial13_Transformations.Rmd",
-    "in_04-Tutorial14_GLM.Rmd",
-    "in_04-Tutorial15_MLR.Rmd",
-
 
   ]

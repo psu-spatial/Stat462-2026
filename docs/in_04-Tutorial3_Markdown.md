@@ -2,97 +2,23 @@
 
 # R-Markdown {#T3_Markdown}
 
-## What is markdown? {#T31_Whatisit}
+## What is markdown? {#T31_Basics}
 
 Remind yourself of what Rmarkdown is here <https://rmarkdown.rstudio.com>, or via this short video
 
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/846773750?h=7cb3871e91" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
 
-```{=html}
-<div class="vembedr">
-<div>
-<iframe class="vimeo-embed" src="https://player.vimeo.com/video/178485416" width="533" height="300" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-external="1"></iframe>
-</div>
-</div>
-```
-
-<br> All markdown documents have three components.
-
--   There is a space at the top of the file where we can add information about themes/styles etc called "YAML". This determines what type/style of document your work will become <br>
--   There is space to add text (white), <br>
--   And you can add code in 'mini consoles' called 'code chunks'. (Grey) <br>
-
-<img src="./index_images/im_T3_Markdown.png" width="80%" style="display: block; margin: auto;" />
 
 <br>
 
-------------------------------------------------------------------------
+## Creating a new markdown file.  {#T31_NewMarkdown}  
 
-## Important things to know {#T32_MarkdownImportant}
-
-### Visual mode {#T32A_visualmode}
-
-It is MUCH easier to edit markdown documents in the new visual mode. Essentially instead of having to remember text short cuts like \* for bold, you can edit the text part as though you were using a word processor. NOTE HEADERS where it says "Normal", this allows you to make auto tables of contents.
-
-![](https://quarto.org/docs/get-started/hello/images/rstudio-source-visual.png)
-
-<br>
-
-------------------------------------------------------------------------
-
-### Inserting images/tables and formatting {#T32B_formatting}
-
-In visual mode, look at the menu at the top. It's very easy to insert images, tables and other formatting. Pay special attention to the Normal/Heading 1/Heading 2 buttons..
-
-For what I mean by this, see this link: <https://zsmith27.github.io/rmarkdown_crash-course/lesson-3-basic-syntax.html>
-
-Note, because of visual mode, you can click a button instead of learning the syntax.
-
-<br>
-
-------------------------------------------------------------------------
-
-### Code chunks {#T32D_CodeChunks}
-
-Code chunks are mini consoles where you can run R commands. We will talk more about them in the next tutorial.
-
-<img src="./index_images/im_T3_CodeChunkCreate.png" width="80%" style="display: block; margin: auto;" />
-
-<br>
-
-On the top right there are a suite of buttons for adding a new code chunk, running code etc. The green one adds a new code chunk. To run an individual code chunk you will press the green arrow on its top right e.g.
-
-<img src="./index_images/im_T3_RunCodeChunk.png" width="90" style="display: block; margin: auto;" />
-
-<br>
-
-------------------------------------------------------------------------
-
-### Knitting {#T32E_Knitting}
-
-<img src="./index_images/im_T3_knit.png" width="90" style="display: block; margin: auto;" />
-
-The file on your screen isn't the finished article. To see how it will look as a final version, we need to "knit" it. Go to the top of the .Rmd file, find the `knit` button. Press it (you might have to first save your script if you haven't already, then press it again)
-
-You should see that the Markdown tab "builds" your document and you get an output as a website. The html should also be saved into your project folder.
-
-**Yours will not knit if you haven't yet installed the rmdformats package**
-
-For example, here is a file with markdown and knitted output.
-
-<img src="./index_images/im_T3_AllMarkdownElements.png" width="90" style="display: block; margin: auto;" />
-
-<br><br>
-
-------------------------------------------------------------------------
-
-## YAML Code and templates {#T3_YAML}
-
-For Lab 1-3, you will be using a custom template that I made using the package `rmdformats`.[\^in_04-tutorial3_markdown-1] This outputs a html file in a special html format called 'downcute'. From lab 4 onwards, you will be making your own markdown documents. Here's how
-
-1.  Make sure that you have installed the `rmdformats` package. If you're on posit cloud, you will need to install it every time.<br>
-
-2.  MAKE SURE YOU ARE RUNNING YOUR PROJECT\
+1.  MAKE SURE YOU ARE RUNNING YOUR PROJECT\
     <br>
+    
+2.  Make sure that you have installed the `rmdformats` package. If you're using posit cloud online to do your labs, you will need to install it every lab
+br>
+
 
 3.  Go to File/New File/[**R-Markdown**]{.underline} (it's the 5th menu option down)\
     <br>
@@ -108,7 +34,7 @@ Now there are two things you might see (I'm not sure why - Mac vs PC?)
 
 **OPTION A:** If you see something like this, where the bottom bit is blank.
 
--   ![](index_images/im_T3Rmdformats.png){width="400"}
+<img src="index_images/im_T3Rmdformats.png" alt="" width="100%" style="display: block; margin: auto;" />
 
 -   Choose your template, press OK and it will make a file called untitled.RmD. Click either knit or save and save it as your labnumber_emailID.RmD.
 
@@ -116,7 +42,8 @@ Now there are two things you might see (I'm not sure why - Mac vs PC?)
 
 **OPTION B:** On some computers (including mine), it says that these files need to be put into a new directory.
 
--   ![](index_images/im_T3RmdformatsPlus.png){width="400"}
+<img src="index_images/im_T3RmdformatsPlus.png" alt="" width="100%" style="display: block; margin: auto;" />
+
 
 -   In that case, name the file here as your labnumber_emailID.Rm and click OK.
 
@@ -128,14 +55,109 @@ Now there are two things you might see (I'm not sure why - Mac vs PC?)
 
     -   Then click on the tickbox by your lab report file, click on the cogwheel on the right (this gets hidden if your R-Studio isn't full screen) and click move. Move it up one-level to your main lab folder.\
         ![](index_images/im_T3MoveLabReport.png)\
+        
+<img src="index_images/im_T3MoveLabReport.png" alt="" width="100%" style="display: block; margin: auto;" />
 
     -   Then move up a level to your main lab 4, click the tickbox by the sub-folder and press delete.
 
-    -   ![](index_images/im_T3DeleteFolder.png)
+<img src="index_images/im_T3DeleteFolder.png" alt="" width="100%" style="display: block; margin: auto;" />
+
 
 Now reopen the RmD file and carry on with your lab.
 
 <br><br>
+
+
+------------------------------------------------------------------------
+
+## Important things to know {#T32_MarkdownImportant}
+
+### What is a markdown document? {#T32A_whatisit?}
+
+<br> All markdown documents have three components.
+
+-   There is a space at the top of the file where we can add information about themes/styles etc called "YAML". This determines what type/style of document your work will become <br>
+-   There is space to add text (white), <br>
+-   And you can add code in 'mini consoles' called 'code chunks'. (Grey) <br>
+
+<div class="figure" style="text-align: center">
+<img src="./index_images/im_T3_Markdown.png" alt="Markdown Components" width="100%" />
+<p class="caption">(\#fig:im-T3-Markdown)Markdown Components</p>
+</div>
+
+
+### Visual mode {#T32A_visualmode}
+
+It is MUCH easier to edit markdown documents in the new visual mode. Essentially instead of having to remember text short cuts like \* for bold, you can edit the text part as though you were using a word processor. NOTE HEADERS where it says "Normal", this allows you to make auto tables of contents.
+
+<div class="figure" style="text-align: center">
+<img src="./index_images/im_T3_SourceVisual.png" alt="Look at the circled button near the top of the two reports" width="100%" />
+<p class="caption">(\#fig:im-T3-SourceVis)Look at the circled button near the top of the two reports</p>
+</div>
+
+
+<br>
+
+------------------------------------------------------------------------
+
+### Inserting images/tables and formatting {#T32B_formatting}
+
+In visual mode, look at the menu at the top. It's very easy to insert images, tables and other formatting. Pay special attention to the Normal/Heading 1/Heading 2 buttons..
+
+You can also do this in source mode, but you have to learn the keyboard shortcuts. For example to make something *bold* you put stars around it e.g. `*bold*` 
+
+For more, see this link: <https://zsmith27.github.io/rmarkdown_crash-course/lesson-3-basic-syntax.html>
+
+
+<br>
+
+------------------------------------------------------------------------
+
+### Code chunks {#T32D_CodeChunks}
+
+Code chunks are mini consoles where you can run R commands. 
+
+#### Adding a code chunk {#T32Da_Adding}
+
+On the top right there are a suite of buttons for adding a new code chunk, running code etc. The green one adds a new code chunk. To run an individual code chunk you will press the green arrow on its top right e.g.
+
+
+<img src="./index_images/im_T3_CodeChunkCreate.png" alt="" width="100%" style="display: block; margin: auto;" />
+
+<br>
+
+#### Editing and running code chunks {#T32Db_Editing}
+
+You should see that a new area has appeared in your report that is a different color to the background.
+Inside its essentially a "mini console".  It's where you add your code and you need to 'speak R' inside it. 
+
+When you press enter, the code won't run. INSTEAD, click the little green arrow
+
+<img src="./index_images/im_T3_RunCodeChunk.png" alt="" width="100%" style="display: block; margin: auto;" />
+
+<br>
+
+------------------------------------------------------------------------
+
+### Knitting {#T32E_Knitting}
+
+<img src="./index_images/im_T3_knit.png" alt="" width="100%" style="display: block; margin: auto;" />
+
+The file on your screen isn't the finished article. To see how it will look as a final version, we need to "knit" it. Go to the top of the .Rmd file, find the `knit` button. Press it (you might have to first save your script if you haven't already, then press it again)
+
+You should see that the Markdown tab "builds" your document and you get an output as a website. The html should also be saved into your project folder.
+
+**Yours will not knit if you haven't yet installed the rmdformats package**
+
+For example, here is a file with markdown and knitted output.
+
+<img src="./index_images/im_T3_AllMarkdownElements.png" alt="" width="100%" style="display: block; margin: auto;" />
+
+<br><br>
+
+------------------------------------------------------------------------
+
+
 
 ------------------------------------------------------------------------
 
@@ -168,55 +190,6 @@ Shows up as $$\widehat{y} = b_{0}+b_{1}x$$
 
 Essentially this is the same, but the equation is part of the text and you only see the output when you press knit. For example including `$x=2$` in this sentence shows $x=2$ as an output.
 
-<br><br>
-
-### Using Equatiomatic {#S.Tutorial.4C.2}
-
-There's also a package called `equatiomatic` that we can use to directly make equations from our linear models. Full tutorial here: <https://github.com/datalorax/equatiomatic>
-
-#### Installing it
-
-It's no longer in the official app-store, so to install it, FIRST, install a package called '`remotes`'.
-
-Then run this code to install from github:
-
-`remotes::install_github("datalorax/equatiomatic")`
-
-Then add the library command in the library code chunk. Note, as discussed here, this might not work for some people and to be honest, I think this package might be more effort than it's worth.
-
-<br>
-
-#### Using it
-
-Equatiomatic allows us to extract an equation from any linear model using `extract_eq()`. For example, let's create a linear model:
-
-
-```r
-data(starwars)
-mymodel <- lm(mass~height,data=starwars)
-```
-
-Then extract_eq allows you to see the LateX version of the equation.
-
-
-```r
-extract_eq(mymodel)
-```
-
-If you run it in the console, the command returns the LaTeX code you need to add it into the text yourself. If you want to use the actual numbers, simply turn on use_coefs=TRUE.
-
-
-```r
-extract_eq(mymodel, use_coefs = TRUE)
-```
-
-Let's say our data is a sample, not the population, then we want to use lower case names for our sample statistics (b0 & b1).
-
-There is no easy way to do this in the command, so I run the command in the console, then copy the command over to the TEXT part of the report as an equation and change the betas to 'b's.
-
-More examples here:
-
-![From the equatiomatic website: <https://github.com/datalorax/equatiomatic>](https://github.com/datalorax/equatiomatic/raw/master/img/equatiomatic.gif)
 
 <br><br>
 
@@ -230,13 +203,14 @@ What are they? Essentially, instructions that you tell the computer when you pre
 
 Click source mode and have a look at a code chunk. You will see it starts with three little back-ticks and the {r} sign. For code chunk options, we will be focusing on the top line with the {r}
 
-![](index_images/im_T3CodeChunkOptions.png){width="600"}
+<img src="index_images/im_T3CodeChunkOptions.png" alt="" width="100%" style="display: block; margin: auto;" />
 
 At the moment, the code chunk tells us that the code inside is written in R.
 
 We can also add other options, **separated using commas.**
 
-![](index_images/im_T3CodeChunkOptionsComplete.png){width="600"}
+
+<img src="index_images/im_T3CodeChunkOptionsComplete.png" alt="" width="100%" style="display: block; margin: auto;" />
 
 In fact, you have often seen me add message=FALSE and warning=FALSE to prevent any spurious messages appearing when you press knit. Keep reading to see the many other things you can add.
 
@@ -246,11 +220,13 @@ In fact, you have often seen me add message=FALSE and warning=FALSE to prevent a
 
 You can also edit code chunk options in view mode. Create a new code chunk, then click on the little (almost invisible) cogwheel near the run triangle
 
-![](index_images/im_T3CodeChunkOptionsView.png){width="700"}
+<img src="index_images/im_T3CodeChunkOptionsView.png" alt="" width="100%" style="display: block; margin: auto;" />
+
 
 This will open a menu where you can choose many of the common options
 
-![](index_images/im_T3CodeChunkOptionsViewMenu.png){width="400"}
+
+<img src="index_images/im_T3CodeChunkOptionsViewMenu.png" alt="" width="70%" style="display: block; margin: auto;" />
 
 <br>
 
@@ -296,13 +272,13 @@ Here are the common options we typically need:
 
 There are two types of code you can write in your reports: code chunks and inline R code.
 
-#### Code chunks
+#### Code chunks..... (as discussed above)
 
 Click source mode and have a look at a code chunk. You will see it starts with three little back-ticks and the {r} sign.
 
-![](index_images/im_T3CodeChunk.png){width="600"}
+<img src="index_images/im_T3CodeChunk.png" alt="" width="100%" style="display: block; margin: auto;" />
 
-#### .. vs Inline Code
+#### ..... and Inline Code
 
 
 
@@ -334,6 +310,7 @@ The easiest way to do this is to run your commands in a "silent" code chunk with
 
 For example here's how I typed that the mean height of the starwars data is 174.6 cm:
 
-![](index_images/im_T3InlineCode.png){width="700"}
+<img src="index_images/im_T3InlineCode.png" alt="" width="100%" style="display: block; margin: auto;" />
 
-You don't actually need echo AND include. I can simply never remember which one is which and use them both :).
+
+

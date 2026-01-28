@@ -185,7 +185,6 @@ To more advanced:
 ```{r}
 # Library. Put these at the top!
 library(ggplot2)
-library(hrbrthemes)
 
 ggplot(HousesNY, aes(x=Beds, y=Price)) + 
     geom_point(
@@ -196,7 +195,6 @@ ggplot(HousesNY, aes(x=Beds, y=Price)) +
         size=6,
         stroke = 1
         ) +
-    theme_ipsum() +   
    ggtitle("Price of New York Homes by bedroom size") +
    xlab("Beds") + ylab("Price (1000 USD)")
 
@@ -212,7 +210,6 @@ Adding a line of best fit is easy, but it takes a bit of getting used to. The gg
 # Library. Put these at the top if they're 
 # not already in your library code chunk
 library(ggplot2)
-library(hrbrthemes)
 library(plotly)
 
 
@@ -224,8 +221,7 @@ myplot <- ggplot(HousesNY, aes(x=Beds, y=Price)) +
     geom_point() + 
     ggtitle("Price of New York Homes by bedroom size") +
     xlab("Beds") + ylab("Price (1000 USD)")+
-    geom_smooth(method=lm , color="red", se=FALSE) +
-    theme_ipsum()
+    geom_smooth(method=lm , color="red", se=FALSE) 
 
 # ggplotly makes it interactive, but you could just type myplot
 ggplotly(myplot)
@@ -242,8 +238,7 @@ ggplot(HousesNY, aes(x=Beds, y=Price)) +
     geom_point() + 
     ggtitle("Price of New York Homes by bedroom size") +
     xlab("Beds") + ylab("Price (1000 USD)")+
-    geom_smooth(method=lm , color="blue", fill="#69b3a2", se=TRUE) +
-    theme_ipsum()
+    geom_smooth(method=lm , color="blue", fill="#69b3a2", se=TRUE)
 
 ```
 
@@ -542,7 +537,6 @@ In GGplot comparing different groups:
 ```{r}
 # Libraries
 library(tidyverse)
-library(hrbrthemes)
 library(viridis)
 
 # tell R that the beds column is categorical
@@ -560,7 +554,6 @@ Or getting more complex
 ```{r}
 # Libraries
 library(tidyverse)
-library(hrbrthemes)
 library(viridis)
 
 # tell R that the beds column is categorical
@@ -706,7 +699,6 @@ HousesNY %>%
     geom_density_ridges(alpha=0.6, stat="binline") +
     scale_fill_viridis(discrete=TRUE) +
     scale_color_viridis(discrete=TRUE) +
-    theme_ipsum() +
     theme(
       legend.position="none",
       panel.spacing = unit(0.1, "lines"),

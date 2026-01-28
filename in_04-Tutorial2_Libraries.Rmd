@@ -49,11 +49,11 @@ Just like your phone, to access the commands in a package we need two steps:
 
 <br>
 
-## Seeing what packages you already have
+### Seeing what packages you already have
 
-Some packages are downloaded on your computer by default (just like the flashlight /calculator app on your phone). You can see this list in the Package tab.
+Some packages are downloaded on your computer by default (just like the flashlight or calculator app on your phone). You can see this list in the Package tab.
 
-```{r,im_T2_Packages, echo=FALSE, out.width="80%",fig.align='center'}
+```{r,im-T2-Packages, echo=FALSE, out.width="100%",fig.align='center'}
 knitr::include_graphics('./index_images/im_T2_Packages.png')
 ```
 
@@ -62,7 +62,7 @@ knitr::include_graphics('./index_images/im_T2_Packages.png')
 ------------------------------------------------------------------------
 
 
-## The app store/getting new packages
+## The app store/getting new packages {#T2_Libraries_install}
 
 There is a package for literally everything and there are now well over 20,000 available. You can see the full list here: <https://cran.r-project.org/web/packages/available_packages_by_name.html>
 
@@ -87,7 +87,7 @@ This is like going to the app store to get a new app. Just like you only go to t
 
 -   R will sometime tell you that you are missing a package (sometimes a little yellow ribbon), click install to install!
 
-```{r, im_T2_yellowbanner, echo=FALSE, fig.align='center',out.width="100%"}
+```{r, im-T2-yellowbanner, echo=FALSE, fig.align='center',out.width="100%"}
 knitr::include_graphics('./index_images/im_T2_yellowbanner.png')
 ```
 
@@ -109,7 +109,7 @@ Sometimes R-Studio might want to restart when downloading packages and occasiona
 
 
 
-## Using/Loading a package you 'own'
+## Using packages
 
 Just as going to the app store doesn't check your credit-card balance or make an Instagram post, simply *downloading* a package from the app-store doesn't make the commands immediately available. For that you need to load it (just as you click on a phone app to open it).
 
@@ -149,7 +149,7 @@ Hard to tell. So I suggest running the library command TWICE! This is because ma
 
 For example, this is what shows up when you install the tidyverse package. The welcome text is indicating the sub-packages that tidyverse downloaded and also that some commands now have a different meaning.
 
-```{r, im_T2_friendlytext, echo=FALSE, fig.cap = "Tidyverse install messages",fig.align='center',out.width="100%"}
+```{r, im-T2-friendlytext, echo=FALSE, fig.cap = "Tidyverse install messages",fig.align='center',out.width="100%"}
 knitr::include_graphics('./index_images/im_T2_friendlytext.png')
 ```
 

@@ -1,4 +1,5 @@
 # (PART\*) [.]{style="color: white;"} {.unnumbered}
+
 # (PART\*) **TUTORIALS** {.unnumbered}
 
 
@@ -32,7 +33,7 @@ Watch this short video to learn why we are using them (4 minutes)
 
 <div class="figure" style="text-align: center">
 <img src="./index_images/im_T1_ProjectCloud.png" alt="*The Cloud dashboard*" width="90" />
-<p class="caption">(\#fig:im_T1_ProjectCloud)*The Cloud dashboard*</p>
+<p class="caption">(\#fig:im-T1-ProjectCloud)*The Cloud dashboard*</p>
 </div>
 
 <br>
@@ -42,50 +43,51 @@ Watch this short video to learn why we are using them (4 minutes)
 ## Projects on your desktop {#T1_ProjectsDesktop}
 
 1.  Make a folder called STAT462 in an easy to access location on your computer.
-    -   This is where all of your labs will live for this course.\
-2.  Now open R-studio (NOT R!). You should have updated to the most recent version <br>
+    -   This is where all of your labs will live for this course.  \
+2.  Inside this, make a folder called Lab 1 (or Lab 2, Lab 3 etc).You should put all your data and all your code in this relevant folder for each lab. DO NOT LEAVE ANYTHING IN DOWNLOADS! \
+3.  Now open R-studio (NOT R!). You should have updated to the most recent version <br>
 
-<img src="./index_images/im_T1_StartupLogos.png" width="80%" style="display: block; margin: auto;" />
+<img src="./index_images/im_T1_StartupLogos.png" alt="" width="80%" style="display: block; margin: auto;" />
 
-Steps 3-7 are shown graphically in the figure below. If you are new to this, follow them slowly.
+Steps 3-7 are shown graphically in the figures below. If you are new to this, follow them slowly.
 
 3.  Go to the Main File menu at the [very top left]{.underline} and click `New Project` <br>\
 
-4.  Select `New Directory`, then `New Project`<br>\
+4.  Select `New Directory`, then `New Project`, then click `Existing Directory` <br>\
 
-5.  Name your project *STAT462-Lab1* (or whatever lab it us) <br>\
+![](./index_images/im_T1_Projectcreation1.png)<!-- -->
 
-6.  **IMPORTANT.**
+5.  You will be asked to find your Lab 1 folder on your computer. Find it and click open,
 
-    -   Under "create project as a subdirectory of", hit the browse button and find your STAT462 folder
+![](./index_images/im_T1_Projectcreation2.png)<!-- -->
 
-    -   (you just need to navigate to inside the folder, you don't need to have selected anything).
+6.  Check that the address looks right.
 
-    -   Press open <br>\
+7.  Finally, press `Create Project`.  Your screen should subtly change (see below) <br>\
 
-7.  Finally, press `Create Project`<br>\
-
-<img src="./index_images/im_T1_Projectcreation.png" width="646" />
+![](./index_images/im_T1_Projectcreation3.png)<!-- -->
 
 ### How to check you are running your project
 
 If you have any errors, this will be the first thing I check, so you may as well check first!
 
--   R will change slightly. If you look at the top of the screen in the title bar, it should say something like *STAT462-Lab1 - R Studio*.
+-   R will change slightly. If you look at the top of the screen in the title bar, it should say something like *Lab1 - R Studio* at the top and at the top of each quadrant
 
--   The Files tab should have gone to your project folder. Essentially, R-Studio is now "looking" inside your Lab 1 folder, making it easier to find your data and output your results.
+-   The Files tab should now show your project folder. Essentially, R-Studio is now "looking" inside your Lab 1 folder, making it easier to find your data and output your results. (for people who have used R before, you no longer need to setwd() or write the location on your data).
+
+- The icon at the bottom of your screen will have changed.
 
 <div class="figure">
-<img src="./index_images/im_T1_Projectcheck.png" alt="How to check you are in a project" width="845" />
-<p class="caption">(\#fig:im_T1_Projectcheck)How to check you are in a project</p>
+<img src="./index_images/im_T1_Projectcheck.png" alt="How to check you are in a project"  />
+<p class="caption">(\#fig:im-T1-Projectcheck)How to check you are in a project</p>
 </div>
 
 <br>
 
--   If you want one final check, try typing this command into the console (INCLUDING THE EMPTY PARANTHESES/BRACKETS), press enter and see if it prints out the location of Lab 1 on your computer. If not, talk to an instructor.
+-   If you want one final check, try typing this command into the console (INCLUDING THE EMPTY PARANTHESES/BRACKETS), press enter and see if it prints out the location of your Lab folder on your computer. If not, talk to an instructor.
 
 
-```r
+``` r
 getwd()
 ```
 
@@ -95,14 +97,27 @@ getwd()
 
 OK, let's imagine that you get halfway through your lab and your computer dies. How do you get back to your Lab work? Try this now. Close down R-Studio.
 
-To reopen a lab:
+There are two ways to reopen a lab
 
-1.  **DO NOT RE-OPEN R-STUDIO! (if you do, go to File/Open Project)**
+#### From your computer
 
-2.  Instead navigate on your computer to your *STAT462/STAT462-Lab1* folder.
+1.  Instead navigate on your computer to your *STAT462/Lab1* folder.
 
-3.  Double click on the *STAT462-Lab1*.RProj file. Look for the RPROJ data type!
+3.  Double click on the `Lab1.RProj` file. *Look for the RPROJ file type!* DO NOT DOUBLE CLICK THE RMD FILE
 
 This will reopen R-Studio for that specific lab, so you can continue where you left off. It means you can also open several versions of R studio for multiple labs, which can be very useful in staying sane
 
-<img src="./index_images/im_T1_Projectopen.png" width="961" />
+![](./index_images/im_T1_Projectopen.png)<!-- -->
+
+#### From inside R-studio.
+
+Alternatively you can open R-Studio, 
+
+ - Then navigate to File/Open Projects and find your Lab 1 folder.
+ - OR, look at File/Recent projects and you might just see Lab 1 there, especially if you have worked on it recently.
+ 
+![](./index_images/im_T1_Projectopen_inside1.png)<!-- -->
+ 
+Or 
+
+![](./index_images/im_T1_Projectopen_inside2.png)<!-- -->

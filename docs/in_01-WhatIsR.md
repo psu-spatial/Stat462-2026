@@ -27,8 +27,8 @@ Learning R means learning vocabulary and grammar in order to communicate. It als
 If you open "R" on your computer (DON'T DO THIS), you will see a simple window with a cursor ready to hear commands. There is no help or support. This is how I learned to programme in R and I don't recommend it!
 
 <div class="figure" style="text-align: center">
-<img src="./index_images/im_02Setup_1RConsole.png" alt="*Basic R*" width="841" />
-<p class="caption">(\#fig:Tut_Fig1)*Basic R*</p>
+<img src="./index_images/im_02Setup_1RConsole.png" alt="Basic R" width="100%" />
+<p class="caption">(\#fig:Tut-Fig1)Basic R</p>
 </div>
 
 <br>
@@ -37,29 +37,17 @@ If you open "R" on your computer (DON'T DO THIS), you will see a simple window w
 
 #### **R-STUDIO/POSIT is a Software Application like Word, Chrome or Spotify** {.unnumbered}
 
-**R-studio** is a *software program/app*, like Microsoft Word, or the Chrome Web-browser. It's has recently been re-branded to Posit because it can also now "speak" other computer languages. For GIS folks, it's a competitor to Google Collab.
+**R-studio** is a *software program/app*, like Microsoft Word, or the Chrome Web-browser. It's has recently been re-branded to Posit because it can also now "speak" other computer languages. For programming folks, it's a competitor to Google Colab or Jupiter Notebook.
 
-It's a program that's designed to make it easy to write R-commands. RStudio has many useful features. For example, you can easily see help files, run code, see your results and create professional graphics. R-Studio also allows us to make interactive documents called R-Markdown files.
+R-studio is a program that's designed to make it easy to write R-commands. RStudio has many useful features. For example, you can easily see help files, run code, see your results and create professional graphics. R-Studio also allows us to make interactive documents called R-Markdown files.
 
 There is a version you can download onto your own computer called R-Studio/Posit Desktop, and a version that runs on a website called 'R-Studio Cloud'.
 
 <div class="figure" style="text-align: center">
-<img src="./index_images/im_02Setup_2RStudioIntro.png" alt="*R-studio is much more sophisticated*" width="766" />
-<p class="caption">(\#fig:Tut_Fig2)*R-studio is much more sophisticated*</p>
+<img src="./index_images/im_02Setup_2RStudioIntro.png" alt="*R-studio is much more sophisticated*"  />
+<p class="caption">(\#fig:Tut-Fig2)*R-studio is much more sophisticated*</p>
 </div>
 
-<br>
-
-Watch this 5 min video on the newest version of R studio. More here: <https://posit.co/blog/announcing-rstudio-1-4/>
-
-
-```{=html}
-<div class="vembedr">
-<div>
-<iframe src="https://www.youtube.com/embed/SdMPh5uphO0" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
-</div>
-</div>
-```
 
 <br>
 
@@ -71,7 +59,7 @@ Watch this 5 min video on the newest version of R studio. More here: <https://po
 #### R-Markdown is a markdown file that uses R code {.unnumbered}
 
 
-<img src="./index_images/im_02Setup_3AboutMarkdown.png" width="1424" style="display: block; margin: auto;" />
+<img src="./index_images/im_02Setup_3AboutMarkdown.png" alt="" style="display: block; margin: auto;" />
 
 <br>
 

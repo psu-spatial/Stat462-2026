@@ -79,7 +79,7 @@ In this expression:
 To see the help file for all normal related functions:
 
 
-```r
+``` r
 ?Normal
 ```
 
@@ -90,7 +90,7 @@ To see the help file for all normal related functions:
 To generate a random sample from a normal distribution we use rnorm:
 
 
-```r
+``` r
 # random sample of size 100
 sample.normal <- rnorm(n=100,mean=4,sd=2)
 ```
@@ -104,7 +104,7 @@ To calculate a z score from your sample/population, you can use R as a calculato
 To calculate the probability of greater/lesser than a value in a given normal distribution (e.g. you can use this as an interactive table)
 
 
-```r
+``` r
 # probability of less than 1.7 in a normal distribution with mean 4 and standard deviation = 2 
 pnorm(1.7,mean=4,sd=2,lower.tail = TRUE)
 ```
@@ -113,7 +113,7 @@ pnorm(1.7,mean=4,sd=2,lower.tail = TRUE)
 ## [1] 0.1250719
 ```
 
-```r
+``` r
 # probability of GREATER than 1.8 in a normal distribution with mean 4 and VARIANCE = 9
 1 - pnorm(1,mean=4,sd=3,lower.tail = TRUE)
 ```
@@ -122,7 +122,7 @@ pnorm(1.7,mean=4,sd=2,lower.tail = TRUE)
 ## [1] 0.8413447
 ```
 
-```r
+``` r
 # or
 pnorm(1,mean=4,sd=2,lower.tail = FALSE)
 ```
@@ -138,7 +138,7 @@ pnorm(1,mean=4,sd=2,lower.tail = FALSE)
 Inversely, to calculate the z-score for a given probability
 
 
-```r
+``` r
 # what value is less than 60% of the data?
 qnorm(0.6,mean=4,sd=2,lower.tail = TRUE)
 ```
@@ -147,7 +147,7 @@ qnorm(0.6,mean=4,sd=2,lower.tail = TRUE)
 ## [1] 4.506694
 ```
 
-```r
+``` r
 # what value is greater than 80% of the data?
 qnorm(0.8,mean=4,sd=2,lower.tail = FALSE)
 ```
@@ -167,7 +167,7 @@ To test for normality:
 First, have a look at the histogram! Here is the code for the Shapiro-Wilk test.
 
 
-```r
+``` r
 shapiro.test(HousesNY$Price)
 ```
 
@@ -188,7 +188,7 @@ There are many online tutorials for interpretation
 You can also make a QQ-Norm plot. Instal the ggpubr package, add it to your library code chunk and run.
 
 
-```r
+``` r
 library(ggpubr)
 ggqqplot(HousesNY$Price,col="blue")
 ```
@@ -204,7 +204,7 @@ What even is this? See this nice resource: <https://365datascience.com/tutorials
 To see the help file for all these:
 
 
-```r
+``` r
 ?TDist
 ```
 
@@ -213,7 +213,7 @@ To see the help file for all these:
 To calculate a t-statistic from your sample/population, you can use R as a calculator. To calculate the probability of greater/lesser than a value in a given t-distribution (e.f. you can use this as an interactive t-table)
 
 
-```r
+``` r
 # probability of seeing less than 1.7 in a  t-distribution 
 # with 20 degrees of freedom
 pt(1.55,df=20,lower.tail = TRUE)
@@ -230,7 +230,7 @@ pt(1.55,df=20,lower.tail = TRUE)
 To calculate the value for a given probability
 
 
-```r
+``` r
 # what value is greater than 90% of the data in a t-distribution with df=25
 qt(0.9,df=25,lower.tail = TRUE)
 ```
@@ -246,7 +246,7 @@ qt(0.9,df=25,lower.tail = TRUE)
 To conduct a full t-test on some data:
 
 
-```r
+``` r
 # Conduct a two-sided t-test where we think that the data comes from a T-distribution with mean 100.
 t.test(HousesNY$Price,mu=100,alternative="two.sided")
 ```
