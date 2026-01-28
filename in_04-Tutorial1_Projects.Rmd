@@ -28,13 +28,25 @@ library(units)
 
 # Projects/Starting each lab {#T1_Projects}
 
-An R project typically refers to a collection of files, data, and code organized within the R programming language environment for a specific analysis, research, or statistical project.
+An R project  refers to a collection of files, data, and code organized within the R programming language environment for a specific analysis, research, or statistical project. 
 
--   On the Posit Cloud, a new project means a 'new version of R opens'
+An R Project is a home folder the files, scripts, and data connected to one piece of work like Lab 1. Instead of saving files in lots of different places and then struggling to tell R where to look, the Project keeps everything together. 
 
--   On the Desktop, you will have a single folder for each lab. Inside that will be your code, your data/images etc and a special .RProj file that you will use to open R.
+-   On the Posit Cloud, "a project" means a 'new version of R opens'
 
-Watch this short video to learn why we are using them (4 minutes)
+-   On the Desktop, "a project" you will have a single folder for each lab. Inside that will be your code, your data/images etc and a special .RProj file that you will use to open R.
+
+Here’s why projects are so useful:
+
+-   Consistency across computers: If you move from Posit Cloud to a lab computer or your own laptop, you only need to copy the Project folder. Open it, and everything inside will still “know where it lives.”
+
+-   No messy file paths: You won’t have to keep typing or updating long folder names. R will automatically treat your Project folder as the starting point.
+
+-   Everything is organised: Each lab, assignment, or project has its own container, so your work never gets tangled.
+
+-   Easy to share or back up: You can zip up the folder, send it, or store it in GitHub/OneDrive, and it will still work when reopened.
+
+Watch this video to find out more: (4 mins)
 
 ![](./index_images/im_T1_ProjectVideo.png){width="600"}*(link here if it's not working: <https://www.linkedin.com/learning/learning-the-r-tidyverse/why-should-you-use-projects-in-rstudio?u=76811570>, you will need to log into Penn State)*
 
