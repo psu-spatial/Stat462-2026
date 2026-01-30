@@ -14,7 +14,6 @@ The aim of this lab is to get comfortable creating your lab reports, and how to 
 
 ------------------------------------------------------------------------
 
-
 ## LAB SET-UP (Important!) {.unnumbered}
 
 This might take a while during week 1, but I promise that after a few labs, this will be very easy.
@@ -90,7 +89,6 @@ We will load and use them later in the lab.
 
 <br>
 
-
 ------------------------------------------------------------------------
 
 ## QUESTIONS {.unnumbered}
@@ -123,7 +121,6 @@ Press knit and check it still works.
 
 ------------------------------------------------------------------------
 
-
 ### STEP 6: R-Coding {.unnumbered}
 
 The following questions link to your homework and datacamp. For those who have programmed in R, they are trivial, but use it to get used to the markdown format. If you are struggling, try the datacamp homework first.
@@ -151,7 +148,6 @@ a <- 1+1
 
 ------------------------------------------------------------------------
 
-
 ### STEP 7: MPG Data {.unnumbered}
 
 In class we discussed about both numerical and graphical summaries to describe the data.You will be using the `mpg` dataset available in R to make some numerical and graphical summaries. **Hint - press knit after every question to check there are no coding errors before you move on.**
@@ -173,8 +169,8 @@ Just like downloading a phone app from the app-store doesn't mean that it's auto
 
 -   This will load the `datasets` and `tidyverse` packages which will allow us to use their commands in our analysis.<br>
     -   The options mean that it won't show any error messages or warnings when you press knit.<br>
-    -   Run the code chunk by pressing the green arrow. The first time you run it, you might see a load of "friendly loading text". Press the green arrow a second time and it should go away. 
-    
+    -   Run the code chunk by pressing the green arrow. The first time you run it, you might see a load of "friendly loading text". Press the green arrow a second time and it should go away.
+
 <br>
 
 -   **[7D]** One by one, type the three lines below into the CONSOLE (not into a code chunk).
@@ -261,47 +257,39 @@ You can also add comments to your submission as needed on the canvas page, or yo
 
 You can also add comments to your submission as needed on the canvas page, or you can message Dr G.
 
-## CHECK YOUR GRADE!  {.unnumbered}
-
-This is how you will be graded for this lab.
-
 <br>
 
-### Rubric/Submission checklist {.unnumbered}
+## CHECK YOUR GRADE! {#CheckGrade .unnumbered}
 
-**HTML FILE SUBMISSION - 10 marks**
+### RUBRIC {.unnumbered}
 
-**RMD CODE SUBMISSION - 10 marks**
+This is how you will be graded (percent)
 
-**MARKDOWN/CODE STYLE - 20 MARKS**
+-   **HTML FILE SUBMISSION - 10 marks**
 
-How to get full marks here
+-   **RMD CODE SUBMISSION - 10 marks**
 
--   Your YAML code is working e.g. when you press knit, you see your author name, a table of contents etc etc (see step 4)
+-   **MARKDOWN/CODE STYLE - 15 MARKS** <br> How to get full marks for this:
 
--   Your code and document is neat and easy to read. LOOK AT YOUR HTML FILE IN YOUR WEB-BROWSER BEFORE YOU SUBMIT. For example:
+    -   Your YAML code is working e.g. when you press knit, you see your author name, a table of contents etc etc (see step 4)
 
-    -   There is a spell check next to the save button.
+    -   Your code and document is neat and easy to read. LOOK AT YOUR HTML FILE IN YOUR WEB-BROWSER BEFORE YOU SUBMIT. For example:
 
-    -   You have written in full sentences and it is clear what question your answers are referring to.
+        -   There is a spell check next to the save button.
 
-    -   You have included units!
+        -   You have written in full sentences and it is clear what question your answers are referring to.
 
-    -   You have included formatting like headings/subheadings and bullets. Many people make typos with the headings. The easiest way to do it is to use visual mode, then highlight the text and click Header 1, Header 2 etc.
+        -   You have included units!
 
-**WRITTEN QUESTIONS/R-MARKDOWN: 20 MARKS**
+        -   You have included formatting like headings/subheadings and bullets. Many people make typos with the headings. The easiest way to do it is to use visual mode, then highlight the text and click Header 1, Header 2 etc.
 
-You have answered the questions in Step 5 clearly and thoughtfully in a way I could use as a class example.
+-   **WRITTEN QUESTIONS/R-MARKDOWN: 15 MARKS** <br> You have answered the questions in Step 5 clearly and thoughtfully in a way I could use as a class example.
 
-**R-CODING: 20 MARKS**
+-   **R-CODING: 15 MARKS** <br> You have managed to successfully complete all the code challenges
 
-You have managed to successfully complete all the code challenges
+-   **MPG ANALYSIS: 15 MARKS** <br> You included all the code and successfully answered the questions, providing reasoning where appropriate
 
-**MPG ANALYSIS: 20 MARKS**
-
-You included all the code and successfully answered the questions, providing reasoning where appropriate
-
-[100 marks total]
+[80 marks total]
 
 Overall, here is what your lab should correspond to:
 
@@ -356,4 +344,3 @@ Overall, here is what your lab should correspond to:
   </tr>
 </tbody>
 </table>
-
