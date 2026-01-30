@@ -65,7 +65,7 @@ Watch this video to find out more: (4 mins)
     -   You can open different projects in different tabs on your browser.
 3.  **Returning to your lab projects on the cloud is very easy. Just go back to** <https://posit.cloud/content/yours>
 
-```{r, im-T1-ProjectCloud, echo=FALSE, fig.cap = "*The Cloud dashboard*",out.width='90',fig.align='center'}
+```{r, im-T1-ProjectCloud, echo=FALSE, fig.cap = "*The Cloud dashboard*",out.width='90%',fig.align='center'}
 knitr::include_graphics('./index_images/im_T1_ProjectCloud.png')
 ```
 
@@ -88,15 +88,15 @@ Steps 3-7 are shown graphically in the figures below. If you are new to this, fo
 
 3.  Go to the Main File menu at the [very top left]{.underline} and click `New Project` <br>\
 
-4.  Select `New Directory`, then `New Project`, then click `Existing Directory` <br>\
+4.  Then click `Existing Directory` <br>\
 
-```{r im-T1-Projectcreation1, echo=FALSE}
+```{r im-T1-Projectcreation1, echo=FALSE,out.width="100%"}
 knitr::include_graphics('./index_images/im_T1_Projectcreation1.png')
 ```
 
 5.  You will be asked to find your Lab 1 folder on your computer. Find it and click open,
 
-```{r im-T1-Projectcreation2, echo=FALSE}
+```{r im-T1-Projectcreation2, echo=FALSE,out.width="100%"}
 knitr::include_graphics('./index_images/im_T1_Projectcreation2.png')
 ```
 
@@ -118,7 +118,7 @@ If you have any errors, this will be the first thing I check, so you may as well
 
 - The icon at the bottom of your screen will have changed.
 
-```{r, im-T1-Projectcheck, echo=FALSE, fig.cap="How to check you are in a project"}
+```{r, im-T1-Projectcheck, echo=FALSE, fig.cap="How to check you are in a project",out.width="100%"}
 knitr::include_graphics('./index_images/im_T1_Projectcheck.png')
 ```
 
@@ -146,7 +146,7 @@ There are two ways to reopen a lab
 
 This will reopen R-Studio for that specific lab, so you can continue where you left off. It means you can also open several versions of R studio for multiple labs, which can be very useful in staying sane
 
-```{r, im-T1-Projectopen, echo=FALSE}
+```{r, im-T1-Projectopen, echo=FALSE,out.width="100%"}
 knitr::include_graphics('./index_images/im_T1_Projectopen.png')
 ```
 
@@ -157,12 +157,12 @@ Alternatively you can open R-Studio,
  - Then navigate to File/Open Projects and find your Lab 1 folder.
  - OR, look at File/Recent projects and you might just see Lab 1 there, especially if you have worked on it recently.
  
-```{r, im-T1-Projectopeninside1, echo=FALSE}
+```{r, im-T1-Projectopeninside1, echo=FALSE,out.width="100%"}
 knitr::include_graphics('./index_images/im_T1_Projectopen_inside1.png')
 ```
  
 Or 
 
-```{r, im-T1-Projectopeninside2, echo=FALSE}
+```{r, im-T1-Projectopeninside2, echo=FALSE,out.width="100%"}
 knitr::include_graphics('./index_images/im_T1_Projectopen_inside2.png')
 ```

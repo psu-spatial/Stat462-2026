@@ -1,7 +1,7 @@
 ---
 title: "STAT462 Lab Book 2026"
 author: "Dr Helen Greatrex"
-date: "2026-01-28"
+date: "2026-01-29"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -50,6 +50,8 @@ Don't panic if you are new to this! We will start from scratch and you are expec
 This website has been written using R-bookdown and uploaded to github. The format has been tweaked using the excellent bookdown example of [Mastering Shiny](https://mastering-shiny.org/).
 
 <br>
+
+
 
 
 

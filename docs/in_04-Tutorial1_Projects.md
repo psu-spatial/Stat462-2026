@@ -44,7 +44,7 @@ Watch this video to find out more: (4 mins)
 3.  **Returning to your lab projects on the cloud is very easy. Just go back to** <https://posit.cloud/content/yours>
 
 <div class="figure" style="text-align: center">
-<img src="./index_images/im_T1_ProjectCloud.png" alt="*The Cloud dashboard*" width="90" />
+<img src="./index_images/im_T1_ProjectCloud.png" alt="*The Cloud dashboard*" width="90%" />
 <p class="caption">(\#fig:im-T1-ProjectCloud)*The Cloud dashboard*</p>
 </div>
 
@@ -65,13 +65,13 @@ Steps 3-7 are shown graphically in the figures below. If you are new to this, fo
 
 3.  Go to the Main File menu at the [very top left]{.underline} and click `New Project` <br>\
 
-4.  Select `New Directory`, then `New Project`, then click `Existing Directory` <br>\
+4.  Then click `Existing Directory` <br>\
 
-<img src="./index_images/im_T1_Projectcreation1.png" alt="" width="1273" />
+<img src="./index_images/im_T1_Projectcreation1.png" alt="" width="100%" />
 
 5.  You will be asked to find your Lab 1 folder on your computer. Find it and click open,
 
-<img src="./index_images/im_T1_Projectcreation2.png" alt="" width="1270" />
+<img src="./index_images/im_T1_Projectcreation2.png" alt="" width="100%" />
 
 6.  Check that the address looks right.
 
@@ -90,7 +90,7 @@ If you have any errors, this will be the first thing I check, so you may as well
 - The icon at the bottom of your screen will have changed.
 
 <div class="figure">
-<img src="./index_images/im_T1_Projectcheck.png" alt="How to check you are in a project" width="1049" />
+<img src="./index_images/im_T1_Projectcheck.png" alt="How to check you are in a project" width="100%" />
 <p class="caption">(\#fig:im-T1-Projectcheck)How to check you are in a project</p>
 </div>
 
@@ -119,7 +119,7 @@ There are two ways to reopen a lab
 
 This will reopen R-Studio for that specific lab, so you can continue where you left off. It means you can also open several versions of R studio for multiple labs, which can be very useful in staying sane
 
-<img src="./index_images/im_T1_Projectopen.png" alt="" width="961" />
+<img src="./index_images/im_T1_Projectopen.png" alt="" width="100%" />
 
 #### From inside R-studio.
 
@@ -128,8 +128,8 @@ Alternatively you can open R-Studio,
  - Then navigate to File/Open Projects and find your Lab 1 folder.
  - OR, look at File/Recent projects and you might just see Lab 1 there, especially if you have worked on it recently.
  
-<img src="./index_images/im_T1_Projectopen_inside1.png" alt="" width="1081" />
+<img src="./index_images/im_T1_Projectopen_inside1.png" alt="" width="100%" />
  
 Or 
 
-<img src="./index_images/im_T1_Projectopen_inside2.png" alt="" width="1113" />
+<img src="./index_images/im_T1_Projectopen_inside2.png" alt="" width="100%" />

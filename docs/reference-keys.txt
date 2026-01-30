@@ -3,6 +3,10 @@ fig:Tut-Fig1
 fig:Tut-Fig2
 fig:Setup-Fig7
 fig:L1-Projectcheck
+fig:L1-Loadpackages
+fig:L1-ViewData
+fig:L1-Submit
+fig:L1-CloudDownload
 fig:im-T1-ProjectCloud
 fig:im-T1-Projectcheck
 fig:im-T2-friendlytext
@@ -13,11 +17,6 @@ written-instructions
 then-update-your-packages.
 everyone-should-sign-up-for-an-account-here-httpsposit.cloud
 what-if-i-run-out-of-free-time
-aim
-step-2-creating-a-project..
-step-4-create-your-lab-report
-questions
-Lab_1_01
 T1_Projects
 T1_ProjectsCloud
 T1_ProjectsDesktop
@@ -118,3 +117,4 @@ sophisticated
 violin-plots
 ridgeline-plots
 beeswarm-plots
+cover-image-path-to-the-social-sharing-image-like-imagescover.jpg
