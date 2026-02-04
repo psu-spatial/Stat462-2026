@@ -7,6 +7,8 @@ fig:L1-Loadpackages
 fig:L1-ViewData
 fig:L1-Submit
 fig:L1-CloudDownload
+fig:L2-Projectcheck
+fig:L2-PenguinsHelp
 fig:im-T1-ProjectCloud
 fig:im-T1-Projectcheck
 fig:im-T2-friendlytext

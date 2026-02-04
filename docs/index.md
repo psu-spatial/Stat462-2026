@@ -1,7 +1,7 @@
 ---
 title: "STAT462 Lab Book 2026"
 author: "Dr Helen Greatrex"
-date: "2026-01-29"
+date: "2026-02-04"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
