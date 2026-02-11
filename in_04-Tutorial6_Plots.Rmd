@@ -96,45 +96,14 @@ HousesNY$Beds <- as.numeric(HousesNY$Beds)
 
 ### Basic plot (no line of best fit)
 
-Here is the absolute basic scatterplot. This should not be the one you submit in your reports (e.g. either choose a more professional one or adjust the options below)
+Here is the absolute basic scatterplot. This should not be the one you submit in your reports but is useful for a quick look.
 
 ```{r}
-# you can either do plot(x, y)
-# OR (recommended), use the ~ to say plot(y~x) 
-# e.g. y depends on x
+
 plot(HousesNY$Price ~ HousesNY$Beds,
      xlab="Beds",ylab="Price (USD")
 ```
 
-There are many things we can change, see the help file for the `par` command for more. For example, here is an ugly plot showing as many as I can think!
-
-```{r}
-
-plot(HousesNY$Price ~ HousesNY$Beds,
-     xlim=c(0,7), #xlimits
-     ylim=c(40,220), #ylimits
-     xlab=list("Beds",cex=.8,col="red",font=2), # play with x-label
-     ylab=list("Price",cex=1.2,col="blue",font=3), # play with x-label
-     main="Ugly feature plot",
-     cex=1.2, #point size
-     pch=16, # symbol shape (try plot(1:24,1:24,pch=1:24 to see them all))
-     tcl=-.25, # smaller tick marks
-     mgp=c(1.75,.5,0)) # move the x/y labels around
-
-grid() #  add a grid
-
-# lines means "add points on top"
-lines(HousesNY$Price ~ HousesNY$Beds, 
-     type="p", # p for points, "l" for lines, "o" for both, "h for bars
-     xlim=c(0,7), #xlimits
-     ylim=c(40,220), #ylimits
-     col="yellow",
-     cex=.5, #point size
-     pch=4) # move the x/y labels around
-
-
-
-```
 
 <br>
 
@@ -767,3 +736,22 @@ beeswarm(HousesNY$Price,
 ```
 
 This is a little boring for my 58 data points! (although perhaps it does show that 58 points is barely a big enough sample to know an underlying model..)
+
+
+
+
+## Pairwise Relationships & Correlation
+
+### `GGally`
+
+The `GGally` package provides useful visual summaries of numerical variables.
+
+```{r}
+if (!require(GGally)) install.packages("GGally", dependencies = TRUE)
+library(GGally)
+# Create pairwise scatter plots
+GGally::ggpairs(test_data, columns = c("MPG"))
+```
+
+
+

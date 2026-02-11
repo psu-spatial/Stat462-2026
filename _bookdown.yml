@@ -24,6 +24,8 @@ rmd_files:
     "in_04-Tutorial3_Markdown.Rmd",
     "in_04-Tutorial4_ReadingInData.Rmd",
     "in_04-Tutorial5_NormalDistributionsTTests.Rmd",
-    "in_04-Tutorial6_Plots.Rmd",
+    "in_04-Tutorial7_Summary.Rmd",
+    "in_04-Tutorial9_Wrangling.Rmd",
+
 
   ]
