@@ -59,8 +59,6 @@ We will load and use them later in the lab.
 
     -   Write the. following three level-1 chapter headings (bold), with the sub-headings as Level-2. Remember that to do this in `source` mode, you need to use a single \# for level 1 and a double \## for level 2. If you are in `visual` mode, type the headings, then click on that line, and click the little arrow next to Normal. \*see screenshot below)
 
-        -   **Code checks**
-
         -   **Plant Sales**
 
             -   Data Description
