@@ -101,6 +101,7 @@ Here is the absolute basic scatterplot. This should not be the one you submit in
 ```{r}
 
 plot(HousesNY$Price ~ HousesNY$Beds,
+     pch=16, # changes the point shape to black dots
      xlab="Beds",ylab="Price (USD")
 ```
 
@@ -233,7 +234,7 @@ ggplotly(myplot)
 
 It's also very easy to add in color to see another variable. For example, here I also add in the lot size.
 
-```{r, eval=FALSE}
+```{r}
 # create the plot, save it as "p" rather than print immediately
 myplot2 <-   ggplot(HousesNY, aes(x=Beds, y=Price,color=Lot)) + 
                geom_point(alpha=.5) +
@@ -265,14 +266,7 @@ Especially just looking at a single response variable, it's useful to look immed
 
 ### Basics
 
-Here is the absolute basic histogram, again on our HousesNY price data.
-
-```{r}
-hist(HousesNY$Price, 
-     xlab="Price (USD)",main="")
-```
-
-Or changing the bin size. You can also specify exact bin sizes using br. - see ?hist
+Here is the absolute basic histogram, again on our HousesNY price data. You can  specify exact bin sizes using br. - see ?hist
 
 ```{r}
 hist(HousesNY$Price,
@@ -737,21 +731,6 @@ beeswarm(HousesNY$Price,
 
 This is a little boring for my 58 data points! (although perhaps it does show that 58 points is barely a big enough sample to know an underlying model..)
 
-
-
-
-## Pairwise Relationships & Correlation
-
-### `GGally`
-
-The `GGally` package provides useful visual summaries of numerical variables.
-
-```{r}
-if (!require(GGally)) install.packages("GGally", dependencies = TRUE)
-library(GGally)
-# Create pairwise scatter plots
-GGally::ggpairs(test_data, columns = c("MPG"))
-```
 
 
 

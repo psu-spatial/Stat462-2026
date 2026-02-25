@@ -4,23 +4,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 6 Summarizing Data | STAT462 Lab Book 2026</title>
+<title>Chapter 7 Summarizing Data | STAT462 Lab Book 2026</title>
 <meta name="author" content="Dr Helen Greatrex">
 <meta name="description" content="Before analyzing a dataset, it’s essential to understand its structure, size, and data types. This tutorial will guide you through: Viewing the dataset. Checking its dimensions, column names, and...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
-<meta property="og:title" content="Chapter 6 Summarizing Data | STAT462 Lab Book 2026">
+<meta property="og:title" content="Chapter 7 Summarizing Data | STAT462 Lab Book 2026">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psu-spatial.github.io/Stat462-2026/T7_summary.html">
 <meta property="og:description" content="Before analyzing a dataset, it’s essential to understand its structure, size, and data types. This tutorial will guide you through: Viewing the dataset. Checking its dimensions, column names, and...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 6 Summarizing Data | STAT462 Lab Book 2026">
+<meta name="twitter:title" content="Chapter 7 Summarizing Data | STAT462 Lab Book 2026">
 <meta name="twitter:description" content="Before analyzing a dataset, it’s essential to understand its structure, size, and data types. This tutorial will guide you through: Viewing the dataset. Checking its dimensions, column names, and...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><script src="libs/plotly-binding-4.11.0/plotly.js"></script><script src="libs/typedarray-0.1/typedarray.min.js"></script><link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+<script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script><link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
@@ -63,8 +66,9 @@
 <li><a class="" href="T3_Markdown.html"><span class="header-section-number">3</span> R-Markdown</a></li>
 <li><a class="" href="T4_ReadingData.html"><span class="header-section-number">4</span> Reading in data</a></li>
 <li><a class="" href="probability-distributions.html"><span class="header-section-number">5</span> Probability distributions</a></li>
-<li><a class="active" href="T7_summary.html"><span class="header-section-number">6</span> Summarizing Data</a></li>
-<li><a class="" href="data-wrangling-t8-wrangle.html"><span class="header-section-number">7</span> Data Wrangling {#T8 wrangle}</a></li>
+<li><a class="" href="T6_plots.html"><span class="header-section-number">6</span> Plots</a></li>
+<li><a class="active" href="T7_summary.html"><span class="header-section-number">7</span> Summarizing Data</a></li>
+<li><a class="" href="T8_Wrangle.html"><span class="header-section-number">8</span> Data Wrangling</a></li>
 </ul>
 
         <div class="book-extra">
@@ -72,9 +76,9 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="T7_summary" class="section level1" number="6">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="T7_summary" class="section level1" number="7">
 <h1>
-<span class="header-section-number">6</span> Summarizing Data<a class="anchor" aria-label="anchor" href="#T7_summary"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7</span> Summarizing Data<a class="anchor" aria-label="anchor" href="#T7_summary"><i class="fas fa-link"></i></a>
 </h1>
 <p>Before analyzing a dataset, it’s essential to understand its structure, size, and data types. This tutorial will guide you through:</p>
 <ol style="list-style-type: decimal">
@@ -83,18 +87,18 @@
 <li>Understanding data types and modifying them if necessary.</li>
 <li>Preparing for summary statistics.</li>
 </ol>
-<div id="suggested-libraries" class="section level3" number="6.0.1">
+<div id="suggested-libraries" class="section level3" number="7.0.1">
 <h3>
-<span class="header-section-number">6.0.1</span> Suggested libraries<a class="anchor" aria-label="anchor" href="#suggested-libraries"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.0.1</span> Suggested libraries<a class="anchor" aria-label="anchor" href="#suggested-libraries"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb75"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/skimr/">skimr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggobi.github.io/ggally/">GGally</a></span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="how-to-edit" class="section level3" number="6.0.2">
+<div id="how-to-edit" class="section level3" number="7.0.2">
 <h3>
-<span class="header-section-number">6.0.2</span> How to edit<a class="anchor" aria-label="anchor" href="#how-to-edit"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.0.2</span> How to edit<a class="anchor" aria-label="anchor" href="#how-to-edit"><i class="fas fa-link"></i></a>
 </h3>
 <p>The tutorial is based on a small dataset called <code>test_data</code> with these four columns,</p>
 <ul>
@@ -110,7 +114,7 @@
 <p>So to edit for your code, all you need to do is replace <code>test_data</code> with the name of your spreadsheet/data-frame, and to replace the variable you are looking at with your column name e,g,</p>
 <p><code>test_data$MPG</code> goes to <code>WhateverYourDataIsCalled$ColumnName</code></p>
 <p>Here is the full dataset.</p>
-<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb76"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">test_data</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##      Make MPG Cylinders Transmission
 ## 1  Toyota  30         4         Auto
@@ -125,9 +129,9 @@
 ## 10 Toyota  25         4       Manual</code></pre>
 <p><br></p>
 </div>
-<div id="how-to-view-data" class="section level2" number="6.1">
+<div id="how-to-view-data" class="section level2" number="7.1">
 <h2>
-<span class="header-section-number">6.1</span> How to view data<a class="anchor" aria-label="anchor" href="#how-to-view-data"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.1</span> How to view data<a class="anchor" aria-label="anchor" href="#how-to-view-data"><i class="fas fa-link"></i></a>
 </h2>
 <p>To explore the dataset interactively, you can:</p>
 <ul>
@@ -137,7 +141,7 @@ Run <code>View(test_data)</code> in the console.<br><em>Note: <code><a href="htt
 Click on <code>test_data</code> in the environment tab.</p></li>
 <li><p><strong>Print the entire dataset</strong> (not recommended for large datasets):</p></li>
 </ul>
-<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># this will only show the first page</span></span>
 <span><span class="va">test_data</span></span></code></pre></div>
 <pre><code>##      Make MPG Cylinders Transmission
@@ -155,7 +159,7 @@ Click on <code>test_data</code> in the environment tab.</p></li>
 <li>
 <strong>View only the first six rows</strong>:</li>
 </ul>
-<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb80"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">test_data</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##     Make MPG Cylinders Transmission
 ## 1 Toyota  30         4         Auto
@@ -165,50 +169,50 @@ Click on <code>test_data</code> in the environment tab.</p></li>
 ## 5 Nissan  29         4       Manual
 ## 6    BMW  24         6       Manual</code></pre>
 <p><br></p>
-<div id="print-column-names" class="section level3" number="6.1.1">
+<div id="print-column-names" class="section level3" number="7.1.1">
 <h3>
-<span class="header-section-number">6.1.1</span> Print column names<a class="anchor" aria-label="anchor" href="#print-column-names"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.1.1</span> Print column names<a class="anchor" aria-label="anchor" href="#print-column-names"><i class="fas fa-link"></i></a>
 </h3>
 <p>To see what columns exist:</p>
-<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb82"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">test_data</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## [1] "Make"         "MPG"          "Cylinders"    "Transmission"</code></pre>
 </div>
 </div>
-<div id="how-to-summarise-data" class="section level2" number="6.2">
+<div id="how-to-summarise-data" class="section level2" number="7.2">
 <h2>
-<span class="header-section-number">6.2</span> How to summarise data<a class="anchor" aria-label="anchor" href="#how-to-summarise-data"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.2</span> How to summarise data<a class="anchor" aria-label="anchor" href="#how-to-summarise-data"><i class="fas fa-link"></i></a>
 </h2>
 <p><br></p>
-<div id="number-of-rowscolumns" class="section level3" number="6.2.1">
+<div id="number-of-rowscolumns" class="section level3" number="7.2.1">
 <h3>
-<span class="header-section-number">6.2.1</span> Number of Rows/Columns<a class="anchor" aria-label="anchor" href="#number-of-rowscolumns"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.2.1</span> Number of Rows/Columns<a class="anchor" aria-label="anchor" href="#number-of-rowscolumns"><i class="fas fa-link"></i></a>
 </h3>
 <p>To find out how many rows and columns there are:</p>
-<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb84"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">test_data</span><span class="op">)</span>  <span class="co"># Number of rows</span></span></code></pre></div>
 <pre><code>## [1] 10</code></pre>
-<div class="sourceCode" id="cb50"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb86"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">test_data</span><span class="op">)</span>  <span class="co"># Number of columns</span></span></code></pre></div>
 <pre><code>## [1] 4</code></pre>
-<div class="sourceCode" id="cb52"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb88"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">test_data</span><span class="op">)</span>   <span class="co"># Dimensions (rows, columns)</span></span></code></pre></div>
 <pre><code>## [1] 10  4</code></pre>
 <p><br></p>
 </div>
-<div id="checking-data-types" class="section level3" number="6.2.2">
+<div id="checking-data-types" class="section level3" number="7.2.2">
 <h3>
-<span class="header-section-number">6.2.2</span> Checking data types<a class="anchor" aria-label="anchor" href="#checking-data-types"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.2.2</span> Checking data types<a class="anchor" aria-label="anchor" href="#checking-data-types"><i class="fas fa-link"></i></a>
 </h3>
 <p>Each column in a dataset has a specific data type (e.g., numeric, character, factor). “Factor” is the R jargon for variables that have a fixed number of unique values (e.g., categories/groups/families).</p>
 <p>We can check the data types using:</p>
-<div class="sourceCode" id="cb54"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb90"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span><span class="op">(</span><span class="va">test_data</span>, <span class="va">class</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##         Make          MPG    Cylinders Transmission 
 ##     "factor"    "numeric"     "factor"  "character"</code></pre>
 <p><br></p>
 <p>If categorical variables are not stored as factors, we can explicitly define them, where levels is the ORDER I want them to be in.</p>
-<div class="sourceCode" id="cb56"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb92"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">test_data</span><span class="op">$</span><span class="va">Cylinders</span>    <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">test_data</span><span class="op">$</span><span class="va">Cylinders</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">6</span>, <span class="fl">8</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">test_data</span><span class="op">$</span><span class="va">Transmission</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">test_data</span><span class="op">$</span><span class="va">Transmission</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Auto"</span>, <span class="st">"Manual"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>This ensures:</p>
@@ -220,17 +224,17 @@ Click on <code>test_data</code> in the environment tab.</p></li>
 <p><br><br></p>
 </div>
 </div>
-<div id="summary-commands" class="section level2" number="6.3">
+<div id="summary-commands" class="section level2" number="7.3">
 <h2>
-<span class="header-section-number">6.3</span> Summary commands<a class="anchor" aria-label="anchor" href="#summary-commands"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.3</span> Summary commands<a class="anchor" aria-label="anchor" href="#summary-commands"><i class="fas fa-link"></i></a>
 </h2>
 <p>There are many commands! You don’t need all of these - choose your favourite :)</p>
-<div id="str" class="section level3" number="6.3.1">
+<div id="str" class="section level3" number="7.3.1">
 <h3>
-<span class="header-section-number">6.3.1</span> str()<a class="anchor" aria-label="anchor" href="#str"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.3.1</span> str()<a class="anchor" aria-label="anchor" href="#str"><i class="fas fa-link"></i></a>
 </h3>
 <p>To get a compact summary of the dataset, <code><a href="https://rdrr.io/r/utils/str.html">str()</a></code> provides an overview, including the number of observations, variables, and data types.</p>
-<div class="sourceCode" id="cb57"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb93"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">test_data</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 'data.frame':    10 obs. of  4 variables:
 ##  $ Make        : Factor w/ 6 levels "BMW","Chevy",..: 6 3 4 2 5 1 6 3 4 6
@@ -239,12 +243,12 @@ Click on <code>test_data</code> in the environment tab.</p></li>
 ##  $ Transmission: Factor w/ 2 levels "Auto","Manual": 1 2 1 1 2 2 1 1 1 2</code></pre>
 <p><br></p>
 </div>
-<div id="dplyrglimpse" class="section level3" number="6.3.2">
+<div id="dplyrglimpse" class="section level3" number="7.3.2">
 <h3>
-<span class="header-section-number">6.3.2</span> dplyr::glimpse()<a class="anchor" aria-label="anchor" href="#dplyrglimpse"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.3.2</span> dplyr::glimpse()<a class="anchor" aria-label="anchor" href="#dplyrglimpse"><i class="fas fa-link"></i></a>
 </h3>
 <p>Another alternative is <code><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse()</a></code> (from the <code>dplyr</code> package, so you have to have run the library code chunk first):</p>
-<div class="sourceCode" id="cb59"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb95"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">test_data</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## Rows: 10
 ## Columns: 4
@@ -254,12 +258,12 @@ Click on <code>test_data</code> in the environment tab.</p></li>
 ## $ Transmission &lt;fct&gt; Auto, Manual, Auto, Auto, Manual, Manual, Auto, Auto, Aut…</code></pre>
 <p><br></p>
 </div>
-<div id="summary" class="section level3" number="6.3.3">
+<div id="summary" class="section level3" number="7.3.3">
 <h3>
-<span class="header-section-number">6.3.3</span> summary()<a class="anchor" aria-label="anchor" href="#summary"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.3.3</span> summary()<a class="anchor" aria-label="anchor" href="#summary"><i class="fas fa-link"></i></a>
 </h3>
 <p>We can use the <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> function to get a quick overview of numerical and factor variables.</p>
-<div class="sourceCode" id="cb61"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb97"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">test_data</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##      Make        MPG        Cylinders Transmission
 ##  BMW   :1   Min.   :22.00   4   :5    Auto  :6    
@@ -270,16 +274,16 @@ Click on <code>test_data</code> in the environment tab.</p></li>
 ##  Toyota:3   Max.   :30.00</code></pre>
 <p><br></p>
 </div>
-<div id="skimrskim" class="section level3" number="6.3.4">
+<div id="skimrskim" class="section level3" number="7.3.4">
 <h3>
-<span class="header-section-number">6.3.4</span> skimr:skim()`<a class="anchor" aria-label="anchor" href="#skimrskim"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.3.4</span> skimr:skim()`<a class="anchor" aria-label="anchor" href="#skimrskim"><i class="fas fa-link"></i></a>
 </h3>
 <p>The <code>skim</code> command from the <code>skimr</code> package provides an easy and readable summary of the dataset</p>
-<div class="sourceCode" id="cb63"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb99"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://docs.ropensci.org/skimr/reference/skim.html">skim</a></span><span class="op">(</span><span class="va">test_data</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:unnamed-chunk-13">Table 6.1: </span>Data summary</caption>
+<span id="tab:unnamed-chunk-13">Table 7.1: </span>Data summary</caption>
 <tbody>
 <tr class="odd">
 <td align="left">Name</td>
@@ -408,20 +412,20 @@ Click on <code>test_data</code> in the environment tab.</p></li>
 </table></div>
 <p><br></p>
 </div>
-<div id="frequency-tables" class="section level3" number="6.3.5">
+<div id="frequency-tables" class="section level3" number="7.3.5">
 <h3>
-<span class="header-section-number">6.3.5</span> Frequency tables<a class="anchor" aria-label="anchor" href="#frequency-tables"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.3.5</span> Frequency tables<a class="anchor" aria-label="anchor" href="#frequency-tables"><i class="fas fa-link"></i></a>
 </h3>
 <p>We can use <code><a href="https://rdrr.io/r/base/table.html">table()</a></code> or <code><a href="https://dplyr.tidyverse.org/reference/count.html">dplyr::count()</a></code> to summarize categorical variables. e.g. count how many rows there are in different categories. This is especially useful for categorical data.</p>
 <p>The easiest way to do this is using the <code>table</code> command.</p>
-<div class="sourceCode" id="cb64"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb100"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">test_data</span><span class="op">$</span><span class="va">Transmission</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ##   Auto Manual 
 ##      6      4</code></pre>
 <p>Shows there are three rows with automatic cars and three with manual,</p>
 <p>We can also make two way tables</p>
-<div class="sourceCode" id="cb66"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb102"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">test_data</span><span class="op">$</span><span class="va">Transmission</span>, <span class="va">test_data</span><span class="op">$</span><span class="va">Cylinders</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##         
 ##          4 6 8
@@ -429,37 +433,37 @@ Click on <code>test_data</code> in the environment tab.</p></li>
 ##   Manual 2 2 0</code></pre>
 <p>So there are 2 cars that are automatic with four cylinders.</p>
 <p>We can also use the <code>count</code> function in the dplyr package.</p>
-<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb104"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">test_data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">Transmission</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##   Transmission n
 ## 1         Auto 6
 ## 2       Manual 4</code></pre>
 </div>
-<div id="calculate-your-own" class="section level3" number="6.3.6">
+<div id="calculate-your-own" class="section level3" number="7.3.6">
 <h3>
-<span class="header-section-number">6.3.6</span> Calculate your own<a class="anchor" aria-label="anchor" href="#calculate-your-own"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.3.6</span> Calculate your own<a class="anchor" aria-label="anchor" href="#calculate-your-own"><i class="fas fa-link"></i></a>
 </h3>
 <p>Alternatively, we can calculate specific summary statistics manually using base R and <code>dplyr</code>.</p>
-<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb106"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span>  <span class="op">(</span><span class="va">test_data</span><span class="op">$</span><span class="va">MPG</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span>  <span class="co"># Mean MPG, ignoring missing values</span></span></code></pre></div>
 <pre><code>## [1] 25.9</code></pre>
-<div class="sourceCode" id="cb72"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb108"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">test_data</span><span class="op">$</span><span class="va">MPG</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span>  <span class="co"># Median MPG, ignoring missing values</span></span></code></pre></div>
 <pre><code>## [1] 25</code></pre>
-<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb110"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span>    <span class="op">(</span><span class="va">test_data</span><span class="op">$</span><span class="va">MPG</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span>      <span class="co"># Standard deviation, ignoring missing values</span></span></code></pre></div>
 <pre><code>## [1] 2.726414</code></pre>
-<div class="sourceCode" id="cb76"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb112"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/range.html">range</a></span> <span class="op">(</span><span class="va">test_data</span><span class="op">$</span><span class="va">MPG</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span>   <span class="co"># Minimum and maximum, ignoring missing values</span></span></code></pre></div>
 <pre><code>## [1] 22 30</code></pre>
 </div>
-<div id="grouped-summary-statistics" class="section level3" number="6.3.7">
+<div id="grouped-summary-statistics" class="section level3" number="7.3.7">
 <h3>
-<span class="header-section-number">6.3.7</span> Grouped Summary Statistics<a class="anchor" aria-label="anchor" href="#grouped-summary-statistics"><i class="fas fa-link"></i></a>
+<span class="header-section-number">7.3.7</span> Grouped Summary Statistics<a class="anchor" aria-label="anchor" href="#grouped-summary-statistics"><i class="fas fa-link"></i></a>
 </h3>
 <p>Finally, we can also compute statistics such as the mean, maximum, and minimum values for different groups.</p>
 <p>Using <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> and <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise()</a></code> from dplyr() , we can compute statistics for each species:</p>
-<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb114"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">test_data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">Transmission</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span></span>
@@ -478,35 +482,35 @@ Click on <code>test_data</code> in the environment tab.</p></li>
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="probability-distributions.html"><span class="header-section-number">5</span> Probability distributions</a></div>
-<div class="next"><a href="data-wrangling-t8-wrangle.html"><span class="header-section-number">7</span> Data Wrangling {#T8 wrangle}</a></div>
+<div class="prev"><a href="T6_plots.html"><span class="header-section-number">6</span> Plots</a></div>
+<div class="next"><a href="T8_Wrangle.html"><span class="header-section-number">8</span> Data Wrangling</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li>
-<a class="nav-link" href="#T7_summary"><span class="header-section-number">6</span> Summarizing Data</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#suggested-libraries"><span class="header-section-number">6.0.1</span> Suggested libraries</a></li>
-<li><a class="nav-link" href="#how-to-edit"><span class="header-section-number">6.0.2</span> How to edit</a></li>
+<a class="nav-link" href="#T7_summary"><span class="header-section-number">7</span> Summarizing Data</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#suggested-libraries"><span class="header-section-number">7.0.1</span> Suggested libraries</a></li>
+<li><a class="nav-link" href="#how-to-edit"><span class="header-section-number">7.0.2</span> How to edit</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#how-to-view-data"><span class="header-section-number">6.1</span> How to view data</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#print-column-names"><span class="header-section-number">6.1.1</span> Print column names</a></li></ul>
+<a class="nav-link" href="#how-to-view-data"><span class="header-section-number">7.1</span> How to view data</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#print-column-names"><span class="header-section-number">7.1.1</span> Print column names</a></li></ul>
 </li>
 <li>
-<a class="nav-link" href="#how-to-summarise-data"><span class="header-section-number">6.2</span> How to summarise data</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#number-of-rowscolumns"><span class="header-section-number">6.2.1</span> Number of Rows/Columns</a></li>
-<li><a class="nav-link" href="#checking-data-types"><span class="header-section-number">6.2.2</span> Checking data types</a></li>
+<a class="nav-link" href="#how-to-summarise-data"><span class="header-section-number">7.2</span> How to summarise data</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#number-of-rowscolumns"><span class="header-section-number">7.2.1</span> Number of Rows/Columns</a></li>
+<li><a class="nav-link" href="#checking-data-types"><span class="header-section-number">7.2.2</span> Checking data types</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#summary-commands"><span class="header-section-number">6.3</span> Summary commands</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#str"><span class="header-section-number">6.3.1</span> str()</a></li>
-<li><a class="nav-link" href="#dplyrglimpse"><span class="header-section-number">6.3.2</span> dplyr::glimpse()</a></li>
-<li><a class="nav-link" href="#summary"><span class="header-section-number">6.3.3</span> summary()</a></li>
-<li><a class="nav-link" href="#skimrskim"><span class="header-section-number">6.3.4</span> skimr:skim()`</a></li>
-<li><a class="nav-link" href="#frequency-tables"><span class="header-section-number">6.3.5</span> Frequency tables</a></li>
-<li><a class="nav-link" href="#calculate-your-own"><span class="header-section-number">6.3.6</span> Calculate your own</a></li>
-<li><a class="nav-link" href="#grouped-summary-statistics"><span class="header-section-number">6.3.7</span> Grouped Summary Statistics</a></li>
+<a class="nav-link" href="#summary-commands"><span class="header-section-number">7.3</span> Summary commands</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#str"><span class="header-section-number">7.3.1</span> str()</a></li>
+<li><a class="nav-link" href="#dplyrglimpse"><span class="header-section-number">7.3.2</span> dplyr::glimpse()</a></li>
+<li><a class="nav-link" href="#summary"><span class="header-section-number">7.3.3</span> summary()</a></li>
+<li><a class="nav-link" href="#skimrskim"><span class="header-section-number">7.3.4</span> skimr:skim()`</a></li>
+<li><a class="nav-link" href="#frequency-tables"><span class="header-section-number">7.3.5</span> Frequency tables</a></li>
+<li><a class="nav-link" href="#calculate-your-own"><span class="header-section-number">7.3.6</span> Calculate your own</a></li>
+<li><a class="nav-link" href="#grouped-summary-statistics"><span class="header-section-number">7.3.7</span> Grouped Summary Statistics</a></li>
 </ul>
 </li>
 </ul>
@@ -525,7 +529,7 @@ Click on <code>test_data</code> in the environment tab.</p></li>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>STAT462 Lab Book 2026</strong>" was written by Dr Helen Greatrex. It was last built on 2026-02-11.</p>
+    <p>"<strong>STAT462 Lab Book 2026</strong>" was written by Dr Helen Greatrex. It was last built on 2026-02-25.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

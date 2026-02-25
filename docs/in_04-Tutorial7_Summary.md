@@ -108,8 +108,7 @@ head(test_data)
 
 <br>
 
-
-### Print column names 
+### Print column names
 
 To see what columns exist:
 
@@ -121,8 +120,6 @@ names(test_data)
 ```
 ## [1] "Make"         "MPG"          "Cylinders"    "Transmission"
 ```
-
-
 
 ## How to summarise data
 
@@ -159,8 +156,6 @@ dim(test_data)   # Dimensions (rows, columns)
 
 <br>
 
-
-
 ### Checking data types
 
 Each column in a dataset has a specific data type (e.g., numeric, character, factor). "Factor" is the R jargon for variables that have a fixed number of unique values (e.g., categories/groups/families).
@@ -196,15 +191,11 @@ Similarly, if data "should" be numeric, but isn't for some reason, we can conver
 
 <br><br>
 
-
-
-
 ## Summary commands
 
-There are many commands!  You don't need all of these - choose your favourite :)
+There are many commands! You don't need all of these - choose your favourite :)
 
 ### str()
-
 
 To get a compact summary of the dataset, `str()` provides an overview, including the number of observations, variables, and data types.
 
@@ -240,10 +231,10 @@ glimpse(test_data)
 ## $ Cylinders    <fct> 4, 6, 4, 8, 4, 6, 8, 4, NA, 4
 ## $ Transmission <fct> Auto, Manual, Auto, Auto, Manual, Manual, Auto, Auto, Aut…
 ```
+
 <br>
 
 ### summary()
-
 
 We can use the `summary()` function to get a quick overview of numerical and factor variables.
 
@@ -264,8 +255,7 @@ summary(test_data)
 
 <br>
 
-
-### skimr:skim()`
+### skimr:skim()\`
 
 The `skim` command from the `skimr` package provides an easy and readable summary of the dataset
 
@@ -307,13 +297,11 @@ Table: (\#tab:unnamed-chunk-13)Data summary
 
 <br>
 
-
 ### Frequency tables
-
 
 We can use `table()` or `dplyr::count()` to summarize categorical variables. e.g. count how many rows there are in different categories. This is especially useful for categorical data.
 
-The easiest way to do this is using the `table` command. 
+The easiest way to do this is using the `table` command.
 
 
 ``` r
@@ -326,7 +314,7 @@ table(test_data$Transmission)
 ##      6      4
 ```
 
-Shows there are three rows with automatic cars and three with manual, 
+Shows there are three rows with automatic cars and three with manual,
 
 We can also make two way tables
 
@@ -342,7 +330,7 @@ table(test_data$Transmission, test_data$Cylinders)
 ##   Manual 2 2 0
 ```
 
-So there are 2 cars that are automatic with four cylinders. 
+So there are 2 cars that are automatic with four cylinders.
 
 We can also use the `count` function in the dplyr package.
 
@@ -356,10 +344,6 @@ test_data %>% count(Transmission)
 ## 1         Auto 6
 ## 2       Manual 4
 ```
-
-
-
-
 
 ### Calculate your own
 
@@ -398,10 +382,9 @@ range (test_data$MPG, na.rm=TRUE)   # Minimum and maximum, ignoring missing valu
 ## [1] 22 30
 ```
 
-
 ### Grouped Summary Statistics
 
-Finally,  we can also compute statistics such as the mean, maximum, and minimum values for different groups.
+Finally, we can also compute statistics such as the mean, maximum, and minimum values for different groups.
 
 Using `group_by()` and `summarise()` from dplyr() , we can compute statistics for each species:
 
@@ -425,6 +408,3 @@ test_data %>%
 ```
 
 <br>
-
-
-

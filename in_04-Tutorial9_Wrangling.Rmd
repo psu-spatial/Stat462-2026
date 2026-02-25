@@ -28,11 +28,11 @@ HousesNY$Beds <- as.numeric(HousesNY$Beds)
 
 ```
 
-# Data Wrangling {#T8_Wrangle}
+# Data Filtering {#T8_Wrangle}
 
 ## Introduction & packages
 
-This tutorial explains how to filter, select, summarize, and wrangle data in R using both **Tidyverse** and **Base R** approaches. 
+This tutorial explains how to filter, select, and wrangle data in R using both **Tidyverse** and **Base R** approaches. 
 
 Both approaches are valid, but they differ in syntax and philosophy. **Tidyverse** functions (from `dplyr`) use a  pipeline-based approach, whereas **Base R** relies on indexing and built-in functions. 
 

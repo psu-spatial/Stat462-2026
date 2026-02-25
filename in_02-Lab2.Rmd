@@ -193,7 +193,7 @@ knitr::include_graphics('./index_images/im_L2_check_helpfile.png')
 <br>
 
 -   **[Q3.1]** Now go back to your report. Underneath "data description", leave a few blank lines, then describe/list everything we need to know about this data to conduct our analysis. You are welcome and encouraged to use additional sub-headings, bullets or any other formatting to make this easier to grade.
-    -   HINT/HELP, see the handout from Monday's lecture ([WEEK 4 - L4A Basic Regression Handout salary.pdf](https://psu.instructure.com/courses/2450096)), or Homeworks 1 & 2 or the lecture slides.
+    -   HINT/HELP, see the handout from Monday's lecture ([WEEK 4 - L4A Basic Regression Handout salary.pdf](https://psu.instructure.com/courses/2450096/files/188222526)), or Homeworks 1 & 2 or the lecture slides.
     -   I am grading you against the specific list I gave in class, so don't randomly ask chatgpt!
 
 <br>
@@ -323,7 +323,7 @@ You can also add comments to your submission as needed on the canvas page, or yo
 
 <br>
 
-## CHECK YOUR GRADE! {#CheckGrade .unnumbered}
+## CHECK YOUR GRADE! {#CheckGradeL2 .unnumbered}
 
 ### RUBRIC {.unnumbered}
 

@@ -1,6 +1,6 @@
 
 
-# Data Wrangling {#T8 wrangle}
+# Data Wrangling {#T8_Wrangle}
 
 ## Introduction & packages
 
