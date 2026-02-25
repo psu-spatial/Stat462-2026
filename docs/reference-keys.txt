@@ -9,6 +9,7 @@ fig:L1-Submit
 fig:L1-CloudDownload
 fig:L2-Projectcheck
 fig:L2-PenguinsHelp
+fig:L3-Projectcheck
 fig:im-T1-ProjectCloud
 fig:im-T1-Projectcheck
 fig:im-T2-friendlytext
@@ -150,5 +151,3 @@ random-sampling
 saving-data-to-new-columns
 sorting-data
 combining-everything
-fig:L3-Projectcheck
-cover-image-path-to-the-social-sharing-image-like-imagescover.jpg

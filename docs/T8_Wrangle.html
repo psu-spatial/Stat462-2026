@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 8 Data Wrangling | STAT462 Lab Book 2026</title>
+<title>Chapter 8 Data Filtering | STAT462 Lab Book 2026</title>
 <meta name="author" content="Dr Helen Greatrex">
-<meta name="description" content="8.1 Introduction &amp; packages This tutorial explains how to filter, select, summarize, and wrangle data in R using both Tidyverse and Base R approaches. Both approaches are valid, but they differ in...">
+<meta name="description" content="8.1 Introduction &amp; packages This tutorial explains how to filter, select, and wrangle data in R using both Tidyverse and Base R approaches. Both approaches are valid, but they differ in syntax and...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
-<meta property="og:title" content="Chapter 8 Data Wrangling | STAT462 Lab Book 2026">
+<meta property="og:title" content="Chapter 8 Data Filtering | STAT462 Lab Book 2026">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psu-spatial.github.io/Stat462-2026/T8_Wrangle.html">
-<meta property="og:description" content="8.1 Introduction &amp; packages This tutorial explains how to filter, select, summarize, and wrangle data in R using both Tidyverse and Base R approaches. Both approaches are valid, but they differ in...">
+<meta property="og:description" content="8.1 Introduction &amp; packages This tutorial explains how to filter, select, and wrangle data in R using both Tidyverse and Base R approaches. Both approaches are valid, but they differ in syntax and...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 8 Data Wrangling | STAT462 Lab Book 2026">
-<meta name="twitter:description" content="8.1 Introduction &amp; packages This tutorial explains how to filter, select, summarize, and wrangle data in R using both Tidyverse and Base R approaches. Both approaches are valid, but they differ in...">
+<meta name="twitter:title" content="Chapter 8 Data Filtering | STAT462 Lab Book 2026">
+<meta name="twitter:description" content="8.1 Introduction &amp; packages This tutorial explains how to filter, select, and wrangle data in R using both Tidyverse and Base R approaches. Both approaches are valid, but they differ in syntax and...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -59,6 +59,7 @@
 <li><a class="" href="Help.html">HELP!</a></li>
 <li><a class="" href="Lab_1.html">Lab 1</a></li>
 <li><a class="" href="Lab_2.html">Lab 2</a></li>
+<li><a class="" href="Lab_3.html">Lab 3</a></li>
 <li class="book-part">.</li>
 <li class="book-part">TUTORIALS</li>
 <li><a class="" href="T1_Projects.html"><span class="header-section-number">1</span> Projects/Starting each lab</a></li>
@@ -68,7 +69,7 @@
 <li><a class="" href="probability-distributions.html"><span class="header-section-number">5</span> Probability distributions</a></li>
 <li><a class="" href="T6_plots.html"><span class="header-section-number">6</span> Plots</a></li>
 <li><a class="" href="T7_summary.html"><span class="header-section-number">7</span> Summarizing Data</a></li>
-<li><a class="active" href="T8_Wrangle.html"><span class="header-section-number">8</span> Data Wrangling</a></li>
+<li><a class="active" href="T8_Wrangle.html"><span class="header-section-number">8</span> Data Filtering</a></li>
 </ul>
 
         <div class="book-extra">
@@ -78,13 +79,13 @@
 </div>
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="T8_Wrangle" class="section level1" number="8">
 <h1>
-<span class="header-section-number">8</span> Data Wrangling<a class="anchor" aria-label="anchor" href="#T8_Wrangle"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8</span> Data Filtering<a class="anchor" aria-label="anchor" href="#T8_Wrangle"><i class="fas fa-link"></i></a>
 </h1>
 <div id="introduction-packages" class="section level2" number="8.1">
 <h2>
 <span class="header-section-number">8.1</span> Introduction &amp; packages<a class="anchor" aria-label="anchor" href="#introduction-packages"><i class="fas fa-link"></i></a>
 </h2>
-<p>This tutorial explains how to filter, select, summarize, and wrangle data in R using both <strong>Tidyverse</strong> and <strong>Base R</strong> approaches.</p>
+<p>This tutorial explains how to filter, select, and wrangle data in R using both <strong>Tidyverse</strong> and <strong>Base R</strong> approaches.</p>
 <p>Both approaches are valid, but they differ in syntax and philosophy. <strong>Tidyverse</strong> functions (from <code>dplyr</code>) use a pipeline-based approach, whereas <strong>Base R</strong> relies on indexing and built-in functions.</p>
 <div class="sourceCode" id="cb116"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Load necessary packages</span></span>
@@ -375,7 +376,7 @@ tablename [ ROWS , COLUMNS ]
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#T8_Wrangle"><span class="header-section-number">8</span> Data Wrangling</a></li>
+<li><a class="nav-link" href="#T8_Wrangle"><span class="header-section-number">8</span> Data Filtering</a></li>
 <li><a class="nav-link" href="#introduction-packages"><span class="header-section-number">8.1</span> Introduction &amp; packages</a></li>
 <li>
 <a class="nav-link" href="#selecting-columns"><span class="header-section-number">8.2</span> Selecting COLUMNS</a><ul class="nav navbar-nav">

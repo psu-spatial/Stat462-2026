@@ -4,7 +4,7 @@ library(knitr)
 library(kableExtra)
 ```
 
-# Lab 3 {#Lab_2 .unnumbered}
+# Lab 3 {#Lab_3 .unnumbered}
 
 ## LAB AIM {.unnumbered}
 

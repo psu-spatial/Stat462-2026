@@ -1,6 +1,6 @@
 
 
-# Lab 3 {#Lab_2 .unnumbered}
+# Lab 3 {#Lab_3 .unnumbered}
 
 ## LAB AIM {.unnumbered}
 
@@ -18,9 +18,9 @@ This is a ONE WEEK LAB. You only have one lab session (today) working on this du
 
 You need a separate project for every lab!
 
--   **[1A]** Go here to read more about projects and to make a project for Lab 2: [Projects](#T1_Projects)
+-   **[1A]** Go here to read more about projects and to make a project for Lab 3: [Projects](#T1_Projects)
 
--   **[1B]** If you haven't already, open your project in R-Studio. It should look like this, but say Lab 2 for everything.
+-   **[1B]** If you haven't already, open your project in R-Studio. It should look like this, but say Lab 3 for everything.
 
 <div class="figure">
 <img src="./index_images/im_T1_Projectcheck.png" alt="How to check you are in a project" width="100%" />
@@ -69,7 +69,7 @@ We will load and use them later in the lab.
             -   Exploratory Analysis
             -   Initial Regression
 
--   **[4F]** Click knit. This should work, ask you to save (then click knit again) and create a html file in your lab 2 folder AND show you it on your screen. IF YOU HAVE PROBLEMS ASK FOR HELP
+-   **[4F]** Click knit. This should work, ask you to save (then click knit again) and create a html file in your lab 3 folder AND show you it on your screen. IF YOU HAVE PROBLEMS ASK FOR HELP
 
 -   **[4G]** Close down the html file so that you are back in your lab report again.
 
