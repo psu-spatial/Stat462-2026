@@ -151,4 +151,3 @@ random-sampling
 saving-data-to-new-columns
 sorting-data
 combining-everything
-cover-image-path-to-the-social-sharing-image-like-imagescover.jpg
