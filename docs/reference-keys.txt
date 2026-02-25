@@ -150,3 +150,5 @@ random-sampling
 saving-data-to-new-columns
 sorting-data
 combining-everything
+fig:L3-Projectcheck
+cover-image-path-to-the-social-sharing-image-like-imagescover.jpg
