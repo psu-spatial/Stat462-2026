@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Project 2 | STAT462 Lab Book 2026</title>
 <meta name="author" content="Dr Helen Greatrex">
-<meta name="description" content="This is the R-based lab book for Penn State STAT-462 on applied regression analysis. To see the accompnying textbook, go to https://online.stat.psu.edu/stat462">
+<meta name="description" content="IMPORTANTLY - please complete Project 1 before continuing here!  0.2 Overall aim The overall aim of part 2 is to show me that you can conduct a basic simple linear regression analysis and...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="Project 2 | STAT462 Lab Book 2026">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psu-spatial.github.io/Stat462-2026/Project2.html">
-<meta property="og:description" content="This is the R-based lab book for Penn State STAT-462 on applied regression analysis. To see the accompnying textbook, go to https://online.stat.psu.edu/stat462">
+<meta property="og:description" content="IMPORTANTLY - please complete Project 1 before continuing here!  0.2 Overall aim The overall aim of part 2 is to show me that you can conduct a basic simple linear regression analysis and...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Project 2 | STAT462 Lab Book 2026">
-<meta name="twitter:description" content="This is the R-based lab book for Penn State STAT-462 on applied regression analysis. To see the accompnying textbook, go to https://online.stat.psu.edu/stat462">
+<meta name="twitter:description" content="IMPORTANTLY - please complete Project 1 before continuing here!  0.2 Overall aim The overall aim of part 2 is to show me that you can conduct a basic simple linear regression analysis and...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -89,7 +89,46 @@
 <h1>Project 2<a class="anchor" aria-label="anchor" href="#Project2"><i class="fas fa-link"></i></a>
 </h1>
 <p><br></p>
+<p>IMPORTANTLY - please complete <a href="Project1.html#Project1">Project 1</a> before continuing here!</p>
+<div id="overall-aim" class="section level2" number="0.2">
+<h2>
+<span class="header-section-number">0.2</span> Overall aim<a class="anchor" aria-label="anchor" href="#overall-aim"><i class="fas fa-link"></i></a>
+</h2>
+<p>The overall aim of part 2 is to show me that you can conduct a basic simple linear regression analysis and communicate the results TO YOUR IMAGINARY BOSS/END-USER. When I say this, I mean this process</p>
+<div class="inline-figure"><img src="index_images/im_P1_SLROverview.png"></div>
+</div>
+<div id="step-1-set-up-1" class="section level2 unnumbered">
+<h2>Step 1: Set-up<a class="anchor" aria-label="anchor" href="#step-1-set-up-1"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>Re-open your project by EITHER</li>
+</ul>
+<pre><code>-   Going to your project folder and double clicking on the .RProj
 
+-   Opening R studio and going to File, Recent Projects, the open the correct one.</code></pre>
+<ul>
+<li><p>Open your Lab Book RmD file. On the top right, go to the run menu and press Run-All</p></li>
+<li><p>Everything should run without errors. Look at your environment tab and consider renaming your variables if they don’t make sense to you</p></li>
+</ul>
+</div>
+<div id="step-2-state-your-model" class="section level2 unnumbered">
+<h2>Step 2: State your model<a class="anchor" aria-label="anchor" href="#step-2-state-your-model"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>I AM LEAVING IT UP TO YOU TO MAKE HEADINGS/SUB-HEADINGS/SUB-SUB HEADINGS AND TO KEEP THINGS NEAT.</strong></p>
+<p>Remember that you will get more marks if it’s easy for me to find all the sections of your report output.</p>
+<ol style="list-style-type: decimal">
+<li><p>In your text, state your response variable, your object of analysis, and a SINGLE predictor variable that you (or your imaginary boss) would like you to test,</p></li>
+<li><p>Create a professional looking scatterplot with a line of best fit (Tutorial 8) and comment on the form/direction/strength/unusual values (don’t panic if it’s not linear, we will fix post spring break)</p></li>
+<li><p>Using Tutorial 11, run a simple linear regression model</p></li>
+<li><p>Using tutorial 11, formally write out the sample regression equation and interpret the slope and intercept for your imaginary boss.</p></li>
+<li><p>Conduct a hypothesis test (F-test) using ANOVA to assess if your sample suggests that there really is a relationship in the underlying population.. (e.g. what would H0 and H1 be.. see Week 7 and week 8)</p></li>
+<li><p>Interpret and comment on the R2 value</p></li>
+<li><p>Interpret and comment on the root mean squared error</p></li>
+<li><p>Conduct a hypothesis test (T-test) if the INTERCEPT sample is likely to be 0.. (you’re welcome to choose a number other than 0, Tutorial 11, if that’s more interesting to your case study)</p></li>
+<li><p>Assess the LINE assumptions using Tutorial 11.</p></li>
+<li><p>Summarise what you have found so far and any concerns.</p></li>
+</ol>
+</div>
 </div>
 
 
@@ -102,7 +141,12 @@
 <div class="next"><a href="T1_Projects.html"><span class="header-section-number">1</span> Projects/Starting each lab</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#Project2">Project 2</a></li></ul>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#Project2">Project 2</a></li>
+<li><a class="nav-link" href="#overall-aim"><span class="header-section-number">0.2</span> Overall aim</a></li>
+<li><a class="nav-link" href="#step-1-set-up-1">Step 1: Set-up</a></li>
+<li><a class="nav-link" href="#step-2-state-your-model">Step 2: State your model</a></li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
