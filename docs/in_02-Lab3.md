@@ -12,7 +12,7 @@ This is a ONE WEEK LAB. You only have one lab session (today) working on this du
 
 ------------------------------------------------------------------------
 
-## LAB SET-UP (Important!) {.unnumbered}
+## 1. LAB SET-UP (Important!) {.unnumbered}
 
 ### STEP 1: IMPORTANT - Create a Lab 3 project.. {.unnumbered}
 
@@ -111,13 +111,13 @@ All the methods to answer these questions are either things you have done in pre
 
 ### Step 2.1: Read in data {.unnumbered}
 
--   Read the data into R and assign it to a variable called "adverts"
+-   Read the data into R and assign it to a variable called "adverts".  See this tutorial on reading in data [Tutorial_CSV](#T4_load_csv)
 
 <br>
 
 ### Step 2.2: Exploratory analysis/study design {.unnumbered}
 
--   Summarize the the dataset using R and suggest any quality control issues (e.g. unusual values, missing data etc) - Tutorial 7,
+-   Summarize the the dataset using R and suggest any quality control issues (e.g. unusual values, missing data etc). For summary commands, see [Tutorial 5](#T5_Summarising))
 
 -   Write up your study design e.g. object of analysis, sampling frame, the potential population your CEO has in mind, variables (and units.), sample size.
 
@@ -127,11 +127,9 @@ All the methods to answer these questions are either things you have done in pre
 
 You should have noticed a few issues with your dataset.
 
--   Use [Tutorial 8.4.2](https://psu-spatial.github.io/Stat462-2026/T8_Wrangle.html#tidyversedplyr-filter-command) on filtering to remove the row containing the illogical data point
+-   Use [Tutorial 8](#T8_RowSelect) on filtering to remove the row containing the impossible data point (hint use the tidyverse option)
 
--   Use the "na.omit" command on "adverts" to remove any rows containing missing values.
-
--   (<https://www.r-bloggers.com/2024/12/how-to-use-na-omit-in-r-a-comprehensive-guide-to-handling-missing-values/>)
+-   Use the "na.omit" command on "adverts" to remove any rows containing missing values. (see [Tutorial 5](#T5_naomit) or look here (<https://www.r-bloggers.com/2024/12/how-to-use-na-omit-in-r-a-comprehensive-guide-to-handling-missing-values/>).
 
 -   In the text below your code, record what you did, eg how many rows were removed? Why? Why do you think -999 wasn't a "real" value.
 
@@ -141,7 +139,7 @@ You should have noticed a few issues with your dataset.
 
 -   Now that you have tidied your data, repeat your summaries of the dataset as a whole
 
--   Create a professional histogram of each variable and underneath each one, write a few sentences describing the each variable and anything you see. (for histograms, see [Tutorial 6.3](https://psu-spatial.github.io/Stat462-2026/T6_plots.html#ggplot2-histograms)).
+-   Create a professional histogram of each variable and underneath each one, write a few sentences describing the each variable and anything you see. (See [Tutorial 8 on histograms](#T7_Histograms)).
 
 <br>
 
@@ -151,9 +149,9 @@ You are trying to predict sales.
 
 FOR EACH PREDICTOR (TV, Radio, Newspaper, Plant height)
 
--   Use the `lm()` command to create a simple linear regression model to predict sales ([see this 2025 tutorial](https://psu-spatial.github.io/Stat462-2025/in_T14_Regression.html#1_Regression))
+-   Use the `lm()` command to create a simple linear regression model to predict sales (See [Tutorial 11](#T11_RunModel))
 
--   Create a professional scatterplot for each of the others against your response including the line of best fit (for scatterplots, see [Tutorial 6.2](https://psu-spatial.github.io/Stat462-2026/T6_plots.html#ggplot2-scatterplots))
+-   Create a professional scatterplot for each of the others against your response including the line of best fit (for scatterplots, see [Tutorial 8 Scatterplots](#T7_PlotGGPlotWLine))
 
 -   Underneath comment on the relationship that each variable appears to have with sales, and describe the form/strength/direction/features of the scatterplot.
 
@@ -175,13 +173,24 @@ Hint, think about what I have asked you to do in past labs to answer this.
 
 -   Are there any issues with your answers (e.g. are all the models valid? - there might be no issues! I genuinely can't remember how I set the data)
 
+<br>
+
 ### Step 2.7: Peace lilies {.unnumbered}
 
 -   You have a new client who needs to sell 8000 peace lilies but hates newspapers. Conduct an hypothesis test to assess whether you typically sell less than 8000 plants in a situation where you spend zero-money on newspaper advertising. You are happy to be wrong one time in 25. Can you advise your client it is OK to not advertise in newspapers?
 
+Hint, this is VERY similar to the example here: [Tutorial 11 tests](#T11_SigOther))
+
+<br>
+
 ### Step 2.8: TV fears {.unnumbered}
 
 -   Another client is skeptical of TV. Use the ANOVA table output to conduct a hypothesis test to examine if there is evidence to suggest a relationship between TV advertising and plant sales at a significance of 1%.
+
+Hint, see week 6 lecture notes and [Tutorial 11 tests](#T11_Output))
+
+
+<br>
 
 ### Step 2.9: Summary {.unnumbered}
 
@@ -193,7 +202,7 @@ Congrats! Finished
 
 <br>
 
-## 4. WHAT TO SUBMIT {.unnumbered}
+## 3. WHAT TO SUBMIT {.unnumbered}
 
 ### If you are using your own laptop {.unnumbered}
 
@@ -229,7 +238,7 @@ You can also add comments to your submission as needed on the canvas page, or yo
 
 <br>
 
-## CHECK YOUR GRADE! {#CheckGradeL3 .unnumbered}
+## 4. CHECK YOUR GRADE! {#CheckGradeL3 .unnumbered}
 
 ### RUBRIC {.unnumbered}
 
@@ -239,7 +248,7 @@ This is how you will be graded (percent)
 
 -   **RMD CODE SUBMISSION - 10 marks**
 
--   **MARKDOWN/CODE STYLE - 20 MARKS** <br> How to get full marks for this:
+-   **MARKDOWN/CODE STYLE - 10 MARKS** <br> How to get full marks for this:
 
     -   Your YAML code is working e.g. when you press knit, you see your author name, a table of contents etc etc (see step 4)
 
@@ -253,9 +262,41 @@ This is how you will be graded (percent)
 
         -   You have included formatting like headings/subheadings and bullets. Many people make typos with the headings. The easiest way to do it is to use visual mode, then highlight the text and click Header 1, Header 2 etc.
 
--   
+-   **EXPLORATORY ANALYSIS/QUALITY CONTROL - 10 MARKS** <br>
+
+    -   You provide a clear and appropriate summary of the dataset using R. You use relevant commands (such as `summary`, tables, or counts) and correctly describe the main characteristics of the data. Your work shows that you explored the dataset thoughtfully and that you explained any code output in the text.
+
+    -   You clearly identify potential quality issues (such as unusual values, impossible values, or missing data). Your explanation shows that these issues were discovered through inspection of the dataset, and you provide clear reasoning for why they may represent problems.
+
+-   **INITIAL ANALYSIS/LINE ASSUMPTIONS - 15 MARKS**
+
+    -   You have created a simple linear regression model using `lm()` for each predictor (TV, Radio, Newspaper, and Plant height) to predict sales. For each predictor, you produced a clear and professional scatterplot of the predictor against sales and included the fitted regression line. Under each plot, you described the relationship between the predictor and sales. Your description addresses the direction, form, and strength of the relationship and notes any important features visible in the scatterplot (such as clustering, curvature, or unusual points).
+
+        You wrote out the regression equation for each model and explain what each coefficient means in the context of predicting sales. You also discussed whether the LINE assumptions appear reasonable based on the scatterplots and model output. Your explanation shows that you understand what each assumption represents and how the plots help you evaluate them.
+
+-   **PEACE LILIES - 10 MARKS**
+
+    -   You correctly set up and conducted a hypothesis test to assess whether expected sales are typically less than 8000 plants when no money is spent on newspaper advertising. You clearly stated the null and alternative hypotheses, identified the significance level and used the regression output appropriately to perform the test.
+
+        You correctly interpreted the result in the context of the problem and explained what the statistical result implies for the client’s decision about newspaper advertising. Your conclusion clearly answers the practical question: whether it is reasonable to advise the client that avoiding newspaper advertising is acceptable based on the evidence from the data.
+
+-   **TV FEARS - 10 MARKS**
+
+    -   You correctly used the ANOVA table from the regression output to conduct a hypothesis test examining whether there is evidence of a relationship between TV advertising and plant sales. You clearly stated the null and alternative hypotheses, identified the significance level, and correctly interpreted the F-test or p-value from the ANOVA table.
+
+        Your explanation shows that you understand what the ANOVA test is assessing in the context of regression. You provide a clear conclusion explaining whether the evidence suggests a relationship between TV advertising and plant sales.
+
+-   **CONCLUSION - 5 MARKS**
+
+    -   You clearly summarised the main findings from your analysis in plain language appropriate for a non-technical audience. e.g. you highlighted the most important insights about the relationship between advertising channels and plant sales and explain what the results suggest about effective advertising strategies.
+
+        Your summary focuses on the practical implications of the analysis rather than repeating technical output.
 
 [80 marks total]
+
+<br>
+
+### Grade meaning {.unnumbered}
 
 Overall, here is what your lab should correspond to:
 

@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 8 Data Filtering | STAT462 Lab Book 2026</title>
+<title>Chapter 9 Data Filtering | STAT462 Lab Book 2026</title>
 <meta name="author" content="Dr Helen Greatrex">
-<meta name="description" content="8.1 Introduction &amp; packages This tutorial explains how to filter, select, and wrangle data in R using both Tidyverse and Base R approaches. Both approaches are valid, but they differ in syntax and...">
+<meta name="description" content="9.1 Introduction &amp; packages This tutorial explains how to filter, select, and wrangle data in R using both Tidyverse and Base R approaches. Both approaches are valid, but they differ in syntax and...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
-<meta property="og:title" content="Chapter 8 Data Filtering | STAT462 Lab Book 2026">
+<meta property="og:title" content="Chapter 9 Data Filtering | STAT462 Lab Book 2026">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psu-spatial.github.io/Stat462-2026/T8_Wrangle.html">
-<meta property="og:description" content="8.1 Introduction &amp; packages This tutorial explains how to filter, select, and wrangle data in R using both Tidyverse and Base R approaches. Both approaches are valid, but they differ in syntax and...">
+<meta property="og:description" content="9.1 Introduction &amp; packages This tutorial explains how to filter, select, and wrangle data in R using both Tidyverse and Base R approaches. Both approaches are valid, but they differ in syntax and...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 8 Data Filtering | STAT462 Lab Book 2026">
-<meta name="twitter:description" content="8.1 Introduction &amp; packages This tutorial explains how to filter, select, and wrangle data in R using both Tidyverse and Base R approaches. Both approaches are valid, but they differ in syntax and...">
+<meta name="twitter:title" content="Chapter 9 Data Filtering | STAT462 Lab Book 2026">
+<meta name="twitter:description" content="9.1 Introduction &amp; packages This tutorial explains how to filter, select, and wrangle data in R using both Tidyverse and Base R approaches. Both approaches are valid, but they differ in syntax and...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -61,15 +61,23 @@
 <li><a class="" href="Lab_2.html">Lab 2</a></li>
 <li><a class="" href="Lab_3.html">Lab 3</a></li>
 <li class="book-part">.</li>
+<li class="book-part">PROJECT 1</li>
+<li><a class="" href="Project1.html">Project 1</a></li>
+<li><a class="" href="Project2.html">Project 2</a></li>
+<li class="book-part">.</li>
 <li class="book-part">TUTORIALS</li>
 <li><a class="" href="T1_Projects.html"><span class="header-section-number">1</span> Projects/Starting each lab</a></li>
 <li><a class="" href="T2_Libraries.html"><span class="header-section-number">2</span> Libraries/Packages</a></li>
 <li><a class="" href="T3_Markdown.html"><span class="header-section-number">3</span> R-Markdown</a></li>
-<li><a class="" href="T4_ReadingData.html"><span class="header-section-number">4</span> Reading in data</a></li>
-<li><a class="" href="probability-distributions.html"><span class="header-section-number">5</span> Probability distributions</a></li>
-<li><a class="" href="T6_plots.html"><span class="header-section-number">6</span> Plots</a></li>
-<li><a class="" href="T7_summary.html"><span class="header-section-number">7</span> Summarizing Data</a></li>
-<li><a class="active" href="T8_Wrangle.html"><span class="header-section-number">8</span> Data Filtering</a></li>
+<li><a class="" href="T7_Coding.html"><span class="header-section-number">4</span> Coding</a></li>
+<li><a class="" href="T4_ReadingData.html"><span class="header-section-number">5</span> Reading in data</a></li>
+<li><a class="" href="T5_Summarising.html"><span class="header-section-number">6</span> Summarising Data</a></li>
+<li><a class="" href="T6B_MissingData.html"><span class="header-section-number">7</span> Missing Data In Depth</a></li>
+<li><a class="" href="T6_plots.html"><span class="header-section-number">8</span> Plots</a></li>
+<li><a class="active" href="T8_Wrangle.html"><span class="header-section-number">9</span> Data Filtering</a></li>
+<li><a class="" href="probability-distributions.html"><span class="header-section-number">10</span> Probability distributions</a></li>
+<li><a class="" href="correlation.html"><span class="header-section-number">11</span> Correlation</a></li>
+<li><a class="" href="T11_SLR.html"><span class="header-section-number">12</span> Simple Linear Regression</a></li>
 </ul>
 
         <div class="book-extra">
@@ -77,17 +85,17 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="T8_Wrangle" class="section level1" number="8">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="T8_Wrangle" class="section level1" number="9">
 <h1>
-<span class="header-section-number">8</span> Data Filtering<a class="anchor" aria-label="anchor" href="#T8_Wrangle"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9</span> Data Filtering<a class="anchor" aria-label="anchor" href="#T8_Wrangle"><i class="fas fa-link"></i></a>
 </h1>
-<div id="introduction-packages" class="section level2" number="8.1">
+<div id="introduction-packages" class="section level2" number="9.1">
 <h2>
-<span class="header-section-number">8.1</span> Introduction &amp; packages<a class="anchor" aria-label="anchor" href="#introduction-packages"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.1</span> Introduction &amp; packages<a class="anchor" aria-label="anchor" href="#introduction-packages"><i class="fas fa-link"></i></a>
 </h2>
 <p>This tutorial explains how to filter, select, and wrangle data in R using both <strong>Tidyverse</strong> and <strong>Base R</strong> approaches.</p>
 <p>Both approaches are valid, but they differ in syntax and philosophy. <strong>Tidyverse</strong> functions (from <code>dplyr</code>) use a pipeline-based approach, whereas <strong>Base R</strong> relies on indexing and built-in functions.</p>
-<div class="sourceCode" id="cb116"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Load necessary packages</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>  <span class="co"># Core data wrangling</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a></span><span class="op">)</span> <span class="co"># Example dataset</span></span>
@@ -95,21 +103,21 @@
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggobi.github.io/ggally/">GGally</a></span><span class="op">)</span>  <span class="co"># Pair plots</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span> <span class="co"># Visualization</span></span></code></pre></div>
 <p>We will use the <strong>penguins</strong> dataset from the <code>palmerpenguins</code> package to demonstrate data wrangling techniques.</p>
-<div class="sourceCode" id="cb117"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb152"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"penguins"</span><span class="op">)</span>  <span class="co"># Load dataset</span></span></code></pre></div>
 <p><br><br></p>
 </div>
-<div id="selecting-columns" class="section level2" number="8.2">
+<div id="selecting-columns" class="section level2" number="9.2">
 <h2>
-<span class="header-section-number">8.2</span> Selecting COLUMNS<a class="anchor" aria-label="anchor" href="#selecting-columns"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.2</span> Selecting COLUMNS<a class="anchor" aria-label="anchor" href="#selecting-columns"><i class="fas fa-link"></i></a>
 </h2>
-<div id="selecting-a-specific-column-using" class="section level3" number="8.2.1">
+<div id="selecting-a-specific-column-using" class="section level3" number="9.2.1">
 <h3>
-<span class="header-section-number">8.2.1</span> Selecting a specific column using $<a class="anchor" aria-label="anchor" href="#selecting-a-specific-column-using"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.2.1</span> Selecting a specific column using $<a class="anchor" aria-label="anchor" href="#selecting-a-specific-column-using"><i class="fas fa-link"></i></a>
 </h3>
 <p>Sometimes we want to deal with only one specific column in our dataset, for example applying the mean command to say just one column.</p>
 <p>To do this, we use the $ symbol. For example, here I’m simply selecting the data in the elevation column only and saving it to a new variable called elevationdata.</p>
-<div class="sourceCode" id="cb118"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb153"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mean_mass</span> <span class="op">&lt;-</span> <span class="va">penguins</span><span class="op">$</span><span class="va">body_mass_g</span> </span>
 <span></span>
 <span><span class="va">mean_mass</span></span></code></pre></div>
@@ -124,15 +132,15 @@
 </ul>
 <p><br><br></p>
 </div>
-<div id="selecting-multiple-columns" class="section level3" number="8.2.2">
+<div id="selecting-multiple-columns" class="section level3" number="9.2.2">
 <h3>
-<span class="header-section-number">8.2.2</span> Selecting multiple columns<a class="anchor" aria-label="anchor" href="#selecting-multiple-columns"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.2.2</span> Selecting multiple columns<a class="anchor" aria-label="anchor" href="#selecting-multiple-columns"><i class="fas fa-link"></i></a>
 </h3>
 <p>Remember you have the names() command to help find these and that the names are CASE SENSITIVE. If we want to work with several specific columns (e.g., <code>species</code>, <code>bill_length_mm</code>, and <code>flipper_length_mm</code>), we can extract them like this:</p>
 <div id="tidyverse-approach" class="section level4 unnumbered">
 <h4>Tidyverse Approach<a class="anchor" aria-label="anchor" href="#tidyverse-approach"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb119"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb154"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">selected_data</span> <span class="op">&lt;-</span> <span class="va">penguins</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">species</span>, <span class="va">bill_length_mm</span>, <span class="va">flipper_length_mm</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">selected_data</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## # A tibble: 6 × 3
@@ -148,7 +156,7 @@
 <div id="base-r-approach" class="section level4 unnumbered">
 <h4>Base R Approach<a class="anchor" aria-label="anchor" href="#base-r-approach"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb121"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb156"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">selected_data</span> <span class="op">&lt;-</span> <span class="va">penguins</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"species"</span>, <span class="st">"bill_length_mm"</span>, <span class="st">"flipper_length_mm"</span><span class="op">)</span><span class="op">]</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">selected_data</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## # A tibble: 6 × 3
@@ -164,9 +172,9 @@
 </div>
 </div>
 </div>
-<div id="selecting-specific-rows-columns" class="section level2" number="8.3">
+<div id="selecting-specific-cells" class="section level2" number="9.3">
 <h2>
-<span class="header-section-number">8.3</span> SELECTING SPECIFIC ROWS &amp; COLUMNS<a class="anchor" aria-label="anchor" href="#selecting-specific-rows-columns"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.3</span> SELECTING SPECIFIC CELLS<a class="anchor" aria-label="anchor" href="#selecting-specific-cells"><i class="fas fa-link"></i></a>
 </h2>
 <p>Sometimes, we do not want to analyse at the entire data.frame. Instead, we would like to only look at one (or more) columns or rows.</p>
 <p>There are several ways we can select data.</p>
@@ -179,7 +187,7 @@ tablename [ ROWS , COLUMNS ]
 \]</span>
 <br></p>
 <p>Some examples:</p>
-<div class="sourceCode" id="cb123"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb158"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># This will select the data in the 5th row and 7th column</span></span>
 <span><span class="va">penguins</span><span class="op">[</span><span class="fl">5</span>,<span class="fl">7</span><span class="op">]</span></span>
 <span></span>
@@ -202,12 +210,12 @@ tablename [ ROWS , COLUMNS ]
 <span><span class="co"># The "c" command allows you to enter whatever numbers you like.  </span></span>
 <span><span class="co"># So this will print out rows 4,3,7 and the "Elevation" and "Dist_to_Coast" columns</span></span>
 <span><span class="va">penguins</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>,<span class="fl">3</span>,<span class="fl">7</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"island"</span>,<span class="st">"body_mass_g"</span><span class="op">)</span><span class="op">]</span></span></code></pre></div>
-<div id="deleting-data" class="section level3" number="8.3.1">
+<div id="deleting-data" class="section level3" number="9.3.1">
 <h3>
-<span class="header-section-number">8.3.1</span> Deleting data<a class="anchor" aria-label="anchor" href="#deleting-data"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.3.1</span> Deleting data<a class="anchor" aria-label="anchor" href="#deleting-data"><i class="fas fa-link"></i></a>
 </h3>
 <p>Or if you know the row or column number you can use the minus - sign to remove. Or use filter..</p>
-<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb159"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># remove row 6 and and overwrite</span></span>
 <span><span class="va">penguins</span> <span class="op">&lt;-</span> <span class="va">penguins</span><span class="op">[</span><span class="op">-</span><span class="fl">6</span> ,<span class="op">]</span></span>
 <span></span>
@@ -216,9 +224,9 @@ tablename [ ROWS , COLUMNS ]
 <p><br><br></p>
 </div>
 </div>
-<div id="selecting-rows" class="section level2" number="8.4">
+<div id="T8_RowSelect" class="section level2" number="9.4">
 <h2>
-<span class="header-section-number">8.4</span> SELECTING ROWS<a class="anchor" aria-label="anchor" href="#selecting-rows"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.4</span> Selecting ROWS<a class="anchor" aria-label="anchor" href="#T8_RowSelect"><i class="fas fa-link"></i></a>
 </h2>
 <p>Filtering means selecting only the rows that meet certain conditions.</p>
 <ul>
@@ -229,119 +237,118 @@ tablename [ ROWS , COLUMNS ]
 <li>Logical operators (<code>&amp;</code>, <code>|</code>, <code>!=</code>, <code>%in%</code>) provide additional flexibility in specifying conditions.</li>
 </ul>
 <p><br></p>
-<div id="baser-which-command" class="section level3" number="8.4.1">
+<div id="random-sampling" class="section level3" number="9.4.1">
 <h3>
-<span class="header-section-number">8.4.1</span> BaseR <code>which()</code> command<a class="anchor" aria-label="anchor" href="#baser-which-command"><i class="fas fa-link"></i></a>
-</h3>
-<p>The <code><a href="https://rdrr.io/r/base/which.html">which()</a></code> command helps us identify row indices that meet a condition.</p>
-<p>For example, identifying numbers greater than 107 in a sequence:</p>
-<div class="sourceCode" id="cb125"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">a</span> <span class="op">&lt;-</span> <span class="fl">100</span><span class="op">:</span><span class="fl">110</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">a</span> <span class="op">&gt;</span> <span class="fl">107</span><span class="op">)</span></span></code></pre></div>
-<p>I like it because you can read the command as a sentence e.g. which numbers in “a” are greater than 107, Or which penguins have a <code>body_mass_g</code> less than or equal to 3000g:</p>
-<div class="sourceCode" id="cb126"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">outlier_rows</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">body_mass_g</span> <span class="op">&lt;=</span> <span class="fl">3000</span><span class="op">)</span></span></code></pre></div>
-<p>To find the row corresponding to the penguin with the smallest bill length:</p>
-<div class="sourceCode" id="cb127"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">row_number</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">bill_length_mm</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">bill_length_mm</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">smallest_bill</span> <span class="op">&lt;-</span> <span class="va">penguins</span><span class="op">[</span><span class="va">row_number</span>, <span class="op">]</span></span>
-<span><span class="va">smallest_bill</span></span></code></pre></div>
-<p><br></p>
-</div>
-<div id="tidyversedplyr-filter-command" class="section level3" number="8.4.2">
-<h3>
-<span class="header-section-number">8.4.2</span> Tidyverse/dplyr filter command<a class="anchor" aria-label="anchor" href="#tidyversedplyr-filter-command"><i class="fas fa-link"></i></a>
-</h3>
-<p>We can also use the tidyverse approach, the <code><a href="https://dplyr.tidyverse.org/reference/filter.html">dplyr::filter()</a></code> function. All the condition symbols e.g. !=NOT etc also work for the which command,</p>
-<p>Selecting all <code>Adelie</code> penguins:</p>
-<div class="sourceCode" id="cb128"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="va">species</span> <span class="op">==</span> <span class="st">"Adelie"</span><span class="op">)</span></span></code></pre></div>
-<p>Selecting multiple species using <code>%in%</code>:</p>
-<div class="sourceCode" id="cb129"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="va">species</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Adelie"</span>, <span class="st">"Chinstrap"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p>Excluding a species using <code>!=</code>:</p>
-<div class="sourceCode" id="cb130"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="va">species</span> <span class="op">!=</span> <span class="st">"Gentoo"</span><span class="op">)</span></span></code></pre></div>
-<p>Filtering penguins with a flipper length greater than 200 mm:</p>
-<div class="sourceCode" id="cb131"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="va">flipper_length_mm</span> <span class="op">&gt;</span> <span class="fl">200</span><span class="op">)</span></span></code></pre></div>
-<p>Filtering penguins with a body mass less than or equal to 3000 g:</p>
-<div class="sourceCode" id="cb132"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">light_penguins</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="va">body_mass_g</span> <span class="op">&lt;=</span> <span class="fl">3000</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">light_penguins</span><span class="op">)</span></span></code></pre></div>
-<p>Filtering with multiple conditions:</p>
-<div class="sourceCode" id="cb133"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="va">flipper_length_mm</span> <span class="op">&gt;</span> <span class="fl">180</span> <span class="op">&amp;</span> <span class="va">species</span> <span class="op">==</span> <span class="st">"Adelie"</span><span class="op">)</span></span></code></pre></div>
-<p>Using <code>|</code> (OR condition) to select penguins with either a <code>bill_depth_mm</code> greater than 18 or <code>flipper_length_mm</code> longer than 210 mm:</p>
-<p><br></p>
-</div>
-<div id="random-sampling" class="section level3" number="8.4.3">
-<h3>
-<span class="header-section-number">8.4.3</span> Random sampling<a class="anchor" aria-label="anchor" href="#random-sampling"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.4.1</span> Random sampling<a class="anchor" aria-label="anchor" href="#random-sampling"><i class="fas fa-link"></i></a>
 </h3>
 <p>Dplyr’s sample_slice command will do this for us. Here I randomly selected 4 rows.</p>
-<div class="sourceCode" id="cb134"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb160"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">penguinsample</span> <span class="op">&lt;-</span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_sample</a></span><span class="op">(</span><span class="va">penguins</span>, n<span class="op">=</span><span class="fl">4</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">#check it worked</span></span>
 <span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">penguinsample</span><span class="op">)</span></span></code></pre></div>
+<p><br></p>
+</div>
+<div id="tidyversedplyr-filter-command" class="section level3" number="9.4.2">
+<h3>
+<span class="header-section-number">9.4.2</span> Tidyverse/dplyr filter command<a class="anchor" aria-label="anchor" href="#tidyversedplyr-filter-command"><i class="fas fa-link"></i></a>
+</h3>
+<p>We can also use the tidyverse approach, the <code><a href="https://dplyr.tidyverse.org/reference/filter.html">dplyr::filter()</a></code> function. All the condition symbols e.g. !=NOT etc also work for the which command,</p>
+<p>Selecting all <code>Adelie</code> penguins:</p>
+<div class="sourceCode" id="cb161"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="va">species</span> <span class="op">==</span> <span class="st">"Adelie"</span><span class="op">)</span></span></code></pre></div>
+<p>Selecting multiple species using <code>%in%</code>:</p>
+<div class="sourceCode" id="cb162"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="va">species</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Adelie"</span>, <span class="st">"Chinstrap"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>Excluding a species using <code>!=</code>:</p>
+<div class="sourceCode" id="cb163"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="va">species</span> <span class="op">!=</span> <span class="st">"Gentoo"</span><span class="op">)</span></span></code></pre></div>
+<p>Filtering penguins with a flipper length greater than 200 mm:</p>
+<div class="sourceCode" id="cb164"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="va">flipper_length_mm</span> <span class="op">&gt;</span> <span class="fl">200</span><span class="op">)</span></span></code></pre></div>
+<p>Filtering penguins with a body mass less than or equal to 3000 g:</p>
+<div class="sourceCode" id="cb165"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">light_penguins</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="va">body_mass_g</span> <span class="op">&lt;=</span> <span class="fl">3000</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">light_penguins</span><span class="op">)</span></span></code></pre></div>
+<p>Filtering with multiple conditions:</p>
+<div class="sourceCode" id="cb166"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="va">flipper_length_mm</span> <span class="op">&gt;</span> <span class="fl">180</span> <span class="op">&amp;</span> <span class="va">species</span> <span class="op">==</span> <span class="st">"Adelie"</span><span class="op">)</span></span></code></pre></div>
+<p>Using <code>|</code> (OR condition) to select penguins with either a <code>bill_depth_mm</code> greater than 18 or <code>flipper_length_mm</code> longer than 210 mm:</p>
+</div>
+<div id="baser-which-command" class="section level3" number="9.4.3">
+<h3>
+<span class="header-section-number">9.4.3</span> BaseR <code>which()</code> command<a class="anchor" aria-label="anchor" href="#baser-which-command"><i class="fas fa-link"></i></a>
+</h3>
+<p>The <code><a href="https://rdrr.io/r/base/which.html">which()</a></code> command helps us identify row indices that meet a condition.</p>
+<p>For example, identifying numbers greater than 107 in a sequence:</p>
+<div class="sourceCode" id="cb167"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">a</span> <span class="op">&lt;-</span> <span class="fl">100</span><span class="op">:</span><span class="fl">110</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">a</span> <span class="op">&gt;</span> <span class="fl">107</span><span class="op">)</span></span></code></pre></div>
+<p>I like it because you can read the command as a sentence e.g. which numbers in “a” are greater than 107, Or which penguins have a <code>body_mass_g</code> less than or equal to 3000g:</p>
+<div class="sourceCode" id="cb168"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">outlier_rows</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">body_mass_g</span> <span class="op">&lt;=</span> <span class="fl">3000</span><span class="op">)</span></span></code></pre></div>
+<p>To find the row corresponding to the penguin with the smallest bill length:</p>
+<div class="sourceCode" id="cb169"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">row_number</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">bill_length_mm</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">bill_length_mm</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">smallest_bill</span> <span class="op">&lt;-</span> <span class="va">penguins</span><span class="op">[</span><span class="va">row_number</span>, <span class="op">]</span></span>
+<span><span class="va">smallest_bill</span></span></code></pre></div>
 <p><br><br></p>
 </div>
 </div>
-<div id="saving-data-to-new-columns" class="section level2" number="8.5">
+<div id="saving-data-to-new-columns" class="section level2" number="9.5">
 <h2>
-<span class="header-section-number">8.5</span> Saving data to new columns<a class="anchor" aria-label="anchor" href="#saving-data-to-new-columns"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.5</span> Saving data to new columns<a class="anchor" aria-label="anchor" href="#saving-data-to-new-columns"><i class="fas fa-link"></i></a>
 </h2>
 <p>Lets say you wanted to find the ratio between two columns of data, then save your answer as a new column</p>
 <div id="base-r-approach-1" class="section level3 unnumbered">
 <h3>Base R Approach<a class="anchor" aria-label="anchor" href="#base-r-approach-1"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb135"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb170"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">penguins</span><span class="op">$</span><span class="va">bill_ratio</span> <span class="op">&lt;-</span> <span class="va">penguins</span><span class="op">$</span><span class="va">bill_length_mm</span> <span class="op">/</span> <span class="va">penguins</span><span class="op">$</span><span class="va">bill_depth_mm</span></span></code></pre></div>
 </div>
 <div id="tidyverse-approach-1" class="section level3 unnumbered">
 <h3>Tidyverse Approach<a class="anchor" aria-label="anchor" href="#tidyverse-approach-1"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb136"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb171"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">&lt;-</span> <span class="va">penguins</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>bill_ratio <span class="op">=</span> <span class="va">bill_length_mm</span> <span class="op">/</span> <span class="va">bill_depth_mm</span><span class="op">)</span></span></code></pre></div>
 <p><br><br></p>
 </div>
 </div>
-<div id="sorting-data" class="section level2" number="8.6">
+<div id="sorting-data" class="section level2" number="9.6">
 <h2>
-<span class="header-section-number">8.6</span> Sorting Data<a class="anchor" aria-label="anchor" href="#sorting-data"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.6</span> Sorting Data<a class="anchor" aria-label="anchor" href="#sorting-data"><i class="fas fa-link"></i></a>
 </h2>
 <p>Sorting the data allows us to find the highest and lowest values in a dataset.</p>
 <p>Sort by body mass (ascending):</p>
 <div id="tidyverse-approach-2" class="section level3 unnumbered">
 <h3>Tidyverse Approach<a class="anchor" aria-label="anchor" href="#tidyverse-approach-2"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb137"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb172"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="va">body_mass_g</span><span class="op">)</span></span></code></pre></div>
 <p>Sort by descending order:</p>
-<div class="sourceCode" id="cb138"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb173"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">penguins</span>, <span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">flipper_length_mm</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><br></p>
 </div>
 <div id="base-r-approach-2" class="section level3 unnumbered">
 <h3>Base R Approach<a class="anchor" aria-label="anchor" href="#base-r-approach-2"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb139"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb174"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">&lt;-</span> <span class="va">penguins</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">body_mass_g</span><span class="op">)</span>, <span class="op">]</span></span></code></pre></div>
-<div class="sourceCode" id="cb140"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb175"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">&lt;-</span> <span class="va">penguins</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span><span class="op">(</span><span class="op">-</span><span class="va">penguins</span><span class="op">$</span><span class="va">flipper_length_mm</span><span class="op">)</span>, <span class="op">]</span></span></code></pre></div>
 <p><br><br></p>
 </div>
 </div>
-<div id="combining-everything" class="section level2" number="8.7">
+<div id="combining-everything" class="section level2" number="9.7">
 <h2>
-<span class="header-section-number">8.7</span> Combining Everything<a class="anchor" aria-label="anchor" href="#combining-everything"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.7</span> Combining Everything<a class="anchor" aria-label="anchor" href="#combining-everything"><i class="fas fa-link"></i></a>
 </h2>
 <p>We can combine multiple operations into a single pipeline. The tidyverse is designed for this.</p>
 <div id="tidyverse-approach-3" class="section level3 unnumbered">
 <h3>Tidyverse Approach<a class="anchor" aria-label="anchor" href="#tidyverse-approach-3"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb141"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb176"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">final_result</span> <span class="op">&lt;-</span> <span class="va">penguins</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">flipper_length_mm</span> <span class="op">&gt;</span> <span class="fl">180</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>bill_ratio <span class="op">=</span> <span class="va">bill_length_mm</span> <span class="op">/</span> <span class="va">bill_depth_mm</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
@@ -352,7 +359,7 @@ tablename [ ROWS , COLUMNS ]
 <div id="base-r-approach-3" class="section level3 unnumbered">
 <h3>Base R Approach<a class="anchor" aria-label="anchor" href="#base-r-approach-3"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb142"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb177"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">filtered</span> <span class="op">&lt;-</span> <span class="va">penguins</span><span class="op">[</span><span class="va">penguins</span><span class="op">$</span><span class="va">flipper_length_mm</span> <span class="op">&gt;</span> <span class="fl">180</span>, <span class="op">]</span></span>
 <span><span class="va">filtered</span><span class="op">$</span><span class="va">bill_ratio</span> <span class="op">&lt;-</span> <span class="va">filtered</span><span class="op">$</span><span class="va">bill_length_mm</span> <span class="op">/</span> <span class="va">filtered</span><span class="op">$</span><span class="va">bill_depth_mm</span></span>
 <span></span>
@@ -364,50 +371,44 @@ tablename [ ROWS , COLUMNS ]
 </div>
 </div>
 </div>
-
-
-
-
-
-
   <div class="chapter-nav">
-<div class="prev"><a href="T7_summary.html"><span class="header-section-number">7</span> Summarizing Data</a></div>
-<div class="empty"></div>
+<div class="prev"><a href="T6_plots.html"><span class="header-section-number">8</span> Plots</a></div>
+<div class="next"><a href="probability-distributions.html"><span class="header-section-number">10</span> Probability distributions</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#T8_Wrangle"><span class="header-section-number">8</span> Data Filtering</a></li>
-<li><a class="nav-link" href="#introduction-packages"><span class="header-section-number">8.1</span> Introduction &amp; packages</a></li>
+<li><a class="nav-link" href="#T8_Wrangle"><span class="header-section-number">9</span> Data Filtering</a></li>
+<li><a class="nav-link" href="#introduction-packages"><span class="header-section-number">9.1</span> Introduction &amp; packages</a></li>
 <li>
-<a class="nav-link" href="#selecting-columns"><span class="header-section-number">8.2</span> Selecting COLUMNS</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#selecting-a-specific-column-using"><span class="header-section-number">8.2.1</span> Selecting a specific column using $</a></li>
-<li><a class="nav-link" href="#selecting-multiple-columns"><span class="header-section-number">8.2.2</span> Selecting multiple columns</a></li>
+<a class="nav-link" href="#selecting-columns"><span class="header-section-number">9.2</span> Selecting COLUMNS</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#selecting-a-specific-column-using"><span class="header-section-number">9.2.1</span> Selecting a specific column using $</a></li>
+<li><a class="nav-link" href="#selecting-multiple-columns"><span class="header-section-number">9.2.2</span> Selecting multiple columns</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#selecting-specific-rows-columns"><span class="header-section-number">8.3</span> SELECTING SPECIFIC ROWS &amp; COLUMNS</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#deleting-data"><span class="header-section-number">8.3.1</span> Deleting data</a></li></ul>
+<a class="nav-link" href="#selecting-specific-cells"><span class="header-section-number">9.3</span> SELECTING SPECIFIC CELLS</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#deleting-data"><span class="header-section-number">9.3.1</span> Deleting data</a></li></ul>
 </li>
 <li>
-<a class="nav-link" href="#selecting-rows"><span class="header-section-number">8.4</span> SELECTING ROWS</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#baser-which-command"><span class="header-section-number">8.4.1</span> BaseR which() command</a></li>
-<li><a class="nav-link" href="#tidyversedplyr-filter-command"><span class="header-section-number">8.4.2</span> Tidyverse/dplyr filter command</a></li>
-<li><a class="nav-link" href="#random-sampling"><span class="header-section-number">8.4.3</span> Random sampling</a></li>
+<a class="nav-link" href="#T8_RowSelect"><span class="header-section-number">9.4</span> Selecting ROWS</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#random-sampling"><span class="header-section-number">9.4.1</span> Random sampling</a></li>
+<li><a class="nav-link" href="#tidyversedplyr-filter-command"><span class="header-section-number">9.4.2</span> Tidyverse/dplyr filter command</a></li>
+<li><a class="nav-link" href="#baser-which-command"><span class="header-section-number">9.4.3</span> BaseR which() command</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#saving-data-to-new-columns"><span class="header-section-number">8.5</span> Saving data to new columns</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#saving-data-to-new-columns"><span class="header-section-number">9.5</span> Saving data to new columns</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#base-r-approach-1">Base R Approach</a></li>
 <li><a class="nav-link" href="#tidyverse-approach-1">Tidyverse Approach</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#sorting-data"><span class="header-section-number">8.6</span> Sorting Data</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#sorting-data"><span class="header-section-number">9.6</span> Sorting Data</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#tidyverse-approach-2">Tidyverse Approach</a></li>
 <li><a class="nav-link" href="#base-r-approach-2">Base R Approach</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#combining-everything"><span class="header-section-number">8.7</span> Combining Everything</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#combining-everything"><span class="header-section-number">9.7</span> Combining Everything</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#tidyverse-approach-3">Tidyverse Approach</a></li>
 <li><a class="nav-link" href="#base-r-approach-3">Base R Approach</a></li>
 </ul>
@@ -428,7 +429,7 @@ tablename [ ROWS , COLUMNS ]
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>STAT462 Lab Book 2026</strong>" was written by Dr Helen Greatrex. It was last built on 2026-02-25.</p>
+    <p>"<strong>STAT462 Lab Book 2026</strong>" was written by Dr Helen Greatrex. It was last built on 2026-03-04.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
