@@ -234,3 +234,4 @@ T11_Variance
 T11_Normality
 T11_Independence
 T11_Troubleshooting
+cover-image-path-to-the-social-sharing-image-like-imagescover.jpg

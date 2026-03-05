@@ -20,19 +20,15 @@ IMPORTANTLY - please complete [Project 1](#Project1) before continuing here!
 
 The overall aim of part 2 is to show me that you can conduct a basic simple linear regression analysis and communicate the results TO YOUR IMAGINARY BOSS/END-USER. When I say this, I mean this process
 
-![](index_images/im_P1_SLROverview.png)
+![](index_images/im_P1_SLROverview.png){width="90%"}
 
 ## Step 1: Set-up {.unnumbered}
 
--    Re-open your project by EITHER
-
+-   Re-open your project by EITHER
     -   Going to your project folder and double clicking on the .RProj
-
-    -   Opening R studio and going to File, Recent Projects, the open the correct one.
-
--   Open your Lab Book RmD file. On the top right, go to the run menu and press Run-All
-
--   Everything should run without errors. Look at your environment tab and consider renaming your variables if they don't make sense to you
+    -   OR Opening R studio and going to File, Recent Projects, the open the one for your independent research project
+-   Now go to the files tab and open your lab book RmD file. On the top right, go to the run menu and press Run-All.
+-   Everything should run without errors. Look at your environment tab and consider renaming your variables if they don't make sense to you.
 
 ## Step 2: State your model {.unnumbered}
 
