@@ -845,7 +845,7 @@ For cross-sectional data collected independently (like the `HousesNY` sample), i
 
 ------------------------------------------------------------------------
 
-## Troubleshooting {#T11_Troubleshooting}
+## Troubleshooting {#T11_TroubleshootingB}
 
 <br>
 

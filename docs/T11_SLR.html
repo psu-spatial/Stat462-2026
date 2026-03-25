@@ -157,7 +157,7 @@
 <p>The <code>olsrr</code> package provides an alternative summary with a cleaner layout. Remember to first install the olsrr package and to add library(olsrr) to your library code chunk at the top of your script.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">## you apply this command to the MODEL</span></span>
-<span><span class="fu">ols_regress</span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_regress.html">ols_regress</a></span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##                           Model Summary                           
 ## -----------------------------------------------------------------
 ## R                        0.011       RMSE                 41.035 
@@ -190,7 +190,7 @@
 ##         Lot     -0.575         7.611       -0.011    -0.076    0.940    -15.855     14.705 
 ## -------------------------------------------------------------------------------------------</code></pre>
 <blockquote>
-<p><strong>Important:</strong> <code>ols_regress()</code> only works if you used <code>lm(y ~ x, data = tablename)</code>. If you used the <code>$</code> operator (e.g. <code>lm(data$y ~ data$x)</code>), it will break. This is one reason to always use the <code>data =</code> argument.</p>
+<p><strong>Important:</strong> <code><a href="https://olsrr.rsquaredacademy.com/reference/ols_regress.html">ols_regress()</a></code> only works if you used <code>lm(y ~ x, data = tablename)</code>. If you used the <code>$</code> operator (e.g. <code>lm(data$y ~ data$x)</code>), it will break. This is one reason to always use the <code>data =</code> argument.</p>
 </blockquote>
 <p><br></p>
 <hr>
@@ -449,7 +449,7 @@ t = \frac{b_1 - \beta_{1}fromH_0}{se(b_1)}
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># First, extract the coefficients and standard errors from the model. the easiest way is to use olsrr </span></span>
 <span></span>
-<span><span class="va">Model1.summary</span> <span class="op">&lt;-</span> <span class="fu">ols_regress</span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span></span>
+<span><span class="va">Model1.summary</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_regress.html">ols_regress</a></span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span></span>
 <span><span class="va">Model1.Coefficients</span> <span class="op">&lt;-</span> <span class="va">Model1.summary</span><span class="op">$</span><span class="va">betas</span></span>
 <span><span class="va">Model1.StandardError</span> <span class="op">&lt;-</span> <span class="va">Model1.summary</span><span class="op">$</span><span class="va">std_errors</span></span>
 <span></span>
@@ -576,18 +576,18 @@ t = \frac{b_1 - \beta_{1}fromH_0}{se(b_1)}
 </h4>
 <p>For a report or presentation, use <code>ggplot2</code>:</p>
 <div class="sourceCode" id="cb40"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">HousesNY</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">Lot</span>, y <span class="op">=</span> <span class="va">Price</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">geom_point</span><span class="op">(</span>colour <span class="op">=</span> <span class="st">"grey50"</span>, alpha <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span>, colour <span class="op">=</span> <span class="st">"steelblue"</span>, se <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">labs</span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Lot size"</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">HousesNY</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Lot</span>, y <span class="op">=</span> <span class="va">Price</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>colour <span class="op">=</span> <span class="st">"grey50"</span>, alpha <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span>, colour <span class="op">=</span> <span class="st">"steelblue"</span>, se <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Lot size"</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">"Price (x$1000)"</span>,</span>
 <span>       title <span class="op">=</span> <span class="st">"House price vs lot size"</span>,</span>
 <span>       subtitle <span class="op">=</span> <span class="st">"Shaded band = 95% confidence interval on the mean"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">theme_bw</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-figure"><img src="in_04-Tutorial11_SLR_files/figure-html/unnamed-chunk-19-1.png" alt="" width="672"></div>
 <p><code>se = TRUE</code> adds a shaded confidence band around the line. Set <code>se = FALSE</code> to remove it.</p>
 <blockquote>
-<p><strong>Note:</strong> <code>geom_smooth(method = "lm")</code> fits its own line internally — it is not using your saved <code>Model1.lm</code> object. For simple regression this makes no difference, but if your model includes transformations or additional terms, use <code>geom_abline()</code> with the coefficients from your model instead.</p>
+<p><strong>Note:</strong> <code>geom_smooth(method = "lm")</code> fits its own line internally — it is not using your saved <code>Model1.lm</code> object. For simple regression this makes no difference, but if your model includes transformations or additional terms, use <code><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_abline()</a></code> with the coefficients from your model instead.</p>
 </blockquote>
 <p><br></p>
 <hr>
@@ -617,14 +617,14 @@ t = \frac{b_1 - \beta_{1}fromH_0}{se(b_1)}
 <p><strong>What to look for:</strong> a random cloud of points in the residuals vs fitted plot. A curve or systematic pattern means a straight line is not the right model.</p>
 <div class="inline-figure"><img src="index_images/im_T10_linearity.png" style="width:90.0%"></div>
 <div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ols_plot_resid_fit</span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_plot_resid_fit.html">ols_plot_resid_fit</a></span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-figure"><img src="in_04-Tutorial11_SLR_files/figure-html/unnamed-chunk-20-1.png" alt="" width="672"></div>
 <details><summary><span style="color: #1388aa;">Expand to see an example where linearity is broken</span>
 </summary><p>This example uses treadwear data where the raw scatterplot looks approximately linear — but the residuals reveal a clear curve:</p>
 <div class="sourceCode" id="cb42"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">treadwear</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/treadwear.csv"</span><span class="op">)</span></span>
 <span><span class="va">tread_model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">mileage</span> <span class="op">~</span> <span class="va">groove</span>, data <span class="op">=</span> <span class="va">treadwear</span><span class="op">)</span></span>
-<span><span class="fu">ols_plot_resid_fit</span><span class="op">(</span><span class="va">tread_model</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_plot_resid_fit.html">ols_plot_resid_fit</a></span><span class="op">(</span><span class="va">tread_model</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
 <span style="display:block;" id="fig:unnamed-chunk-21"></span>
 <img src="in_04-Tutorial11_SLR_files/figure-html/unnamed-chunk-21-1.png" alt="The residuals show a clear parabolic pattern — a linear model is not appropriate here" width="672"><p class="caption">
@@ -641,11 +641,11 @@ Figure 12.1: The residuals show a clear parabolic pattern — a linear model is 
 <p><strong>What to look for:</strong> the spread of residuals should stay roughly constant across all fitted values. A fan shape or bow-tie means variance is unequal.</p>
 <div class="inline-figure"><img src="index_images/im_T10_variance.png" style="width:90.0%"></div>
 <div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ols_plot_resid_fit</span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_plot_resid_fit.html">ols_plot_resid_fit</a></span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-figure"><img src="in_04-Tutorial11_SLR_files/figure-html/unnamed-chunk-22-1.png" alt="" width="672"></div>
 <p>You can also run a formal test. The F-test assumes residuals are independent and identically distributed:</p>
 <div class="sourceCode" id="cb44"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ols_test_f</span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_test_f.html">ols_test_f</a></span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ##  F Test for Heteroskedasticity
 ##  -----------------------------
@@ -665,7 +665,7 @@ Figure 12.1: The residuals show a clear parabolic pattern — a linear model is 
 </summary><div class="sourceCode" id="cb46"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">alphapluto</span>  <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.table</a></span><span class="op">(</span><span class="st">"/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/alphapluto.txt"</span>, sep <span class="op">=</span> <span class="st">"\t"</span>, header <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="va">alpha_model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">alpha</span> <span class="op">~</span> <span class="va">pluto</span>, data <span class="op">=</span> <span class="va">alphapluto</span><span class="op">)</span></span>
-<span><span class="fu">ols_plot_resid_fit</span><span class="op">(</span><span class="va">alpha_model</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_plot_resid_fit.html">ols_plot_resid_fit</a></span><span class="op">(</span><span class="va">alpha_model</span><span class="op">)</span></span></code></pre></div>
 <div class="figure">
 <span style="display:block;" id="fig:unnamed-chunk-24"></span>
 <img src="in_04-Tutorial11_SLR_files/figure-html/unnamed-chunk-24-1.png" alt="Clear fanning — variance increases with fitted values" width="672"><p class="caption">
@@ -673,7 +673,7 @@ Figure 12.2: Clear fanning — variance increases with fitted values
 </p>
 </div>
 <div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ols_test_f</span><span class="op">(</span><span class="va">alpha_model</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_test_f.html">ols_test_f</a></span><span class="op">(</span><span class="va">alpha_model</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ##  F Test for Heteroskedasticity
 ##  -----------------------------
@@ -700,13 +700,13 @@ Figure 12.2: Clear fanning — variance increases with fitted values
 <p><strong>Note:</strong> Normality matters mainly for p-values and confidence intervals in small samples. With <span class="math inline">\(n &gt; 200\)</span>, the Central Limit Theorem means mild non-normality has little practical effect. Never discard data just because this assumption is mildly broken.</p>
 </blockquote>
 <div class="sourceCode" id="cb49"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ols_plot_resid_qq</span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span>    <span class="co"># Q-Q plot</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_plot_resid_qq.html">ols_plot_resid_qq</a></span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span>    <span class="co"># Q-Q plot</span></span></code></pre></div>
 <div class="inline-figure"><img src="in_04-Tutorial11_SLR_files/figure-html/unnamed-chunk-25-1.png" alt="" width="672"></div>
 <div class="sourceCode" id="cb50"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ols_plot_resid_hist</span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span>  <span class="co"># histogram of residuals</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_plot_resid_hist.html">ols_plot_resid_hist</a></span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span>  <span class="co"># histogram of residuals</span></span></code></pre></div>
 <div class="inline-figure"><img src="in_04-Tutorial11_SLR_files/figure-html/unnamed-chunk-25-2.png" alt="" width="672"></div>
 <div class="sourceCode" id="cb51"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ols_test_normality</span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span>   <span class="co"># formal normality tests</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_test_normality.html">ols_test_normality</a></span><span class="op">(</span><span class="va">Model1.lm</span><span class="op">)</span>   <span class="co"># formal normality tests</span></span></code></pre></div>
 <pre><code>## -----------------------------------------------
 ##        Test             Statistic       pvalue  
 ## -----------------------------------------------
@@ -740,9 +740,9 @@ Figure 12.2: Clear fanning — variance increases with fitted values
 <hr>
 </div>
 </div>
-<div id="T11_Troubleshooting" class="section level2" number="12.10">
+<div id="T11_TroubleshootingB" class="section level2" number="12.10">
 <h2>
-<span class="header-section-number">12.10</span> Troubleshooting<a class="anchor" aria-label="anchor" href="#T11_Troubleshooting"><i class="fas fa-link"></i></a>
+<span class="header-section-number">12.10</span> Troubleshooting<a class="anchor" aria-label="anchor" href="#T11_TroubleshootingB"><i class="fas fa-link"></i></a>
 </h2>
 <p><br></p>
 </div>
