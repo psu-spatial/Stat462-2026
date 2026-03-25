@@ -99,7 +99,7 @@ In this case, you can see that "Beds" is missing because we made it categorical.
 
 <br>
 
-## `ggcorrmat()` from the ggstatsplot library (easier)
+## `ggcorrmat()` from ggstatsplot  {#T10_ggcorrmat}
 
 A second option is in the `ggstatsplot` package and you don't need to worry about subsetting to numeric data. It automatically removes the categorical data for you.
 

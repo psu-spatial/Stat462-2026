@@ -9,7 +9,12 @@ fig:L1-Submit
 fig:L1-CloudDownload
 fig:L2-Projectcheck
 fig:L2-PenguinsHelp
+fig:L2-Submit
+fig:L2-CloudDownload
 fig:L3-Projectcheck
+fig:L3-Submit
+fig:L3-CloudDownload
+fig:L4-Submit
 fig:im-T1-ProjectCloud
 fig:im-T1-Projectcheck
 fig:im-T2-friendlytext
@@ -235,3 +240,5 @@ T11_Normality
 T11_Independence
 T11_Troubleshooting
 cover-image-path-to-the-social-sharing-image-like-imagescover.jpg
+need-help
+fig:unnamed-chunk-3

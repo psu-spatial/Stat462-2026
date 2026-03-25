@@ -301,7 +301,7 @@ Find the html and RmD files in your Lab 1 folder on your computer. Double click 
 
 You can also add comments to your submission as needed on the canvas page, or you can message Dr G.
 
-```{r, L1-Submit, echo=FALSE, fig.cap="Find them in your STAT462 folder on your computer", out.width="100%"}
+```{r, L2-Submit, echo=FALSE, fig.cap="Find them in your STAT462 folder on your computer", out.width="100%"}
 knitr::include_graphics('./index_images/im_T1_WhattoSubmit.png')
 ```
 
@@ -311,7 +311,7 @@ knitr::include_graphics('./index_images/im_T1_WhattoSubmit.png')
 
 2.  Go to the files tab an click on the little check-box by the RmD file. Then click the blue "more button" and press export. Save onto your computer.
 
-```{r, L1-CloudDownload, echo=FALSE, fig.cap="How do download the files from PositCloud", out.width="100%"}
+```{r, L2-CloudDownload, echo=FALSE, fig.cap="How do download the files from PositCloud", out.width="100%"}
 knitr::include_graphics('./index_images/im_T1_CloudSubmit.png')
 ```
 

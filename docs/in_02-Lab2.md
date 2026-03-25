@@ -294,7 +294,7 @@ You can also add comments to your submission as needed on the canvas page, or yo
 
 <div class="figure">
 <img src="./index_images/im_T1_WhattoSubmit.png" alt="Find them in your STAT462 folder on your computer" width="100%" />
-<p class="caption">(\#fig:L1-Submit)Find them in your STAT462 folder on your computer</p>
+<p class="caption">(\#fig:L2-Submit)Find them in your STAT462 folder on your computer</p>
 </div>
 
 ### If you are using Posit Cloud online {.unnumbered}
@@ -305,7 +305,7 @@ You can also add comments to your submission as needed on the canvas page, or yo
 
 <div class="figure">
 <img src="./index_images/im_T1_CloudSubmit.png" alt="How do download the files from PositCloud" width="100%" />
-<p class="caption">(\#fig:L1-CloudDownload)How do download the files from PositCloud</p>
+<p class="caption">(\#fig:L2-CloudDownload)How do download the files from PositCloud</p>
 </div>
 
 2.  Uncheck the .RmD box and click the box by the html file. Then click the blue "more button" and press export. Save onto your computer.
