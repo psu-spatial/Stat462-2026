@@ -29,7 +29,8 @@ REMEMBER THAT EVERY TIME YOU RE-OPEN R-STUDIO YOU NEED TO RE-RUN **ALL** YOUR CO
 
 The maximum time this lab should take is about 4-5 hrs of your time.
 
-<br>
+<br> 
+
 
 ------------------------------------------------------------------------
 
