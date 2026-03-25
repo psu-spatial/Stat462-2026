@@ -1,5 +1,8 @@
 
 
+# Lab 4 {#Lab_4 .unnumbered}
+
+
 ## Aim {.unnumbered}
 
 Welcome to lab 4. This is worth 8% (480 points) and you can drop your lowest lab.
@@ -408,7 +411,7 @@ You can also add comments to your submission as needed on the canvas page, or yo
 
 <br>
 
-## 4. CHECK YOUR GRADE! {#CheckGradeL3 .unnumbered}
+## 4. CHECK YOUR GRADE! {#CheckGradeL4 .unnumbered}
 
 ### RUBRIC {.unnumbered}
 

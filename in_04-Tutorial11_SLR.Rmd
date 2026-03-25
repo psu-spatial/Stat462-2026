@@ -538,7 +538,7 @@ ols_plot_resid_fit(Model1.lm)
 This example uses treadwear data where the raw scatterplot looks approximately linear — but the residuals reveal a clear curve:
 
 ```{r, fig.cap="The residuals show a clear parabolic pattern — a linear model is not appropriate here"}
-treadwear  <- read.csv("index_data/treadwear.csv")
+treadwear  <- read.csv("/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/treadwear.csv")
 tread_model <- lm(mileage ~ groove, data = treadwear)
 ols_plot_resid_fit(tread_model)
 ```
@@ -572,7 +572,7 @@ A small p-value suggests the population may not have equal variance.
 <summary>[Expand to see an example where equal variance is broken]{style="color: #1388aa;"}</summary>
 
 ```{r, fig.cap="Clear fanning — variance increases with fitted values"}
-alphapluto  <- read.table("index_data/alphapluto.txt", sep = "\t", header = TRUE)
+alphapluto  <- read.table("/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/alphapluto.txt", sep = "\t", header = TRUE)
 alpha_model <- lm(alpha ~ pluto, data = alphapluto)
 ols_plot_resid_fit(alpha_model)
 ols_test_f(alpha_model)
@@ -628,7 +628,7 @@ For cross-sectional data collected independently (like the `HousesNY` sample), i
 
 ------------------------------------------------------------------------
 
-## Troubleshooting {#T11_Troubleshooting}
+## Troubleshooting {#T11_TroubleshootingB}
 
 <br>
 
@@ -665,7 +665,7 @@ We can identify residuals via "residual vs leverage plots" and by looking at the
 ### Residual vs leverage plots
 
 ```{r, include=FALSE}
-data <- read.csv("neither.csv")
+data <- read.csv("/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/neither.csv")
 model <- lm(y~x,data=data)
 ```
 
@@ -686,7 +686,7 @@ This takes all
 ### No outliers, influential or high leverage points {.unnumbered}
 
 ```{r,echo=FALSE,message=FALSE,fig.cap="No outliers, influential values or high leverage points"}
-data <- read.csv("neither.csv")
+data <- read.csv("/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/neither.csv")
 layout(matrix(c(1,2), 1, 2, byrow = TRUE))
 plot(data$x,data$y,pch=16,xlab="x",ylab="y",main="Dataset A")
 plot(data$x,data$y,pch=16,xlab="x",ylab="y",main="Dataset A"); abline(lm(y~x,data=data))
@@ -709,7 +709,7 @@ The first way we can check for simple linear regression is to plot the data and 
 ### No outliers, influential or high leverage points {.unnumbered}
 
 ```{r,echo=FALSE,message=FALSE,fig.cap="No outliers, influential values or high leverage points"}
-data <- read.csv("neither.csv")
+data <- read.csv("/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/neither.csv")
 layout(matrix(c(1,2), 1, 2, byrow = TRUE))
 plot(data$x,data$y,pch=16,xlab="x",ylab="y",main="Dataset A")
 plot(data$x,data$y,pch=16,xlab="x",ylab="y",main="Dataset A"); abline(lm(y~x,data=data))
@@ -723,7 +723,7 @@ In the figure above, all of the data points follow the general trend of the rest
 ### An outlier with no leverage {.unnumbered}
 
 ```{r,echo=FALSE,message=FALSE,fig.cap="One outlier. The red-dashed line is the model including all the points. The black-solid line is the model with the red point removed "}
-data1 <- read.csv("outlier.csv")
+data1 <- read.csv("/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/outlier.csv")
 data1b <- data1[-21,]
 
 layout(matrix(c(1,2), 1, 2, byrow = TRUE))
@@ -743,7 +743,7 @@ In the figure above, most of the data points follow the general trend of the res
 ### A high leverage point that isn't an outlier {.unnumbered}
 
 ```{r,echo=FALSE,message=FALSE,fig.cap="No outliers,but one high leverage point. The red-dashed line is the model including all the points. The black-solid line is the model with the red point removed"}
-data2 <- read.csv("leverage.csv")
+data2 <- read.csv("/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/leverage.csv")
 data2b <- data2[-25,]
 
 layout(matrix(c(1,2), 1, 2, byrow = TRUE))
@@ -763,7 +763,7 @@ In the figure above, most of the data points follow the general trend of the res
 ### An influential high leverage outlier {.unnumbered}
 
 ```{r,echo=FALSE,message=FALSE,fig.cap="One influential high leverage outlier. The red-dashed line is the model including all the points. The black-solid line is the model with the red point removed" }
-data2 <- read.csv("influential.csv")
+data2 <- read.csv("/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/influential.csv")
 data2b <- data2[-25,]
 
 layout(matrix(c(1,2), 1, 2, byrow = TRUE))
@@ -808,7 +808,7 @@ For example for our test data:
 
 ```{r,message=FALSE}
 # read the data
-data <- read.csv("neither.csv")
+data <- read.csv("/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/neither.csv")
 
 #calculate the model
 model <- lm(y~x,data=data)
@@ -827,7 +827,7 @@ There should be no absolute cut-off here (around 2-3 is a warning sign). Instead
 
 ```{r,message=FALSE}
 # read the data
-data1 <- read.csv("outlier.csv")
+data1 <- read.csv("/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/outlier.csv")
 
 #calculate the model
 model1 <- lm(y~x,data=data1)
@@ -857,12 +857,12 @@ For example here are our four plots together:
 
 ```{r,message=FALSE,fig.cap="Our four examples"}
 # read the data
-data <- read.csv("neither.csv")
-data2 <- read.csv("outlier.csv")
+data <- read.csv("/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/neither.csv")
+data2 <- read.csv("/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/outlier.csv")
 data2b <- data2[-21,]
-data3 <- read.csv("leverage.csv")
+data3 <- read.csv("/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/leverage.csv")
 data3b <- data3[-25,]
-data4 <- read.csv("influential.csv")
+data4 <- read.csv("/Users/hgreatrex/Documents/GitHub/Teaching/STAT-462/Stat462-2026/index_data/influential.csv")
 data4b <- data4[-25,]
 
 #calculate the model
