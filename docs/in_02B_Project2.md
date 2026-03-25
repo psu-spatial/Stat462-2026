@@ -14,7 +14,7 @@ details > *:not(summary){
 
 <br>
 
-IMPORTANTLY - please complete [Project 1](#Project1) before continuing here!
+IMPORTANTLY - please complete [Project 1](#Project1) before continuing here.
 
 ## Overall aim
 
