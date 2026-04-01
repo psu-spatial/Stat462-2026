@@ -3,14 +3,14 @@
 # Lab 4 {#Lab_4 .unnumbered}
 
 
-## Aim {.unnumbered}
+### Aim {.unnumbered}
 
 Welcome to lab 4. This is worth 8% (480 points) and you can drop your lowest lab.
 
 By the end of this lab, you will be able to:
 
 1.  Understand & use regression diagnostics to assess LINE
-2.  Consider the role of transformations
+2.  Apply this knowledge to a real case study on pollution in Florida Lakes
 
 This is a ONE WEEK LAB. You need to finish writing up by next Tuesday (23:59pm) e.g. just before Lab 6 starts.
 
@@ -22,7 +22,8 @@ REMEMBER THAT EVERY TIME YOU RE-OPEN R-STUDIO YOU NEED TO RE-RUN **ALL** YOUR CO
 
 The maximum time this lab should take is about 4-5 hrs of your time.
 
-<br>
+<br> 
+
 
 ------------------------------------------------------------------------
 
@@ -205,9 +206,7 @@ Small amounts of the element mercury are present in many foods. They do not norm
 
 In the late 1980s, there were widespread public safety concerns in Florida about high mercury concentrations in sport fish. In 1989, the State of Florida issued an advisory urging the public to limit consumption of "top level" predatory fish from Lake Tohopekaliga and connected waters: including largemouth bass (Micropterus salmoides), bowfin (Amia calva), and gar (Lepisosteus spp.). This severely impacted tourism and the economy in the area.
 
-Urgent research was required to inform public policy about which lakes needed to be closed. We are going to reproduce part of one study on the topic conducted by T.R. Lange in 1993.
-
-You can see part of the paper here: [https://www.researchgate.net/publication/15388314_Mercury_accumulation_in_largemouth_bass_Micropterus_salmoides_in_a\\\_Florida_Lake](https://www.researchgate.net/publication/15388314_Mercury_accumulation_in_largemouth_bass_Micropterus_salmoides_in_a_Florida_Lake){.uri}<br>
+Urgent research was required to inform public policy about which lakes needed to be closed. We are going to reproduce part of a real study on this topic <br>
 
 #### Your Goal {.unnumbered}
 
@@ -215,13 +214,9 @@ You can see part of the paper here: [https://www.researchgate.net/publication/15
 
 **You will be presenting your results to the Mayor of Orlando in order to set new fishing regulations.**
 
-Urgent research was required to inform public policy about which lakes needed to be closed. We are going to reproduce part of one study on the topic conducted by T.R. Lange in 1993. Dr Lange and their team took samples from 53 lakes in the Central Florida area.
+In 1993, Dr. T.R. Lange and colleagues collected water samples from 53 lakes across Central Florida. For each lake, they recorded four water quality measures — pH, chlorophyll, calcium, and alkalinity — alongside the average mercury concentration found in the muscle tissue of fish sampled from each lake's waters.
 
--   Using water samples collected from each of the lakes, the researchers measured the pH level, as well as the amount of chlorophyll, calcium and alkalinity.
-
--   The Mercury concentration in the muscle tissue of lake fish was also recorded.
-
-You can read more details in the paper/resources here - [https://www.researchgate.net/publication/15388314_Mercury_accumulation_in_largemouth_bass_Micropterus_salmoides_in_a\\\_Florida_Lake](https://www.researchgate.net/publication/15388314_Mercury_accumulation_in_largemouth_bass_Micropterus_salmoides_in_a_Florida_Lake){.uri}.
+You can read more details in the paper/resources here - [https://www.researchgate.net/publication/241734788_Influence_of_Water_Chemistry_on_Mercury_Concentration_in_Largemouth_Bass_from_Florida_Lakes](https://www.researchgate.net/publication/241734788_Influence_of_Water_Chemistry_on_Mercury_Concentration_in_Largemouth_Bass_from_Florida_Lakes){.uri}.
 
 The units of the your dataset are:
 
@@ -249,7 +244,7 @@ The units of the your dataset are:
 
 -   Create a level 1 heading called Florida Fish
 -   The data is stored on Canvas in **BassNew.xlsx**. Obtain the data from Canvas and put it in your project folder.
--   Use read_excel to read it into R and save it as a variable called `BassNew.xlsx`. e.g.
+-   Use read_excel to read it into R and save it as a variable called `bass`. e.g.
 
 
 ``` r
