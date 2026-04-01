@@ -1,38 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 4 Coding | STAT462 Lab Book 2026</title>
-<meta name="author" content="Dr Helen Greatrex">
-<meta name="description" content="4.1 Functions / Commands Three useful facts about commands: Commands, (often called functions), are the verbs of ‘speaking R’. They are actions, things you do. Commands ALWAYS have...">
-<meta name="generator" content="bookdown 0.46 with bs4_book()">
-<meta property="og:title" content="Chapter 4 Coding | STAT462 Lab Book 2026">
-<meta property="og:type" content="book">
-<meta property="og:url" content="https://psu-spatial.github.io/Stat462-2026/T7_Coding.html">
-<meta property="og:description" content="4.1 Functions / Commands Three useful facts about commands: Commands, (often called functions), are the verbs of ‘speaking R’. They are actions, things you do. Commands ALWAYS have...">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 4 Coding | STAT462 Lab Book 2026">
-<meta name="twitter:description" content="4.1 Functions / Commands Three useful facts about commands: Commands, (often called functions), are the verbs of ‘speaking R’. They are actions, things you do. Commands ALWAYS have...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet">
-<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
-<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><script src="libs/plotly-binding-4.11.0/plotly.js"></script><script src="libs/typedarray-0.1/typedarray.min.js"></script><link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
-<script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script><link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
-<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Chapter 4 Coding | STAT462 Lab Book 2026</title>
+
+    <meta name="author" content="Dr Helen Greatrex" />
+  
+   <meta name="description" content="This is the R-based lab book for Penn State STAT-462 on applied regression analysis. To see the accompnying textbook, go to https://online.stat.psu.edu/stat462" />
+   <meta name="generator" content="placeholder" />
+  <meta property="og:title" content="Chapter 4 Coding | STAT462 Lab Book 2026" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://psu-spatial.github.io/Stat462-2026/" />
+  
+  <meta property="og:description" content="This is the R-based lab book for Penn State STAT-462 on applied regression analysis. To see the accompnying textbook, go to https://online.stat.psu.edu/stat462" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Coding | STAT462 Lab Book 2026" />
+  
+  <meta name="twitter:description" content="This is the R-based lab book for Penn State STAT-462 on applied regression analysis. To see the accompnying textbook, go to https://online.stat.psu.edu/stat462" />
+  
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script>
+    <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
+    <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
+    <script src="libs/bs3compat-0.9.0/transition.js"></script>
+    <script src="libs/bs3compat-0.9.0/tabs.js"></script>
+    <script src="libs/bs3compat-0.9.0/bs3compat.js"></script>
+    <link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet" />
+    <script src="libs/bs4_book-1.0.0/bs4_book.js"></script>
+    <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+    <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
+    <link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+    <script src="libs/plotly-binding-4.11.0/plotly.js"></script>
+    <script src="libs/typedarray-0.1/typedarray.min.js"></script>
+    <link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+    <link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+    <script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
+    
 </head>
+
 <body data-spy="scroll" data-target="#toc">
 
 <div class="container-fluid">
 <div class="row">
-  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book">
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
     <div class="d-flex align-items-start justify-content-between">
       <h1>
@@ -44,114 +73,67 @@
     <div id="main-nav" class="collapse-lg">
       <form role="search">
         <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
-</form>
+      </form>
 
-      <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html">Welcome to STAT-462!</a></li>
-<li><a class="" href="FAQ.html">Course FAQ</a></li>
-<li><a class="" href="WhatIsR.html">What are R and R-Studio?</a></li>
-<li><a class="" href="Setup_Desktop.html">Installing R/R-Studio</a></li>
-<li><a class="" href="Setup_UpdateDesktop.html">Updating R/R-Studio</a></li>
-<li><a class="" href="Setup_Online.html">Posit Cloud Online</a></li>
-<li class="book-part">.</li>
-<li class="book-part">LAB INSTRUCTIONS</li>
-<li><a class="" href="Help.html">HELP!</a></li>
-<li><a class="" href="Lab_1.html">Lab 1</a></li>
-<li><a class="" href="Lab_2.html">Lab 2</a></li>
-<li><a class="" href="Lab_3.html">Lab 3</a></li>
-<li><a class="" href="Lab_4.html">Lab 4</a></li>
-<li class="book-part">.</li>
-<li class="book-part">PROJECT 1</li>
-<li><a class="" href="Project1.html">Project 1</a></li>
-<li><a class="" href="Project2.html">Project 2</a></li>
-<li class="book-part">.</li>
-<li class="book-part">TUTORIALS</li>
-<li><a class="" href="T1_Projects.html"><span class="header-section-number">1</span> Projects/Starting each lab</a></li>
-<li><a class="" href="T2_Libraries.html"><span class="header-section-number">2</span> Libraries/Packages</a></li>
-<li><a class="" href="T3_Markdown.html"><span class="header-section-number">3</span> R-Markdown</a></li>
-<li><a class="active" href="T7_Coding.html"><span class="header-section-number">4</span> Coding</a></li>
-<li><a class="" href="T4_ReadingData.html"><span class="header-section-number">5</span> Reading in data</a></li>
-<li><a class="" href="T5_Summarising.html"><span class="header-section-number">6</span> Summarising Data</a></li>
-<li><a class="" href="T6B_MissingData.html"><span class="header-section-number">7</span> Missing Data In Depth</a></li>
-<li><a class="" href="T6_plots.html"><span class="header-section-number">8</span> Plots</a></li>
-<li><a class="" href="T8_Wrangle.html"><span class="header-section-number">9</span> Data Filtering</a></li>
-<li><a class="" href="probability-distributions.html"><span class="header-section-number">10</span> Probability distributions</a></li>
-<li><a class="" href="correlation.html"><span class="header-section-number">11</span> Correlation</a></li>
-<li><a class="" href="T11_SLR.html"><span class="header-section-number">12</span> Simple Linear Regression</a></li>
-<li><a class="" href="outliers-high-leverage-influential-points.html"><span class="header-section-number">13</span> Outliers, high leverage &amp; influential points</a></li>
-</ul>
+      <nav aria-label="Table of contents">
+        <h2>Table of contents</h2>
+        <div id="book-toc"></div>
 
         <div class="book-extra">
-          
+          <p><a id="book-repo" href="#">View book source <i class="fab fa-github"></i></a></li></p>
         </div>
       </nav>
-</div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="T7_Coding" class="section level1" number="4">
-<h1>
-<span class="header-section-number">4</span> Coding<a class="anchor" aria-label="anchor" href="#T7_Coding"><i class="fas fa-link"></i></a>
-</h1>
+    </div>
+  </header>
+
+  <main class="col-sm-12 col-md-9 col-lg-7" id="content">
+<div id="T7_Coding" class="section level1" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Coding</h1>
 <div id="functions-commands" class="section level2" number="4.1">
-<h2>
-<span class="header-section-number">4.1</span> Functions / Commands<a class="anchor" aria-label="anchor" href="#functions-commands"><i class="fas fa-link"></i></a>
-</h2>
+<h2><span class="header-section-number">4.1</span> Functions / Commands</h2>
 <p>Three useful facts about commands:</p>
 <ul>
-<li>Commands, (often called functions), are the verbs of ‘speaking R’. They are actions, things you <em>do</em>.<br><br>
-</li>
-<li>Commands ALWAYS have parentheses/brackets ( ) after them. It’s how you know it’s a command.<br><br>
-</li>
-<li>You can look at the help file for any command by typing ? then it’s name into the CONSOLE e.g. <code><a href="https://rdrr.io/r/base/mean.html">?mean</a></code>. Or you can go to the help tab next to packages tab, then search for it there. Note, you might have to load the library first! Ever tried getting the instagram help page before you even opened the app? ;)</li>
+<li>Commands, (often called functions), are the verbs of ‘speaking R’. They are actions, things you <em>do</em>.<br><br></li>
+<li>Commands ALWAYS have parentheses/brackets ( ) after them. It’s how you know it’s a command.<br><br></li>
+<li>You can look at the help file for any command by typing ? then it’s name into the CONSOLE e.g. <code>?mean</code>. Or you can go to the help tab next to packages tab, then search for it there. Note, you might have to load the library first! Ever tried getting the instagram help page before you even opened the app? ;)</li>
 </ul>
 <p><br><br></p>
 <div id="commandsfunctions-with-empty" class="section level4" number="4.1.0.1">
-<h4>
-<span class="header-section-number">4.1.0.1</span> Commands/functions with empty ( )<a class="anchor" aria-label="anchor" href="#commandsfunctions-with-empty"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">4.1.0.1</span> Commands/functions with empty ( )</h4>
 <p>These commands are often used to launch an interactive command, or to check something on your computer. You still need the ( ) afterwards, but it can be left empty. I typically run these in the console. Examples</p>
 <ul>
-<li>
-<code><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date( )</a></code><br>
+<li><code>Sys.Date( )</code><br />
 </li>
-<li><code><a href="https://rdrr.io/r/base/getwd.html">getwd( )</a></code></li>
-<li><code><a href="https://rdrr.io/r/base/file.choose.html">file.choose( )</a></code></li>
+<li><code>getwd( )</code></li>
+<li><code>file.choose( )</code></li>
 </ul>
 <p><strong>Task</strong> : Try the commands</p>
 <ul>
-<li><p>One by one, copy/paste the three commands above EXACTLY into the console and press enter to run. As needed, look at the helpfiles for each of them. E.g. in the console, run <code><a href="https://rdrr.io/r/base/Sys.time.html">?Sys.Date</a></code>, <code><a href="https://rdrr.io/r/base/getwd.html">?getwd</a></code>, <code><a href="https://rdrr.io/r/base/file.choose.html">?file.choose</a></code>. In your report, make a heading called Code Showcase (if you haven’t).</p></li>
+<li><p>One by one, copy/paste the three commands above EXACTLY into the console and press enter to run. As needed, look at the helpfiles for each of them. E.g. in the console, run <code>?Sys.Date</code>, <code>?getwd</code>, <code>?file.choose</code>. In your report, make a heading called Code Showcase (if you haven’t).</p></li>
 <li><p>In your report, make a heading called Code Showcase (if you haven’t already).Below it, create a heading-level-2 called “basic commands”. Underneath that, explain what each of the three commands does. Hint, file.choose does NOT open/load any files, or tell you where your project is….</p></li>
 </ul>
 <p><br><br></p>
 </div>
 <div id="commands-that-need-informationdata" class="section level4" number="4.1.0.2">
-<h4>
-<span class="header-section-number">4.1.0.2</span> Commands that need information/data<a class="anchor" aria-label="anchor" href="#commands-that-need-informationdata"><i class="fas fa-link"></i></a>
-</h4>
-<p>Some commands need a little more information. For example, the <code><a href="https://rdrr.io/r/utils/data.html">data()</a></code> command loads an inbuilt dataset into your workspace so we need to tell it which dataset we want. <code><a href="https://rdrr.io/r/stats/Normal.html">rnorm()</a></code> generates a series of random numbers from a normal distribution, but we need to tell it how many we need Examples</p>
+<h4><span class="header-section-number">4.1.0.2</span> Commands that need information/data</h4>
+<p>Some commands need a little more information. For example, the <code>data()</code> command loads an inbuilt dataset into your workspace so we need to tell it which dataset we want. <code>rnorm()</code> generates a series of random numbers from a normal distribution, but we need to tell it how many we need Examples</p>
 <ul>
-<li>
-<code>data(mpg)</code> # loads the mpg data from package ggplot2.</li>
-<li>
-<code>summary(mpg)</code> # summarise the entire mgp dataset (hint for lab 1, this is how to get the average year!)</li>
-<li>
-<code>rnorm(20)</code> # generates a series of 20 random numbers from a normal distribution</li>
-<li>
-<code>names(mpg)</code> # print the column names of a dataset</li>
+<li><code>data(mpg)</code> # loads the mpg data from package ggplot2.</li>
+<li><code>summary(mpg)</code> # summarise the entire mgp dataset (hint for lab 1, this is how to get the average year!)</li>
+<li><code>rnorm(20)</code> # generates a series of 20 random numbers from a normal distribution</li>
+<li><code>names(mpg)</code> # print the column names of a dataset</li>
 </ul>
 <p><strong>Test your knowledge</strong> : Using the information above, try these commands. You can write these in the console.</p>
 <ul>
-<li>Load the <em>penguins</em> dataset from the package <code>palmerpenguins</code> using the data command. <br>
-</li>
-<li>Summarise the penguins dataset using the <code><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse()</a></code> command.</li>
-<li>Look at the penguins dataset using the <code><a href="https://rdrr.io/r/utils/View.html">View()</a></code> command. RUN THIS IN THE CONSOLE</li>
-<li>Work out the column names of the penguins dataset using the <code><a href="https://rdrr.io/r/base/names.html">names()</a></code> command.</li>
+<li>Load the <em>penguins</em> dataset from the package <code>palmerpenguins</code> using the data command. <br></li>
+<li>Summarise the penguins dataset using the <code>glimpse()</code> command.</li>
+<li>Look at the penguins dataset using the <code>View()</code> command. RUN THIS IN THE CONSOLE</li>
+<li>Work out the column names of the penguins dataset using the <code>names()</code> command.</li>
 </ul>
 <p><br><br></p>
 </div>
 <div id="applying-commands-to-columns-rows-of-a-spreadsheet" class="section level4" number="4.1.0.3">
-<h4>
-<span class="header-section-number">4.1.0.3</span> Applying commands to columns &amp; rows of a spreadsheet<a class="anchor" aria-label="anchor" href="#applying-commands-to-columns-rows-of-a-spreadsheet"><i class="fas fa-link"></i></a>
-</h4>
+<h4><span class="header-section-number">4.1.0.3</span> Applying commands to columns &amp; rows of a spreadsheet</h4>
 <p>Just like Lab 1’s ‘what’s the mean year’ question, we often need to apply commands to individual rows or columns in a
 spreadsheet. There are several ways to do this.</p>
 <ul>
@@ -159,61 +141,54 @@ spreadsheet. There are several ways to do this.</p>
 <li>Use a $ and the column name.</li>
 </ul>
 <p>For example, from <a href="https://www.statology.org/r-mean-of-column/" class="uri">https://www.statology.org/r-mean-of-column/</a>, here’s how to get that mean year from the mpg data:</p>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># First, type View(mpg) into the CONSOLE and it will bring up the spreadsheet.  </span></span>
-<span></span>
-<span><span class="co">#calculate mean using column name, note the $ !</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">$</span><span class="va">year</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#calculate mean using column name (ignore missing values)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">$</span><span class="va">year</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#calculate mean using column position, e.g. we're calculating the mean of the Year column (four from left)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">[</span> , <span class="fl">4</span><span class="op">]</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="T7_Coding.html#cb22-1" tabindex="-1"></a><span class="co"># First, type View(mpg) into the CONSOLE and it will bring up the spreadsheet.  </span></span>
+<span id="cb22-2"><a href="T7_Coding.html#cb22-2" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="T7_Coding.html#cb22-3" tabindex="-1"></a><span class="co">#calculate mean using column name, note the $ !</span></span>
+<span id="cb22-4"><a href="T7_Coding.html#cb22-4" tabindex="-1"></a><span class="fu">mean</span>(mpg<span class="sc">$</span>year)</span>
+<span id="cb22-5"><a href="T7_Coding.html#cb22-5" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="T7_Coding.html#cb22-6" tabindex="-1"></a><span class="co">#calculate mean using column name (ignore missing values)</span></span>
+<span id="cb22-7"><a href="T7_Coding.html#cb22-7" tabindex="-1"></a><span class="fu">mean</span>(mpg<span class="sc">$</span>year, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb22-8"><a href="T7_Coding.html#cb22-8" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="T7_Coding.html#cb22-9" tabindex="-1"></a><span class="co">#calculate mean using column position, e.g. we&#39;re calculating the mean of the Year column (four from left)</span></span>
+<span id="cb22-10"><a href="T7_Coding.html#cb22-10" tabindex="-1"></a><span class="fu">mean</span>(mpg[ , <span class="dv">4</span>], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <p><br></p>
 <p><strong>Task</strong> : Using the information above, try these tasks</p>
 <ul>
-<li>Calculate the mean of the column flipper_lenth_mm in the penguins dataset <br>
-</li>
-<li>Calculate the MEDIAN body mass in the penguins dataset <br>
-</li>
-<li>Hint 1, you need to spell the column name EXACTLY for it to work, case sensitive, <br>
-</li>
-<li>Hint 2, look back at your names command! <br>
-</li>
-<li>Hint 3, <a href="https://sparkbyexamples.com/r-programming/median-in-r-examples/" class="uri">https://sparkbyexamples.com/r-programming/median-in-r-examples/</a> <br>
-</li>
+<li>Calculate the mean of the column flipper_lenth_mm in the penguins dataset <br></li>
+<li>Calculate the MEDIAN body mass in the penguins dataset <br></li>
+<li>Hint 1, you need to spell the column name EXACTLY for it to work, case sensitive, <br></li>
+<li>Hint 2, look back at your names command! <br></li>
+<li>Hint 3, <a href="https://sparkbyexamples.com/r-programming/median-in-r-examples/" class="uri">https://sparkbyexamples.com/r-programming/median-in-r-examples/</a> <br></li>
 </ul>
 <p><br><br></p>
 
 </div>
 </div>
 </div>
-  <div class="chapter-nav">
-<div class="prev"><a href="T3_Markdown.html"><span class="header-section-number">3</span> R-Markdown</a></div>
-<div class="next"><a href="T4_ReadingData.html"><span class="header-section-number">5</span> Reading in data</a></div>
-</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
-    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#T7_Coding"><span class="header-section-number">4</span> Coding</a></li>
-<li><a class="nav-link" href="#functions-commands"><span class="header-section-number">4.1</span> Functions / Commands</a></li>
-</ul>
+  </main>
+
+  <div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page">
+      <h2>On this page</h2>
+      <div id="book-on-this-page"></div>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-          
+          <li><a id="book-source" href="#">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="#">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
-</div>
+      </div>
     </nav>
-</div>
+  </div>
 
 </div>
 </div> <!-- .container -->
 
-<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+<footer class="bg-primary text-light mt-5">
+  <div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>STAT462 Lab Book 2026</strong>" was written by Dr Helen Greatrex. It was last built on 2026-03-25.</p>
+    <p>"<strong>STAT462 Lab Book 2026</strong>" was written by Dr Helen Greatrex. It was last built on 2026-04-01.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
@@ -221,7 +196,11 @@ spreadsheet. There are several ways to do this.</p>
   </div>
 
 </div></div>
-</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+</footer>
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -233,7 +212,8 @@ spreadsheet. There are several ways to do this.</p>
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
-</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+</script>
+<script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
 for (let popover of popovers) {
   const div = document.createElement('div');
   div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
@@ -251,4 +231,5 @@ for (let popover of popovers) {
 }
 </script>
 </body>
+
 </html>

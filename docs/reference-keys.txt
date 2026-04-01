@@ -16,6 +16,8 @@ fig:L3-Submit
 fig:L3-CloudDownload
 fig:unnamed-chunk-3
 fig:L4-Submit
+fig:L5-Submit
+fig:L5-CloudDownload
 fig:im-T1-ProjectCloud
 fig:im-T1-Projectcheck
 fig:im-T2-friendlytext
@@ -36,6 +38,7 @@ then-update-your-packages.
 everyone-should-sign-up-for-an-account-here-httpsposit.cloud
 what-if-i-run-out-of-free-time
 need-help
+need-help-1
 overall-aim
 T1_Projects
 T1_ProjectsCloud

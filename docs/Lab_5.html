@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Lab 5 | STAT462 Lab Book 2026</title>
+<meta name="author" content="Dr Helen Greatrex">
+<meta name="description" content="Aim Welcome to Lab 5. This is worth 8% (480 points) and you can drop your lowest lab. By the end of this lab, you will be able to: Understand &amp; use regression diagnostics to assess LINE Apply this...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Lab 5 | STAT462 Lab Book 2026">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://psu-spatial.github.io/Stat462-2026/Lab_5.html">
+<meta property="og:description" content="Aim Welcome to Lab 5. This is worth 8% (480 points) and you can drop your lowest lab. By the end of this lab, you will be able to: Understand &amp; use regression diagnostics to assess LINE Apply this...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lab 5 | STAT462 Lab Book 2026">
+<meta name="twitter:description" content="Aim Welcome to Lab 5. This is worth 8% (480 points) and you can drop your lowest lab. By the end of this lab, you will be able to: Understand &amp; use regression diagnostics to assess LINE Apply this...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet">
+<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><script src="libs/plotly-binding-4.11.0/plotly.js"></script><script src="libs/typedarray-0.1/typedarray.min.js"></script><link href="libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+<script src="libs/crosstalk-1.2.2/js/crosstalk.min.js"></script><link href="libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="libs/plotly-main-2.11.1/plotly-latest.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">STAT462 Lab Book 2026</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome to STAT-462!</a></li>
+<li><a class="" href="FAQ.html">Course FAQ</a></li>
+<li><a class="" href="WhatIsR.html">What are R and R-Studio?</a></li>
+<li><a class="" href="Setup_Desktop.html">Installing R/R-Studio</a></li>
+<li><a class="" href="Setup_UpdateDesktop.html">Updating R/R-Studio</a></li>
+<li><a class="" href="Setup_Online.html">Posit Cloud Online</a></li>
+<li class="book-part">.</li>
+<li class="book-part">LAB INSTRUCTIONS</li>
+<li><a class="" href="Help.html">HELP!</a></li>
+<li><a class="" href="Lab_1.html">Lab 1</a></li>
+<li><a class="" href="Lab_2.html">Lab 2</a></li>
+<li><a class="" href="Lab_3.html">Lab 3</a></li>
+<li><a class="" href="Lab_4.html">Lab 4</a></li>
+<li><a class="active" href="Lab_5.html">Lab 5</a></li>
+<li class="book-part">.</li>
+<li class="book-part">PROJECT 1</li>
+<li><a class="" href="Project1.html">Project 1</a></li>
+<li><a class="" href="Project2.html">Project 2</a></li>
+<li class="book-part">.</li>
+<li class="book-part">TUTORIALS</li>
+<li><a class="" href="T1_Projects.html"><span class="header-section-number">1</span> Projects/Starting each lab</a></li>
+<li><a class="" href="T2_Libraries.html"><span class="header-section-number">2</span> Libraries/Packages</a></li>
+<li><a class="" href="T3_Markdown.html"><span class="header-section-number">3</span> R-Markdown</a></li>
+<li><a class="" href="T7_Coding.html"><span class="header-section-number">4</span> Coding</a></li>
+<li><a class="" href="T4_ReadingData.html"><span class="header-section-number">5</span> Reading in data</a></li>
+<li><a class="" href="T5_Summarising.html"><span class="header-section-number">6</span> Summarising Data</a></li>
+<li><a class="" href="T6B_MissingData.html"><span class="header-section-number">7</span> Missing Data In Depth</a></li>
+<li><a class="" href="T6_plots.html"><span class="header-section-number">8</span> Plots</a></li>
+<li><a class="" href="T8_Wrangle.html"><span class="header-section-number">9</span> Data Filtering</a></li>
+<li><a class="" href="probability-distributions.html"><span class="header-section-number">10</span> Probability distributions</a></li>
+<li><a class="" href="correlation.html"><span class="header-section-number">11</span> Correlation</a></li>
+<li><a class="" href="T11_SLR.html"><span class="header-section-number">12</span> Simple Linear Regression</a></li>
+<li><a class="" href="outliers-high-leverage-influential-points.html"><span class="header-section-number">13</span> Outliers, high leverage &amp; influential points</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="Lab_5" class="section level1 unnumbered">
+<h1>Lab 5<a class="anchor" aria-label="anchor" href="#Lab_5"><i class="fas fa-link"></i></a>
+</h1>
+<div id="aim-1" class="section level3 unnumbered">
+<h3>Aim<a class="anchor" aria-label="anchor" href="#aim-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>Welcome to Lab 5. This is worth 8% (480 points) and you can drop your lowest lab.</p>
+<p>By the end of this lab, you will be able to:</p>
+<ol style="list-style-type: decimal">
+<li>Understand &amp; use regression diagnostics to assess LINE</li>
+<li>Apply this knowledge to a real case study on pollution in Florida Lakes</li>
+</ol>
+<p>This is a ONE WEEK LAB. You need to finish writing up by next Tuesday (23:59pm) e.g. just before Lab 6 starts.</p>
+<p><br></p>
+</div>
+<div id="need-help-1" class="section level3" number="0.1.4">
+<h3>
+<span class="header-section-number">0.1.4</span> Need help?<a class="anchor" aria-label="anchor" href="#need-help-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>REMEMBER THAT EVERY TIME YOU RE-OPEN R-STUDIO YOU NEED TO RE-RUN <strong>ALL</strong> YOUR CODE CHUNKS. The easiest way to do this is to press the “Run All” button (see the Run menu at the top right of your script)</p>
+<p>The maximum time this lab should take is about 4-5 hrs of your time.</p>
+<p><br></p>
+<hr>
+</div>
+<div id="lab-set-up-important-4" class="section level2 unnumbered">
+<h2>1. LAB SET-UP (Important!)<a class="anchor" aria-label="anchor" href="#lab-set-up-important-4"><i class="fas fa-link"></i></a>
+</h2>
+<div id="step-1-create-your-lab-5-project" class="section level3 unnumbered">
+<h3>STEP 1: Create your Lab 5 project<a class="anchor" aria-label="anchor" href="#step-1-create-your-lab-5-project"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p><strong>[1A]</strong> Make a project for Lab 5 (tutorial here) <a href="T1_Projects.html#T1_Projects">Projects</a></p></li>
+<li><p><strong>[1B]</strong> Open your Lab 5 project in R-Studio (see screenshot below).</p></li>
+</ul>
+<p><br></p>
+<hr>
+</div>
+<div id="step-2-create-your-lab-report-structure-1" class="section level3 unnumbered">
+<h3>STEP 2: Create your lab report structure<a class="anchor" aria-label="anchor" href="#step-2-create-your-lab-report-structure-1"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p><strong>[3A]</strong> Make a new RMarkdown Report (<a href="T3_Markdown.html#T31_Basics">Tutorial here</a>) <br></p></li>
+<li>
+<p><strong>[3B]</strong> Using the <a href="T3_Markdown.html#Tut4E_YAML">YAML tutorial</a>, edit the YAML code at the top to include,</p>
+<ul>
+<li><p>A title,</p></li>
+<li><p>your author name,</p></li>
+<li><p>Automatically creating today’s date,</p></li>
+<li><p>A floating table of contents,</p></li>
+<li><p>Numbered sections</p></li>
+<li><p>A theme of your choice. (See the screenshot below) <br></p></li>
+</ul>
+</li>
+<li><p><strong>[3C]</strong> Delete all “the friendly welcome text”, leaving the code at the top, so you have space to write your answers. (see the screenshot below)</p></li>
+</ul>
+<div class="inline-figure"><img src="index_images/im_L2_SetupReport.png" alt="" width="100%" style="display: block; margin: auto;"></div>
+<p><br></p>
+</div>
+<div id="step-3-new-ish-adjust-your-knit-options-1" class="section level3 unnumbered">
+<h3>STEP 3: NEW (ish) Adjust your knit options<a class="anchor" aria-label="anchor" href="#step-3-new-ish-adjust-your-knit-options-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>Many of you are losing marks because you are allowing all the library loading text to appear when you press knit. This makes it hard to find your answers. Although this was addressed in earlier labs, here’s how to fix this issue.</p>
+<ul>
+<li>Look at the first code chunk below the YAML code (or if you deleted it, put this code in a code chunk). The opts_chunk command allows us to set general knit options for the entire report</li>
+</ul>
+<pre><code>   knitr::opts_chunk$set(echo = TRUE)</code></pre>
+<ul>
+<li>Add in two more options, warning=FALSE and message=FALSE. Now when you press knit, you shouldn’t see any library loading text. You can also add these options to any code chunk if you want to suppress that specific output (see the Markdown Tutorial)</li>
+</ul>
+<p><br></p>
+</div>
+<div id="step-4-newish-sort-out-libraries-1" class="section level3 unnumbered">
+<h3>STEP 4: NEW(ish) Sort out libraries<a class="anchor" aria-label="anchor" href="#step-4-newish-sort-out-libraries-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>It’s good practice to have a single code chunk near the top of the script containing all your library commands. This is to stop duplicated code and to make it easy to see what you are loading before running your labs.</p>
+<ul>
+<li>
+<p>Add a new code chunk and add the following libraries. Then press save or try to knit. <br> If any are missing you will see</p>
+<ul>
+<li>EITHER a little yellow bar at the top of the screen asking if you want to install the libraries. Say yes, wait until the libraries are installed and try again. <br>
+</li>
+<li>OR an error saying that it can’t find that library (it might also be a spelling mistake if you are sure it’s installed). In this case, you have to go to the app store and download it. <br><br>
+</li>
+</ul>
+</li>
+<li><p>Finally, if ChatGPT, or R or anyone else gives you code with a library command in it, PUT THAT LIBRARY COMMAND IN YOUR TOP ‘LIBRARY’ CODE CHUNK!</p></li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span> <span class="co"># Lots of data processing commands</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span>     <span class="co"># Helps make good output files</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>   <span class="co"># Output plots</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/skimr/">skimr</a></span><span class="op">)</span>     <span class="co"># Summary statistics</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/statmanrobin/Stat2Data">Stat2Data</a></span><span class="op">)</span> <span class="co"># Regression specific commands</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/taiyun/corrplot">corrplot</a></span><span class="op">)</span>  <span class="co"># correlation plots</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggobi.github.io/ggally/">GGally</a></span><span class="op">)</span>    <span class="co"># correlation plots</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rpkgs.datanovia.com/ggpubr/">ggpubr</a></span><span class="op">)</span>    <span class="co"># QQplots</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://olsrr.rsquaredacademy.com/">olsrr</a></span><span class="op">)</span>     <span class="co"># Regression specific commands</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://plotly-r.com">plotly</a></span><span class="op">)</span>    <span class="co"># Interactive plots</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span>    <span class="co"># Read from excel files</span></span></code></pre></div>
+<p><br><br></p>
+</div>
+<div id="step-1.4-check-progress-1" class="section level3 unnumbered">
+<h3>
+<strong>[Step 1.4] Check Progress</strong><a class="anchor" aria-label="anchor" href="#step-1.4-check-progress-1"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>OK - so by now, you should be running project 5 - see if it says Project 5 at the very top of your screen , you have created your lab report, the YAML code works and your libraries work. If not, STOP, go back and redo the tutorials or talk to Dr G.</li>
+</ul>
+<p><br><br></p>
+<hr>
+</div>
+</div>
+<div id="study-set-up" class="section level2 unnumbered">
+<h2>2. STUDY SET-UP<a class="anchor" aria-label="anchor" href="#study-set-up"><i class="fas fa-link"></i></a>
+</h2>
+<p><br></p>
+<p><strong>THIS IS A SEPARATE LAB TO LAB 4, SO YOU CAN START FRESH IN A NEW PROJECT</strong> <br></p>
+<p><br></p>
+<div id="step-2.1-get-new-data" class="section level3 unnumbered">
+<h3>
+<strong>[Step 2.1] GET NEW DATA</strong><a class="anchor" aria-label="anchor" href="#step-2.1-get-new-data"><i class="fas fa-link"></i></a>
+</h3>
+<p>Although we are on the same topic, this lab is separate to the previous lab, so we need new data.</p>
+<ul>
+<li>Create a level 1 heading called Set up</li>
+<li>Go to the Canvas Lab 5 page, download BOTH the datasets and put them into your Lab 5 project folder.</li>
+<li>Use read_excel to read each of them into R. e.g. </li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">AllData</span>       <span class="op">&lt;-</span> <span class="fu"><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_excel</a></span><span class="op">(</span><span class="st">"index_data/Lab5bassFull.xlsx"</span><span class="op">)</span></span>
+<span><span class="va">MinusOutliers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_excel</a></span><span class="op">(</span><span class="st">"index_data/Lab5bassMinusOutlier.xlsx"</span><span class="op">)</span></span></code></pre></div>
+<p><br><br></p>
+</div>
+<div id="step-2.2-background-context." class="section level3 unnumbered">
+<h3>
+<strong>[Step 2.2] Background context.</strong><a class="anchor" aria-label="anchor" href="#step-2.2-background-context."><i class="fas fa-link"></i></a>
+</h3>
+<p>Go back to your lab 4 report and remind yourself of what you did and what the aim of the study was. Write at least 3 sentences explaining what the topic is, your client, the object of analysis, response &amp; predictor variables, and what you have learned so far. you can copy/paste from your lab 4 text.</p>
+</div>
+</div>
+<div id="data-without-the-outliers" class="section level2 unnumbered">
+<h2>3. DATA WITHOUT THE OUTLIERS<a class="anchor" aria-label="anchor" href="#data-without-the-outliers"><i class="fas fa-link"></i></a>
+</h2>
+<p>At the end of Lab 4, one of your colleagues suggested that there were 4 problematic data points, Lake alligator, Lake puzzle, Lake annie and Lake brick.</p>
+<p>This person removed those outliers and asked you to also analyse that data. <strong>THIS IS YOUR MinusOutliers DATASET</strong>.</p>
+<p><br><br></p>
+<div id="step-3.1-fit-a-new-model" class="section level3 unnumbered">
+<h3>
+<strong>[Step 3.1]</strong> Fit a new model<a class="anchor" aria-label="anchor" href="#step-3.1-fit-a-new-model"><i class="fas fa-link"></i></a>
+</h3>
+<p>THIS IS IDENTICAL TO LAB 4 BUT WITH NEW DATA..</p>
+<ul>
+<li><p>Fit a new linear model to your minus outlier dataset (see lab 4 for instructions). Call it <code>Model_NoOutliers</code>.</p></li>
+<li><p>Note down the coefficient of determination in the text.</p></li>
+<li><p>Assess if the model meets the LINE assumptions, explaining what you mean in the text and providing all evidence as necessary (e.g. residual plots etc).</p></li>
+<li><p>You do NOT need to remove any more outliers, but please note if any are influential.</p></li>
+</ul>
+<p><br><br></p>
+</div>
+<div id="step-3.2-transformation-for-non-equal-variance" class="section level3 unnumbered">
+<h3>
+<strong>[Step 3.2]</strong> Transformation for non equal variance<a class="anchor" aria-label="anchor" href="#step-3.2-transformation-for-non-equal-variance"><i class="fas fa-link"></i></a>
+</h3>
+<p>When assessing your LINE plots, your colleague suggested that it broke the assumption of equal variance. In this case we should transform the RESPONSE variable.</p>
+<ul>
+<li><p>In the text, explain if this means we can trust the “line of best fit”, use the model to predict new points or neither and give reasons.</p></li>
+<li><p>Get this code running and explain in the text, referring to the lecture notes or online textbook (<a href="https://online.stat.psu.edu/stat501/lesson/9" class="uri">https://online.stat.psu.edu/stat501/lesson/9</a>) what we are doing and why.</p></li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">MinusOutliers</span><span class="op">$</span><span class="va">Ln_fish_av_mercury</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">log</a></span><span class="op">(</span><span class="va">MinusOutliers</span><span class="op">$</span><span class="va">fish_av_mercury</span><span class="op">)</span></span></code></pre></div>
+<p><br><br></p>
+</div>
+<div id="step-3.3-fit-a-new-model" class="section level3 unnumbered">
+<h3>
+<strong>[Step 3.3]</strong> Fit a new model<a class="anchor" aria-label="anchor" href="#step-3.3-fit-a-new-model"><i class="fas fa-link"></i></a>
+</h3>
+<p><em>Remember you can copy/paste previous code!</em></p>
+<ul>
+<li><p>Now fit a NEW model between your response and lake_alkalinity (call it something like <code>Model_NoOutliers_lnResp</code>),</p></li>
+<li><p>Plot it in a professional scatterplot (with a line of best fit)</p></li>
+<li><p>Assess it for LINE/outliers (ignoring independence).</p></li>
+<li><p>Write out the regression equation remembering that you are now looking at log(fish_av_mercury) as a response.</p></li>
+<li><p>Discuss in the text, whether the transformation helped and why you think that.</p></li>
+</ul>
+<p><br><br></p>
+</div>
+</div>
+<div id="full-data-with-the-outliers" class="section level2 unnumbered">
+<h2>4. FULL DATA WITH THE OUTLIERS<a class="anchor" aria-label="anchor" href="#full-data-with-the-outliers"><i class="fas fa-link"></i></a>
+</h2>
+<p>There is good evidence to suggest that NONE of the original outliers mentioned by your colleague are actually unusual points or should be removed. So we are going to redo the analysis with the full dataset.</p>
+<p><br><br></p>
+<div id="step-3.1-fit-the-original-model" class="section level3 unnumbered">
+<h3>
+<strong>[Step 3.1]</strong> Fit the original model<a class="anchor" aria-label="anchor" href="#step-3.1-fit-the-original-model"><i class="fas fa-link"></i></a>
+</h3>
+<p><em>Remember you can copy/paste previous code</em></p>
+<ul>
+<li><p>Fit a new linear model to your AllData (see lab 4 for instructions). Call it <code>Model_Full</code>.</p></li>
+<li><p>Note down the coefficient of determination in the text and write out the model equation.</p></li>
+<li><p>You do not need to assess LINE etc because we did this in Lab 4!</p></li>
+</ul>
+<p><br><br></p>
+</div>
+<div id="step-3.2-linearity-transformations" class="section level3 unnumbered">
+<h3>
+<strong>[Step 3.2]</strong> Linearity Transformations<a class="anchor" aria-label="anchor" href="#step-3.2-linearity-transformations"><i class="fas fa-link"></i></a>
+</h3>
+<p>A second way to “explain” the outliers is that the Linearity assumption is broken.</p>
+<ul>
+<li><p>In the text, explain if this means we can trust the “line of best fit”, use the model to predict new points or neither and give reasons.</p></li>
+<li><p>To do this, we will take the natural log transformation of our predictor, lake_alkalinity, and save it as a new column. In R, the natural log (ln) is given by the log() command.</p></li>
+<li><p>So for the <strong>AllData</strong> dataset, take the log of the <strong>lake_alkalinity</strong> column, and save it to a new column called <strong>Log_lake_Alkalinity</strong>. Note, this is similar to step 3.2…</p></li>
+</ul>
+<p><br><br></p>
+</div>
+<div id="step-3.2-predictor-transformed-model" class="section level3 unnumbered">
+<h3>
+<strong>[Step 3.2]</strong> Predictor Transformed Model<a class="anchor" aria-label="anchor" href="#step-3.2-predictor-transformed-model"><i class="fas fa-link"></i></a>
+</h3>
+<p><em>Remember you can copy/paste previous code</em></p>
+<ul>
+<li><p>Now fit a NEW model between your response and Log_Alkalinity (call it something clear like <code>Model_Full_lnPred</code>),</p></li>
+<li><p>Plot it in a professional scatterplot (with a line of best fit)</p></li>
+<li><p>Assess it for LINE/outliers (ignoring independence).</p></li>
+<li><p>Write out the regression equation remembering that you are now looking at log(lake_alkalinity) as a predictor..</p></li>
+</ul>
+<p>Remember you can copy/paste previous code!</p>
+<p><br><br></p>
+</div>
+<div id="step-3.3-model-comparison" class="section level3 unnumbered">
+<h3>
+<strong>[Step 3.3]</strong> Model comparison<a class="anchor" aria-label="anchor" href="#step-3.3-model-comparison"><i class="fas fa-link"></i></a>
+</h3>
+<p>Make a new sub-heading called “Model Comparison”, and sub-sub-heading as needed to keep this neat.</p>
+<ul>
+<li>In the text, summarise what we did for the four models e.g.
+model 1: linear model of data with four data-points removed.</li>
+</ul>
+<p><br></p>
+<ul>
+<li>
+<p>In the text, explain which of the four models explains the most variability in fish-mercury-content across the lakes?</p>
+<ul>
+<li><em>Provide evidence to justify your answer, including the relevant statistic for each model from all four model summaries.</em></li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li>In the text, compare the LINE assumptions (ignoring independence) of the four models.</li>
+</ul>
+<p><br></p>
+<ul>
+<li>In the text, calculate what each model predicts for the lake fish mercury (on average), for lakes with an alkalinity of 2.</li>
+</ul>
+<p><br><br></p>
+</div>
+<div id="step-3.4-summary" class="section level3 unnumbered">
+<h3>
+<strong>[Step 3.4]</strong> Summary<a class="anchor" aria-label="anchor" href="#step-3.4-summary"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p>Finally, summarise for the mayor which model you would choose and why. e.g. Is there more than one “good choice”?</p></li>
+<li><p>Explain the consequences of getting choosing the “wrong” model (e.g. do the other model overpredict for certain lakes? underpredict?).</p></li>
+</ul>
+<p><br><br></p>
+<p>NO MATTER WHAT YOUR CONCLUSIONS, EVERYTHING FROM THIS POINT ONWARDS SHOULD USE THE FULL MODEL WITH THE PREDICTOR TRANSFORMATION (Model_Full_lnPred)</p>
+<p><br><br></p>
+</div>
+</div>
+<div id="prediction" class="section level2 unnumbered">
+<h2>5. PREDICTION<a class="anchor" aria-label="anchor" href="#prediction"><i class="fas fa-link"></i></a>
+</h2>
+<p>THIS IS GOING TO BE COVERED IN LECTURE 12C. FOR NOW, Read Tutorial 12: &lt;<a href="https://psu-spatial.github.io/Stat462-2024/confidence-and-prediction-intervals.html" class="uri">https://psu-spatial.github.io/Stat462-2024/confidence-and-prediction-intervals.html</a></p>
+<div id="step-5.1-prediction-question-1" class="section level3 unnumbered">
+<h3>
+<strong>[Step 5.1]</strong> Prediction question 1<a class="anchor" aria-label="anchor" href="#step-5.1-prediction-question-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>NO MATTER WHAT YOUR CONCLUSIONS, EVERYTHING FROM THIS POINT ONWARDS SHOULD USE THE FULL MODEL WITH THE PREDICTOR TRANSFORMATION.</p>
+<p>Make a new subsection called <code>Prediction</code>. The mayor recently had a question from a member if the public who went fishing in a <strong>new lake</strong> that was not part of the study.</p>
+<ul>
+<li><p>We know the alkalinity level of that lake was 40mg/L.</p></li>
+<li><p>The member of the public wants to be 99% sure that they won’t exceed the Florida Health Advisory level for Mercury levels in Fish, which is 1 <span class="math inline">\(\mu g\)</span> of Mercury.</p></li>
+<li><p>Should they eat the fish?</p></li>
+<li><p>Explain your answer and show your evidence for how you came to your conclusion.</p></li>
+</ul>
+<p>HINT 1: <a href="https://psu-spatial.github.io/Stat462-2025/in_T17_ConfPred.html#13_Calculating_a_prediction_interval" class="uri">https://psu-spatial.github.io/Stat462-2025/in_T17_ConfPred.html#13_Calculating_a_prediction_interval</a></p>
+<p>HINT 2: PROBLEM SOLVING - If your output doesn’t look correct, then its normally this error.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="Lab_5.html#cb15-1" tabindex="-1"></a><span class="co"># make sure yoru model code is</span></span>
+<span id="cb15-2"><a href="Lab_5.html#cb15-2" tabindex="-1"></a><span class="fu">lm</span>(YColumn <span class="sc">~</span> XColumn, <span class="at">data=</span>mytable)</span>
+<span id="cb15-3"><a href="Lab_5.html#cb15-3" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="Lab_5.html#cb15-4" tabindex="-1"></a><span class="co"># NOT THIS, THIS BREAKS THE PREDICT COMMAND</span></span>
+<span id="cb15-5"><a href="Lab_5.html#cb15-5" tabindex="-1"></a><span class="fu">lm</span>(mytable<span class="sc">$</span>YColumn <span class="sc">~</span> mytable<span class="sc">$</span>XColumn, <span class="at">data=</span>mytable</span></code></pre></div>
+<p><br><br></p>
+</div>
+<div id="step-3.11-more-complex---worth-4." class="section level3 unnumbered">
+<h3>
+<strong>[Step 3.11]</strong> More complex - worth 4%.<a class="anchor" aria-label="anchor" href="#step-3.11-more-complex---worth-4."><i class="fas fa-link"></i></a>
+</h3>
+<p>Make a new subsection called <code>Bonus Question</code></p>
+<p><strong>The Florida Health Advisory level for Mercury levels in Fish is 1</strong> <span class="math inline">\(\mu g\)</span> <strong>of Mercury. The nayor has accepted your model and is requiring state-wide alkalinity tests.</strong></p>
+<p><strong>Using your new model, what is your recommended “safety cut-off” value of alkalinity for new lakes? You would like to be 95% sure that you aren’t just seeing this result by chance. Provide evidence/code showing how you got to your answer</strong></p>
+<p><em>This question is designed to be more difficult and realistic. I will answer points of clarification, but I will not help anyone work through it before the labs are submitted. However I will award partial marks for workings and how far you get.</em></p>
+<p><em>It is based on thinking about confidence and prediction intervals and as a hint, think about confidence and prediction intervals graphically on your scatterplot.</em></p>
+<p><a href="https://online.stat.psu.edu/stat501/lesson/3/3.3"><img src="images/regress_mort_lat_PICI.png" style="width:50.0%" alt="Confidence and prediction intervals from the STAT online text book"></a></p>
+<p><br><br></p>
+<p>Congrats! Finished.</p>
+<hr>
+<p><br></p>
+</div>
+</div>
+<div id="what-to-submit-4" class="section level2 unnumbered">
+<h2>3. WHAT TO SUBMIT<a class="anchor" aria-label="anchor" href="#what-to-submit-4"><i class="fas fa-link"></i></a>
+</h2>
+<div id="if-you-are-using-your-own-laptop-4" class="section level3 unnumbered">
+<h3>If you are using your own laptop<a class="anchor" aria-label="anchor" href="#if-you-are-using-your-own-laptop-4"><i class="fas fa-link"></i></a>
+</h3>
+<p>Press knit one final time. You will have created two files; a <code>.Rmd</code> file containing your code and a <code>.html</code> file for viewing your finished document.</p>
+<p>Find the html and RmD files in your Lab 1 folder on your computer. Double click the html file to open it in your browser and check it’s the one you want to submit.</p>
+<p><strong>You need to submit BOTH of these files on the relevant Canvas assignment page.</strong></p>
+<p>You can also add comments to your submission as needed on the canvas page, or you can message Dr G.</p>
+<div class="figure">
+<span style="display:block;" id="fig:L5-Submit"></span>
+<img src="index_images/im_T1_WhattoSubmit.png" alt="Find them in your STAT462 folder on your computer" width="100%"><p class="caption">
+Figure 0.18: Find them in your STAT462 folder on your computer
+</p>
+</div>
+</div>
+<div id="if-you-are-using-posit-cloud-online-4" class="section level3 unnumbered">
+<h3>If you are using Posit Cloud online<a class="anchor" aria-label="anchor" href="#if-you-are-using-posit-cloud-online-4"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li><p>Press knit one final time. You will have created two files; a <code>.Rmd</code> file containing your code and a <code>.html</code> file for viewing your finished document.</p></li>
+<li><p>Go to the files tab an click on the little check-box by the RmD file. Then click the blue “more button” and press export. Save onto your computer.</p></li>
+</ol>
+<div class="figure">
+<span style="display:block;" id="fig:L5-CloudDownload"></span>
+<img src="index_images/im_T1_CloudSubmit.png" alt="How do download the files from PositCloud" width="100%"><p class="caption">
+Figure 0.19: How do download the files from PositCloud
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Uncheck the .RmD box and click the box by the html file. Then click the blue “more button” and press export. Save onto your computer.</li>
+</ol>
+<p><strong>You need to submit BOTH of these files on the relevant Canvas assignment page.</strong></p>
+<p>You can also add comments to your submission as needed on the canvas page, or you can message Dr G.</p>
+<p><br></p>
+</div>
+</div>
+<div id="CheckGradeL4" class="section level2 unnumbered">
+<h2>4. CHECK YOUR GRADE!<a class="anchor" aria-label="anchor" href="#CheckGradeL4"><i class="fas fa-link"></i></a>
+</h2>
+<div id="rubric-4" class="section level3 unnumbered">
+<h3>RUBRIC<a class="anchor" aria-label="anchor" href="#rubric-4"><i class="fas fa-link"></i></a>
+</h3>
+<p>This is how you will be graded (percent)</p>
+<ul>
+<li><p><strong>HTML FILE SUBMISSION - 10 marks</strong></p></li>
+<li><p><strong>RMD CODE SUBMISSION - 10 marks</strong></p></li>
+<li>
+<p><strong>MARKDOWN/CODE STYLE - 10 MARKS</strong> <br> How to get full marks for this:</p>
+<ul>
+<li><p>Your YAML code is working e.g. when you press knit, you see your author name, a table of contents etc etc (see step 4)</p></li>
+<li>
+<p>Your code and document is neat and easy to read. LOOK AT YOUR HTML FILE IN YOUR WEB-BROWSER BEFORE YOU SUBMIT. For example:</p>
+<ul>
+<li><p>There is a spell check next to the save button.</p></li>
+<li><p>You have written in full sentences and it is clear what question your answers are referring to.</p></li>
+<li><p>You have included units!</p></li>
+<li><p>You have included formatting like headings/subheadings and bullets. Many people make typos with the headings. The easiest way to do it is to use visual mode, then highlight the text and click Header 1, Header 2 etc.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>FLORIDA FISH - 45 MARKS</strong> <br></p></li>
+</ul>
+<p>You clearly summarised the main findings from your analysis in plain language appropriate for a non-technical audience. e.g. you highlighted the most important insights about the relationship between advertising channels and plant sales and explain what the results suggest about effective advertising strategies.</p>
+<ul>
+<li>
+<p><strong>BONUS - 4 MARKS</strong> <br></p>
+<pre><code>Your summary focuses on the practical implications of the analysis rather than repeating technical output.</code></pre>
+</li>
+</ul>
+<p>[80 marks total]</p>
+<p><br></p>
+</div>
+<div id="grade-meaning-2" class="section level3 unnumbered">
+<h3>Grade meaning<a class="anchor" aria-label="anchor" href="#grade-meaning-2"><i class="fas fa-link"></i></a>
+</h3>
+<p>Overall, here is what your lab should correspond to:</p>
+<div class="inline-table"><table class=" lightable-classic-2 table table-striped table-hover table-responsive" style='font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;'>
+<thead><tr>
+<th style="text-align:left;">
+POINTS
+</th>
+<th style="text-align:left;">
+Approx grade
+</th>
+<th style="text-align:left;">
+What it means
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+98-100
+</td>
+<td style="text-align:left;">
+A*
+</td>
+<td style="text-align:left;">
+Exceptional.  Above and beyond.  THIS IS HARD TO GET.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+93-98
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+Everything asked for with high quality.   Class example
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+85-93
+</td>
+<td style="text-align:left;">
+B+/A-
+</td>
+<td style="text-align:left;">
+Solid work but the odd mistake or missing answer in either the code or interpretation
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+70-85
+</td>
+<td style="text-align:left;">
+B-/B
+</td>
+<td style="text-align:left;">
+Starting to miss entire/questions sections, or multiple larger mistakes. Still a solid attempt. 
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+60-70
+</td>
+<td style="text-align:left;">
+C/C+
+</td>
+<td style="text-align:left;">
+It’s clear you tried and learned something.  Just attending labs will get you this much as we can help you get to this stage
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+40-60
+</td>
+<td style="text-align:left;">
+D
+</td>
+<td style="text-align:left;">
+You submit a single word AND have reached out to Dr G or Aish for help before the deadline (make sure to comment you did this so we can check)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+30-40
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+You submit a single word……. ANYTHING.. Think, that’s 30-40 marks towards your total….
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+0+
+</td>
+<td style="text-align:left;">
+F
+</td>
+<td style="text-align:left;">
+Didn’t submit, or incredibly limited attempt. 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+details &gt; *:not(summary){
+  margin-left: 10em;
+}
+
+<div class="chapter-nav">
+<div class="prev"><a href="Lab_4.html">Lab 4</a></div>
+<div class="next"><a href="Project1.html">Project 1</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li>
+<a class="nav-link" href="#Lab_5">Lab 5</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#aim-1">Aim</a></li>
+<li><a class="nav-link" href="#need-help-1"><span class="header-section-number">0.1.4</span> Need help?</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#lab-set-up-important-4">1. LAB SET-UP (Important!)</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#step-1-create-your-lab-5-project">STEP 1: Create your Lab 5 project</a></li>
+<li><a class="nav-link" href="#step-2-create-your-lab-report-structure-1">STEP 2: Create your lab report structure</a></li>
+<li><a class="nav-link" href="#step-3-new-ish-adjust-your-knit-options-1">STEP 3: NEW (ish) Adjust your knit options</a></li>
+<li><a class="nav-link" href="#step-4-newish-sort-out-libraries-1">STEP 4: NEW(ish) Sort out libraries</a></li>
+<li><a class="nav-link" href="#step-1.4-check-progress-1">[Step 1.4] Check Progress</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#study-set-up">2. STUDY SET-UP</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#step-2.1-get-new-data">[Step 2.1] GET NEW DATA</a></li>
+<li><a class="nav-link" href="#step-2.2-background-context.">[Step 2.2] Background context.</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#data-without-the-outliers">3. DATA WITHOUT THE OUTLIERS</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#step-3.1-fit-a-new-model">[Step 3.1] Fit a new model</a></li>
+<li><a class="nav-link" href="#step-3.2-transformation-for-non-equal-variance">[Step 3.2] Transformation for non equal variance</a></li>
+<li><a class="nav-link" href="#step-3.3-fit-a-new-model">[Step 3.3] Fit a new model</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#full-data-with-the-outliers">4. FULL DATA WITH THE OUTLIERS</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#step-3.1-fit-the-original-model">[Step 3.1] Fit the original model</a></li>
+<li><a class="nav-link" href="#step-3.2-linearity-transformations">[Step 3.2] Linearity Transformations</a></li>
+<li><a class="nav-link" href="#step-3.2-predictor-transformed-model">[Step 3.2] Predictor Transformed Model</a></li>
+<li><a class="nav-link" href="#step-3.3-model-comparison">[Step 3.3] Model comparison</a></li>
+<li><a class="nav-link" href="#step-3.4-summary">[Step 3.4] Summary</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#prediction">5. PREDICTION</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#step-5.1-prediction-question-1">[Step 5.1] Prediction question 1</a></li>
+<li><a class="nav-link" href="#step-3.11-more-complex---worth-4.">[Step 3.11] More complex - worth 4%.</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#what-to-submit-4">3. WHAT TO SUBMIT</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#if-you-are-using-your-own-laptop-4">If you are using your own laptop</a></li>
+<li><a class="nav-link" href="#if-you-are-using-posit-cloud-online-4">If you are using Posit Cloud online</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#CheckGradeL4">4. CHECK YOUR GRADE!</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#rubric-4">RUBRIC</a></li>
+<li><a class="nav-link" href="#grade-meaning-2">Grade meaning</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+</div>
+  
+
+  
+
+</div>
+ <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>STAT462 Lab Book 2026</strong>" was written by Dr Helen Greatrex. It was last built on 2026-04-01.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

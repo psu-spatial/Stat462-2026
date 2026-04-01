@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Lab 4 | STAT462 Lab Book 2026</title>
 <meta name="author" content="Dr Helen Greatrex">
-<meta name="description" content="Aim Welcome to lab 4. This is worth 8% (480 points) and you can drop your lowest lab. By the end of this lab, you will be able to: Understand &amp; use regression diagnostics to assess LINE Consider...">
+<meta name="description" content="Aim Welcome to lab 4. This is worth 8% (480 points) and you can drop your lowest lab. By the end of this lab, you will be able to: Understand &amp; use regression diagnostics to assess LINE Apply this...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="Lab 4 | STAT462 Lab Book 2026">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psu-spatial.github.io/Stat462-2026/Lab_4.html">
-<meta property="og:description" content="Aim Welcome to lab 4. This is worth 8% (480 points) and you can drop your lowest lab. By the end of this lab, you will be able to: Understand &amp; use regression diagnostics to assess LINE Consider...">
+<meta property="og:description" content="Aim Welcome to lab 4. This is worth 8% (480 points) and you can drop your lowest lab. By the end of this lab, you will be able to: Understand &amp; use regression diagnostics to assess LINE Apply this...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lab 4 | STAT462 Lab Book 2026">
-<meta name="twitter:description" content="Aim Welcome to lab 4. This is worth 8% (480 points) and you can drop your lowest lab. By the end of this lab, you will be able to: Understand &amp; use regression diagnostics to assess LINE Consider...">
+<meta name="twitter:description" content="Aim Welcome to lab 4. This is worth 8% (480 points) and you can drop your lowest lab. By the end of this lab, you will be able to: Understand &amp; use regression diagnostics to assess LINE Apply this...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -61,6 +61,7 @@
 <li><a class="" href="Lab_2.html">Lab 2</a></li>
 <li><a class="" href="Lab_3.html">Lab 3</a></li>
 <li><a class="active" href="Lab_4.html">Lab 4</a></li>
+<li><a class="" href="Lab_5.html">Lab 5</a></li>
 <li class="book-part">.</li>
 <li class="book-part">PROJECT 1</li>
 <li><a class="" href="Project1.html">Project 1</a></li>
@@ -90,17 +91,18 @@
   </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="Lab_4" class="section level1 unnumbered">
 <h1>Lab 4<a class="anchor" aria-label="anchor" href="#Lab_4"><i class="fas fa-link"></i></a>
 </h1>
-<div id="aim" class="section level2 unnumbered">
-<h2>Aim<a class="anchor" aria-label="anchor" href="#aim"><i class="fas fa-link"></i></a>
-</h2>
+<div id="aim" class="section level3 unnumbered">
+<h3>Aim<a class="anchor" aria-label="anchor" href="#aim"><i class="fas fa-link"></i></a>
+</h3>
 <p>Welcome to lab 4. This is worth 8% (480 points) and you can drop your lowest lab.</p>
 <p>By the end of this lab, you will be able to:</p>
 <ol style="list-style-type: decimal">
 <li>Understand &amp; use regression diagnostics to assess LINE</li>
-<li>Consider the role of transformations</li>
+<li>Apply this knowledge to a real case study on pollution in Florida Lakes</li>
 </ol>
 <p>This is a ONE WEEK LAB. You need to finish writing up by next Tuesday (23:59pm) e.g. just before Lab 6 starts.</p>
 <p><br></p>
+</div>
 <div id="need-help" class="section level3" number="0.1.3">
 <h3>
 <span class="header-section-number">0.1.3</span> Need help?<a class="anchor" aria-label="anchor" href="#need-help"><i class="fas fa-link"></i></a>
@@ -109,7 +111,6 @@
 <p>The maximum time this lab should take is about 4-5 hrs of your time.</p>
 <p><br></p>
 <hr>
-</div>
 </div>
 <div id="lab-set-up-important-3" class="section level2 unnumbered">
 <h2>1. LAB SET-UP (Important!)<a class="anchor" aria-label="anchor" href="#lab-set-up-important-3"><i class="fas fa-link"></i></a>
@@ -320,20 +321,15 @@ Figure 0.16: a. (Left): The mercury food chain in fish.(Wikimedia commons, Bretw
 <li><a href="https://medium.com/predict/mercury-pollution-reaches-the-deep-sea-f59a4938dc7c" class="uri">https://medium.com/predict/mercury-pollution-reaches-the-deep-sea-f59a4938dc7c</a></li>
 </ul>
 <p>In the late 1980s, there were widespread public safety concerns in Florida about high mercury concentrations in sport fish. In 1989, the State of Florida issued an advisory urging the public to limit consumption of “top level” predatory fish from Lake Tohopekaliga and connected waters: including largemouth bass (Micropterus salmoides), bowfin (Amia calva), and gar (Lepisosteus spp.). This severely impacted tourism and the economy in the area.</p>
-<p>Urgent research was required to inform public policy about which lakes needed to be closed. We are going to reproduce part of one study on the topic conducted by T.R. Lange in 1993.</p>
-<p>You can see part of the paper here: <a href="https://www.researchgate.net/publication/15388314_Mercury_accumulation_in_largemouth_bass_Micropterus_salmoides_in_a_Florida_Lake" class="uri">https://www.researchgate.net/publication/15388314_Mercury_accumulation_in_largemouth_bass_Micropterus_salmoides_in_a\_Florida_Lake</a><br></p>
+<p>Urgent research was required to inform public policy about which lakes needed to be closed. We are going to reproduce part of a real study on this topic <br></p>
 </div>
 <div id="your-goal" class="section level4 unnumbered">
 <h4>Your Goal<a class="anchor" aria-label="anchor" href="#your-goal"><i class="fas fa-link"></i></a>
 </h4>
 <p><strong>You have been asked to use this dataset assess whether the alkalinity levels of a lake might impact Mercury levels in large-mouth bass.</strong></p>
 <p><strong>You will be presenting your results to the Mayor of Orlando in order to set new fishing regulations.</strong></p>
-<p>Urgent research was required to inform public policy about which lakes needed to be closed. We are going to reproduce part of one study on the topic conducted by T.R. Lange in 1993. Dr Lange and their team took samples from 53 lakes in the Central Florida area.</p>
-<ul>
-<li><p>Using water samples collected from each of the lakes, the researchers measured the pH level, as well as the amount of chlorophyll, calcium and alkalinity.</p></li>
-<li><p>The Mercury concentration in the muscle tissue of lake fish was also recorded.</p></li>
-</ul>
-<p>You can read more details in the paper/resources here - <a href="https://www.researchgate.net/publication/15388314_Mercury_accumulation_in_largemouth_bass_Micropterus_salmoides_in_a_Florida_Lake" class="uri">https://www.researchgate.net/publication/15388314_Mercury_accumulation_in_largemouth_bass_Micropterus_salmoides_in_a\_Florida_Lake</a>.</p>
+<p>In 1993, Dr. T.R. Lange and colleagues collected water samples from 53 lakes across Central Florida. For each lake, they recorded four water quality measures — pH, chlorophyll, calcium, and alkalinity — alongside the average mercury concentration found in the muscle tissue of fish sampled from each lake’s waters.</p>
+<p>You can read more details in the paper/resources here - <a href="https://www.researchgate.net/publication/241734788_Influence_of_Water_Chemistry_on_Mercury_Concentration_in_Largemouth_Bass_from_Florida_Lakes" class="uri">https://www.researchgate.net/publication/241734788_Influence_of_Water_Chemistry_on_Mercury_Concentration_in_Largemouth_Bass_from_Florida_Lakes</a>.</p>
 <p>The units of the your dataset are:</p>
 <div class="inline-table"><table class="table table-sm">
 <colgroup>
@@ -387,7 +383,7 @@ Figure 0.16: a. (Left): The mercury food chain in fish.(Wikimedia commons, Bretw
 <ul>
 <li>Create a level 1 heading called Florida Fish</li>
 <li>The data is stored on Canvas in <strong>BassNew.xlsx</strong>. Obtain the data from Canvas and put it in your project folder.</li>
-<li>Use read_excel to read it into R and save it as a variable called <code>BassNew.xlsx</code>. e.g.</li>
+<li>Use read_excel to read it into R and save it as a variable called <code>bass</code>. e.g.</li>
 </ul>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">bass</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_excel</a></span><span class="op">(</span><span class="st">"index_data/BassNew.xlsx"</span><span class="op">)</span></span></code></pre></div>
@@ -688,25 +684,17 @@ Didn’t submit, or incredibly limited attempt. 
 </div>
 </div>
 </div>
-
-
-
-
-
-
-details &gt; *:not(summary){
-  margin-left: 10em;
-}
-
-<div class="chapter-nav">
+  <div class="chapter-nav">
 <div class="prev"><a href="Lab_3.html">Lab 3</a></div>
-<div class="next"><a href="Project1.html">Project 1</a></div>
+<div class="next"><a href="Lab_5.html">Lab 5</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#Lab_4">Lab 4</a></li>
 <li>
-<a class="nav-link" href="#aim">Aim</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#need-help"><span class="header-section-number">0.1.3</span> Need help?</a></li></ul>
+<a class="nav-link" href="#Lab_4">Lab 4</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#aim">Aim</a></li>
+<li><a class="nav-link" href="#need-help"><span class="header-section-number">0.1.3</span> Need help?</a></li>
+</ul>
 </li>
 <li>
 <a class="nav-link" href="#lab-set-up-important-3">1. LAB SET-UP (Important!)</a><ul class="nav navbar-nav">
@@ -759,18 +747,14 @@ details &gt; *:not(summary){
 </div>
     </nav>
 </div>
-</div>
-  
-
-  
 
 </div>
- <!-- .container -->
+</div> <!-- .container -->
 
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>STAT462 Lab Book 2026</strong>" was written by Dr Helen Greatrex. It was last built on 2026-03-25.</p>
+    <p>"<strong>STAT462 Lab Book 2026</strong>" was written by Dr Helen Greatrex. It was last built on 2026-04-01.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
