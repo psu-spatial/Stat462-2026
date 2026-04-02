@@ -390,7 +390,7 @@ You can also add comments to your submission as needed on the canvas page, or yo
 
 <br>
 
-## 4. CHECK YOUR GRADE! {#CheckGradeL4 .unnumbered}
+## 4. CHECK YOUR GRADE! {#CheckGradeL5 .unnumbered}
 
 ### RUBRIC {.unnumbered}
 

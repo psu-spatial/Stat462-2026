@@ -135,7 +135,7 @@ library(readxl)    # Read from excel files
 
     -   What a residual vs fits plot is,
     -   Why it's useful compared to just looking at the scatterplot.\
-    -   Referring to your plots to explain how each of your three datasets does/doesn't meet the LINE assumptions of linearity and equal variance.
+    -   [There was another question here about 'three datasets', it was left over from last year and was removed]
 
 ### **[Step 2.4] Create some teaching data** {.unnumbered}
 
