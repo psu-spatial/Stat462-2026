@@ -337,6 +337,8 @@ FullModel <- lm(Sepal.Length ~ Sepal.Width + Petal.Width + Species, data = iris)
 ols_regress(FullModel)
 ```
 
+<br><br>
+
 ## STEP 8: Questions
 
 Using sub-headings to make your answers really easy to find.. answer the following questions in full sentences.
@@ -389,82 +391,50 @@ Using sub-headings to make your answers really easy to find.. answer the followi
 
         -   Why is the adjusted R² lower, how does it work and why is it useful?
 
+    <br>
+
+-   **[8E].** **Interpret model fit (global F test)**
+
+    -   From the model summary, conduct a global F t-test
+
+        -   State your null and alternative hypothesis
+
+        -   Write out the test statistic
+
+        -   Write out the probability of seeing this
+
+        -   Write out your conclusions
+
 -   
 
-### E. Interpret the hypothesis tests
+-   **[8F]. Partial slopes**
 
-Use the output to answer the following:
+-   Which predictors appear to be significantly related to your response variable after controlling for the other predictors?
 
-1.  What does the **overall F-test** tell us? State the null and alternative hypotheses in words.
+    -   Which of your predictors has
 
-2.  Based on the output, is there evidence that your predictors are useful **overall** for explaining variation in your response variable?
+        -   A strong effect size (slope) AND low uncertainty? (standard error)
 
-3.  For each slope t-test, what is being tested?
+        -   A strong effect size (slope) AND high uncertainty?
 
-4.  Which predictors appear to be significantly related to your response variable after controlling for the other predictors?
+        -   A weak effect size (slope) AND low uncertainty?
 
-You do **not** need to show formal hypothesis-testing steps, but your written interpretation must be statistically correct.
+        -   A weak effect size (slope) AND high uncertainty?\
 
-This part is important because the textbook distinguishes between:
+    -   Conduct a T test on your predictor with the strongest slope compared to beta=0
 
--   the **overall F-test**, which asks whether at least one slope is non-zero
+        -   State your null and alternative hypothesis
 
--   the **t-tests for individual slopes**, which ask whether one predictor contributes after adjusting for the others
+        -   Write out the test statistic
 
-## STEP 8: Check the model assumptions
+        -   Write out the probability of seeing this
 
-As in simple linear regression, the multiple regression model relies on the **LINE assumptions**:
+        -   Write out your conclusions
 
--   Linear relationship
+<!-- -->
 
--   Independent errors
+-   **[8G]. Comparison**
 
--   Normal errors
+    -   Explain the difference between the global F test and the partial T tests for explaining variation in your response variable?
 
--   Equal variance of errors
-
-In multiple regression, these assumptions apply to the **errors at fixed values of the predictors**.
-
-Use the code below to assess the assumptions and look for unusual or influential points.
-
-```         
-ols_plot_resid_fit(FullModel)
-ols_plot_resid_stud(FullModel)
-ols_plot_resid_stand(FullModel)
-ols_plot_resid_hist(FullModel)
-ols_test_normality(FullModel)
-ols_plot_resid_qq(FullModel)
-ols_plot_resid_lev(FullModel)
-```
-
-In your write-up, comment on the following:
-
-1.  Does the residuals-versus-fitted plot suggest that the linearity assumption is reasonable?
-
-2.  Does the residual spread look roughly constant?
-
-3.  Do the histogram, QQ plot, and normality test suggest that the residuals are approximately normal?
-
-4.  Are there any potentially influential observations?
-
-5.  Overall, do you think the model is adequate for your dataset?
-
-Do **not** try to fix the model yet. Just describe what you see and explain whether you are comfortable using the model.
-
-## STEP 9: Scope of the model and practical use
-
-A regression model should only be used within the **scope of the model**, meaning for predictor values that are reasonably represented by the data used to fit it.
-
-Answer the following in a short paragraph each:
-
-1.  Would you feel comfortable using this model to describe the **average response** for observations similar to those in your dataset? Why or why not?
-
-2.  Would you feel equally comfortable using this model to **predict the response for a new observation**? Why or why not?
-
-In your answer, think about both:
-
--   the regression assumptions
-
--   the difference between explaining average patterns and predicting individual outcomes
-
-## 
+**In the final part of the project, we will look at assumptions, prediction and improving the model.**

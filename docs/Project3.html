@@ -455,6 +455,7 @@ ols_regress(FullModel)</code></pre>
 <code class="sourceCode R"><span><span class="va">FullModel</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">Sepal.Length</span> <span class="op">~</span> <span class="va">Sepal.Width</span> <span class="op">+</span> <span class="va">Petal.Width</span> <span class="op">+</span> <span class="va">Species</span>, data <span class="op">=</span> <span class="va">iris</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_regress.html">ols_regress</a></span><span class="op">(</span><span class="va">FullModel</span><span class="op">)</span></span></code></pre></div>
+<p><br><br></p>
 </div>
 <div id="step-8-questions" class="section level2" number="1.5">
 <h2>
@@ -519,110 +520,89 @@ ols_regress(FullModel)</code></pre>
 </ul>
 </li>
 </ul>
+<p><br></p>
 </li>
 <li>
+<p><strong>[8E].</strong> <strong>Interpret model fit (global F test)</strong></p>
+<ul>
+<li>
+<p>From the model summary, conduct a global F t-test</p>
+<ul>
+<li><p>State your null and alternative hypothesis</p></li>
+<li><p>Write out the test statistic</p></li>
+<li><p>Write out the probability of seeing this</p></li>
+<li><p>Write out your conclusions</p></li>
 </ul>
-<div id="e.-interpret-the-hypothesis-tests" class="section level3" number="1.5.1">
+</li>
+</ul>
+</li>
+<li>
+<li><p><strong>[8F]. Partial slopes</strong></p></li>
+<li>
+<p>Which predictors appear to be significantly related to your response variable after controlling for the other predictors?</p>
+<ul>
+<li>
+<p>Which of your predictors has</p>
+<ul>
+<li><p>A strong effect size (slope) AND low uncertainty? (standard error)</p></li>
+<li><p>A strong effect size (slope) AND high uncertainty?</p></li>
+<li><p>A weak effect size (slope) AND low uncertainty?</p></li>
+<li><p>A weak effect size (slope) AND high uncertainty?<br></p></li>
+</ul>
+</li>
+<li>
+<p>Conduct a T test on your predictor with the strongest slope compared to beta=0</p>
+<ul>
+<li><p>State your null and alternative hypothesis</p></li>
+<li><p>Write out the test statistic</p></li>
+<li><p>Write out the probability of seeing this</p></li>
+<li><p>Write out your conclusions</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- --><ul>
+<li>
+<p><strong>[8G]. Comparison</strong></p>
+<ul>
+<li>Explain the difference between the global F test and the partial T tests for explaining variation in your response variable?</li>
+</ul>
+</li>
+</ul>
+<p><strong>In the final part of the project, we will look at assumptions, prediction and improving the model.</strong></p>
+
+</div>
+</div>
+
+
+
+<div id="T1_ProjectsCloud" class="section level2" number="1.6">
+<h2>
+<span class="header-section-number">1.6</span> Projects using posit Cloud<a class="anchor" aria-label="anchor" href="#T1_ProjectsCloud"><i class="fas fa-link"></i></a>
+</h2>
+</div>
+<div id="T1_ProjectsDesktop" class="section level2" number="1.7">
+<h2>
+<span class="header-section-number">1.7</span> Projects on your desktop<a class="anchor" aria-label="anchor" href="#T1_ProjectsDesktop"><i class="fas fa-link"></i></a>
+</h2>
+<div id="how-to-check-you-are-running-your-project" class="section level3" number="1.7.1">
 <h3>
-<span class="header-section-number">1.5.1</span> E. Interpret the hypothesis tests<a class="anchor" aria-label="anchor" href="#e.-interpret-the-hypothesis-tests"><i class="fas fa-link"></i></a>
-</h3>
-<p>Use the output to answer the following:</p>
-<ol style="list-style-type: decimal">
-<li><p>What does the <strong>overall F-test</strong> tell us? State the null and alternative hypotheses in words.</p></li>
-<li><p>Based on the output, is there evidence that your predictors are useful <strong>overall</strong> for explaining variation in your response variable?</p></li>
-<li><p>For each slope t-test, what is being tested?</p></li>
-<li><p>Which predictors appear to be significantly related to your response variable after controlling for the other predictors?</p></li>
-</ol>
-<p>You do <strong>not</strong> need to show formal hypothesis-testing steps, but your written interpretation must be statistically correct.</p>
-<p>This part is important because the textbook distinguishes between:</p>
-<ul>
-<li><p>the <strong>overall F-test</strong>, which asks whether at least one slope is non-zero</p></li>
-<li><p>the <strong>t-tests for individual slopes</strong>, which ask whether one predictor contributes after adjusting for the others</p></li>
-</ul>
-</div>
-</div>
-<div id="step-8-check-the-model-assumptions" class="section level2" number="1.6">
-<h2>
-<span class="header-section-number">1.6</span> STEP 8: Check the model assumptions<a class="anchor" aria-label="anchor" href="#step-8-check-the-model-assumptions"><i class="fas fa-link"></i></a>
-</h2>
-<p>As in simple linear regression, the multiple regression model relies on the <strong>LINE assumptions</strong>:</p>
-<ul>
-<li><p>Linear relationship</p></li>
-<li><p>Independent errors</p></li>
-<li><p>Normal errors</p></li>
-<li><p>Equal variance of errors</p></li>
-</ul>
-<p>In multiple regression, these assumptions apply to the <strong>errors at fixed values of the predictors</strong>.</p>
-<p>Use the code below to assess the assumptions and look for unusual or influential points.</p>
-<pre><code>ols_plot_resid_fit(FullModel)
-ols_plot_resid_stud(FullModel)
-ols_plot_resid_stand(FullModel)
-ols_plot_resid_hist(FullModel)
-ols_test_normality(FullModel)
-ols_plot_resid_qq(FullModel)
-ols_plot_resid_lev(FullModel)</code></pre>
-<p>In your write-up, comment on the following:</p>
-<ol style="list-style-type: decimal">
-<li><p>Does the residuals-versus-fitted plot suggest that the linearity assumption is reasonable?</p></li>
-<li><p>Does the residual spread look roughly constant?</p></li>
-<li><p>Do the histogram, QQ plot, and normality test suggest that the residuals are approximately normal?</p></li>
-<li><p>Are there any potentially influential observations?</p></li>
-<li><p>Overall, do you think the model is adequate for your dataset?</p></li>
-</ol>
-<p>Do <strong>not</strong> try to fix the model yet. Just describe what you see and explain whether you are comfortable using the model.</p>
-</div>
-<div id="step-9-scope-of-the-model-and-practical-use" class="section level2" number="1.7">
-<h2>
-<span class="header-section-number">1.7</span> STEP 9: Scope of the model and practical use<a class="anchor" aria-label="anchor" href="#step-9-scope-of-the-model-and-practical-use"><i class="fas fa-link"></i></a>
-</h2>
-<p>A regression model should only be used within the <strong>scope of the model</strong>, meaning for predictor values that are reasonably represented by the data used to fit it.</p>
-<p>Answer the following in a short paragraph each:</p>
-<ol style="list-style-type: decimal">
-<li><p>Would you feel comfortable using this model to describe the <strong>average response</strong> for observations similar to those in your dataset? Why or why not?</p></li>
-<li><p>Would you feel equally comfortable using this model to <strong>predict the response for a new observation</strong>? Why or why not?</p></li>
-</ol>
-<p>In your answer, think about both:</p>
-<ul>
-<li><p>the regression assumptions</p></li>
-<li><p>the difference between explaining average patterns and predicting individual outcomes</p></li>
-</ul>
-</div>
-<div id="section-2" class="section level2" number="1.8">
-<h2>
-<span class="header-section-number">1.8</span> <a class="anchor" aria-label="anchor" href="#section-2"><i class="fas fa-link"></i></a>
-</h2>
-
-</div>
-</div>
-
-
-
-<div id="T1_ProjectsCloud" class="section level2" number="1.9">
-<h2>
-<span class="header-section-number">1.9</span> Projects using posit Cloud<a class="anchor" aria-label="anchor" href="#T1_ProjectsCloud"><i class="fas fa-link"></i></a>
-</h2>
-</div>
-<div id="T1_ProjectsDesktop" class="section level2" number="1.10">
-<h2>
-<span class="header-section-number">1.10</span> Projects on your desktop<a class="anchor" aria-label="anchor" href="#T1_ProjectsDesktop"><i class="fas fa-link"></i></a>
-</h2>
-<div id="how-to-check-you-are-running-your-project" class="section level3" number="1.10.1">
-<h3>
-<span class="header-section-number">1.10.1</span> How to check you are running your project<a class="anchor" aria-label="anchor" href="#how-to-check-you-are-running-your-project"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.7.1</span> How to check you are running your project<a class="anchor" aria-label="anchor" href="#how-to-check-you-are-running-your-project"><i class="fas fa-link"></i></a>
 </h3>
 </div>
-<div id="returning-to-your-lab-project" class="section level3" number="1.10.2">
+<div id="returning-to-your-lab-project" class="section level3" number="1.7.2">
 <h3>
-<span class="header-section-number">1.10.2</span> Returning to your lab project<a class="anchor" aria-label="anchor" href="#returning-to-your-lab-project"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.7.2</span> Returning to your lab project<a class="anchor" aria-label="anchor" href="#returning-to-your-lab-project"><i class="fas fa-link"></i></a>
 </h3>
-<div id="from-your-computer" class="section level4" number="1.10.2.1">
+<div id="from-your-computer" class="section level4" number="1.7.2.1">
 <h4>
-<span class="header-section-number">1.10.2.1</span> From your computer<a class="anchor" aria-label="anchor" href="#from-your-computer"><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.7.2.1</span> From your computer<a class="anchor" aria-label="anchor" href="#from-your-computer"><i class="fas fa-link"></i></a>
 </h4>
 </div>
-<div id="from-inside-r-studio." class="section level4" number="1.10.2.2">
+<div id="from-inside-r-studio." class="section level4" number="1.7.2.2">
 <h4>
-<span class="header-section-number">1.10.2.2</span> From inside R-studio.<a class="anchor" aria-label="anchor" href="#from-inside-r-studio."><i class="fas fa-link"></i></a>
+<span class="header-section-number">1.7.2.2</span> From inside R-studio.<a class="anchor" aria-label="anchor" href="#from-inside-r-studio."><i class="fas fa-link"></i></a>
 </h4>
 
 </div>
