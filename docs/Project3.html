@@ -62,6 +62,7 @@
 <li><a class="" href="Lab_3.html">Lab 3</a></li>
 <li><a class="" href="Lab_4.html">Lab 4</a></li>
 <li><a class="" href="Lab_5.html">Lab 5</a></li>
+<li><a class="" href="Lab_6.html">Lab 6</a></li>
 <li class="book-part">.</li>
 <li class="book-part">PROJECT 1</li>
 <li><a class="" href="Project1.html">Project 1</a></li>
@@ -305,7 +306,7 @@
 </li>
 </ul>
 <p><em>For example, for the iris data, I can see that three of my columns are numeric and Species is categorical with three potential categories. (see table at the end of step5 for how I recorded this)</em></p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">iris</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 'data.frame':    150 obs. of  5 variables:
 ##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
@@ -357,7 +358,7 @@
 </ul>
 <p>The easiest way to think this through is by looking at the correlation matrix. Feel free to reprint it in your lab report rather than having to scroll up and down a lot.</p>
 <p><em>For example in my iris data, I can see that there’s no direct-calculations, but there is a VERY strong link between petal length and petal width. So in this, case I might start with only one of the petal variables.</em></p>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># this is from the ggstatsplot package, </span></span>
 <span><span class="co"># remember to run your library code chunk first.</span></span>
 <span><span class="fu"><a href="https://www.indrapatil.com/ggstatsplot/reference/ggcorrmat.html">ggcorrmat</a></span><span class="op">(</span><span class="va">iris</span><span class="op">)</span></span></code></pre></div>
@@ -486,7 +487,7 @@
 
 ols_regress(FullModel)</code></pre>
 <p>For example, for the iris data.</p>
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">FullModel</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">Sepal.Length</span> <span class="op">~</span> <span class="va">Sepal.Width</span> <span class="op">+</span> <span class="va">Petal.Width</span> <span class="op">+</span> <span class="va">Species</span>, data <span class="op">=</span> <span class="va">iris</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_regress.html">ols_regress</a></span><span class="op">(</span><span class="va">FullModel</span><span class="op">)</span></span></code></pre></div>
@@ -497,6 +498,9 @@ ols_regress(FullModel)</code></pre>
 <span class="header-section-number">0.5</span> STEP 8: Questions<a class="anchor" aria-label="anchor" href="#step-8-questions"><i class="fas fa-link"></i></a>
 </h2>
 <p>Using sub-headings to make your answers really easy to find.. answer the following questions in full sentences.</p>
+<p><span class="math display">\[
+\widehat{yjhekasd} = 1223443+x_1
+\]</span></p>
 <p><br></p>
 <ul>
 <li>
@@ -571,7 +575,6 @@ ols_regress(FullModel)</code></pre>
 </li>
 </ul>
 </li>
-<li>
 <li><p><strong>[8F]. Partial slopes</strong></p></li>
 <li>
 <p>Which predictors appear to be significantly related to your response variable after controlling for the other predictors?</p>
@@ -597,7 +600,8 @@ ols_regress(FullModel)</code></pre>
 </ul>
 </li>
 </ul>
-<!-- --><ul>
+<p><br></p>
+<ul>
 <li>
 <p><strong>[8G]. Comparison</strong></p>
 <ul>
@@ -606,6 +610,7 @@ ols_regress(FullModel)</code></pre>
 </li>
 </ul>
 <p><strong>In the final part of the project, we will look at assumptions, prediction and improving the model.</strong></p>
+<p><br><br></p>
 
 </div>
 </div>
@@ -658,7 +663,7 @@ ols_regress(FullModel)</code></pre>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>STAT462 Lab Book 2026</strong>" was written by Dr Helen Greatrex. It was last built on 2026-04-08.</p>
+    <p>"<strong>STAT462 Lab Book 2026</strong>" was written by Dr Helen Greatrex. It was last built on 2026-04-15.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

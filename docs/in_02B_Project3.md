@@ -343,6 +343,10 @@ ols_regress(FullModel)
 
 Using sub-headings to make your answers really easy to find.. answer the following questions in full sentences.
 
+$$
+\widehat{yjhekasd} = 1223443+x_1 
+$$
+
 <br>
 
 -   **[8A].** **Model size and structure**
@@ -405,7 +409,6 @@ Using sub-headings to make your answers really easy to find.. answer the followi
 
         -   Write out your conclusions
 
--   
 
 -   **[8F]. Partial slopes**
 
@@ -431,10 +434,13 @@ Using sub-headings to make your answers really easy to find.. answer the followi
 
         -   Write out your conclusions
 
-<!-- -->
+<br>
 
 -   **[8G]. Comparison**
 
     -   Explain the difference between the global F test and the partial T tests for explaining variation in your response variable?
 
 **In the final part of the project, we will look at assumptions, prediction and improving the model.**
+
+<br><br>
+
