@@ -4,16 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 2 Project 4 | STAT462 Lab Book 2026</title>
+<title>Project 4 | STAT462 Lab Book 2026</title>
 <meta name="author" content="Dr Helen Greatrex">
 <meta name="description" content="Aim of Project 4 In Projects 2 and 3 you fitted a simple linear regression model and then extended it to a multiple linear regression model. In this project, you will refine that work by checking...">
 <meta name="generator" content="bookdown 0.46 with bs4_book()">
-<meta property="og:title" content="Chapter 2 Project 4 | STAT462 Lab Book 2026">
+<meta property="og:title" content="Project 4 | STAT462 Lab Book 2026">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://psu-spatial.github.io/Stat462-2026/project-4.html">
 <meta property="og:description" content="Aim of Project 4 In Projects 2 and 3 you fitted a simple linear regression model and then extended it to a multiple linear regression model. In this project, you will refine that work by checking...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 2 Project 4 | STAT462 Lab Book 2026">
+<meta name="twitter:title" content="Project 4 | STAT462 Lab Book 2026">
 <meta name="twitter:description" content="Aim of Project 4 In Projects 2 and 3 you fitted a simple linear regression model and then extended it to a multiple linear regression model. In this project, you will refine that work by checking...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -47,16 +47,52 @@
 </form>
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled"><li><a class="" href="index.html"><span class="header-section-number">Chapter 2</span> Project 4</a></li></ul>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome to STAT-462!</a></li>
+<li><a class="" href="FAQ.html">Course FAQ</a></li>
+<li><a class="" href="WhatIsR.html">What are R and R-Studio?</a></li>
+<li><a class="" href="Setup_Desktop.html">Installing R/R-Studio</a></li>
+<li><a class="" href="Setup_UpdateDesktop.html">Updating R/R-Studio</a></li>
+<li><a class="" href="Setup_Online.html">Posit Cloud Online</a></li>
+<li class="book-part">.</li>
+<li class="book-part">LAB INSTRUCTIONS</li>
+<li><a class="" href="Help.html">HELP!</a></li>
+<li><a class="" href="Lab_1.html">Lab 1</a></li>
+<li><a class="" href="Lab_2.html">Lab 2</a></li>
+<li><a class="" href="Lab_3.html">Lab 3</a></li>
+<li><a class="" href="Lab_4.html">Lab 4</a></li>
+<li><a class="" href="Lab_5.html">Lab 5</a></li>
+<li><a class="" href="Lab_6.html">Lab 6</a></li>
+<li class="book-part">.</li>
+<li class="book-part">PROJECT 1</li>
+<li><a class="" href="Project1.html">Project 1</a></li>
+<li><a class="" href="Project2.html">Project 2</a></li>
+<li><a class="" href="Project3.html">Project 3</a></li>
+<li><a class="active" href="project-4.html">Project 4</a></li>
+<li class="book-part">.</li>
+<li class="book-part">TUTORIALS</li>
+<li><a class="" href="T1_Projects.html"><span class="header-section-number">1</span> Projects/Starting each lab</a></li>
+<li><a class="" href="T2_Libraries.html"><span class="header-section-number">2</span> Libraries/Packages</a></li>
+<li><a class="" href="T3_Markdown.html"><span class="header-section-number">3</span> R-Markdown</a></li>
+<li><a class="" href="T7_Coding.html"><span class="header-section-number">4</span> Coding</a></li>
+<li><a class="" href="T4_ReadingData.html"><span class="header-section-number">5</span> Reading in data</a></li>
+<li><a class="" href="T5_Summarising.html"><span class="header-section-number">6</span> Summarising Data</a></li>
+<li><a class="" href="T6B_MissingData.html"><span class="header-section-number">7</span> Missing Data In Depth</a></li>
+<li><a class="" href="T6_plots.html"><span class="header-section-number">8</span> Plots</a></li>
+<li><a class="" href="T8_Wrangle.html"><span class="header-section-number">9</span> Data Filtering</a></li>
+<li><a class="" href="probability-distributions.html"><span class="header-section-number">10</span> Probability distributions</a></li>
+<li><a class="" href="correlation.html"><span class="header-section-number">11</span> Correlation</a></li>
+<li><a class="" href="T11_SLR.html"><span class="header-section-number">12</span> Simple Linear Regression</a></li>
+<li><a class="" href="outliers-high-leverage-influential-points.html"><span class="header-section-number">13</span> Outliers, high leverage &amp; influential points</a></li>
+</ul>
 
         <div class="book-extra">
           
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="project-4" class="section level1" number="2">
-<h1>
-<span class="header-section-number">2</span> Project 4<a class="anchor" aria-label="anchor" href="#project-4"><i class="fas fa-link"></i></a>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="project-4" class="section level1 unnumbered">
+<h1>Project 4<a class="anchor" aria-label="anchor" href="#project-4"><i class="fas fa-link"></i></a>
 </h1>
 <div id="aim-of-project-4" class="section level2 unnumbered">
 <h2>Aim of Project 4<a class="anchor" aria-label="anchor" href="#aim-of-project-4"><i class="fas fa-link"></i></a>
@@ -80,8 +116,8 @@ individual predictors</li>
 <p><br><br></p>
 <hr>
 </div>
-<div id="meeting-the-line-assumptions" class="section level2 unnumbered">
-<h2>Meeting the LINE assumptions<a class="anchor" aria-label="anchor" href="#meeting-the-line-assumptions"><i class="fas fa-link"></i></a>
+<div id="checking-line-assumptions" class="section level2 unnumbered">
+<h2>Checking LINE assumptions<a class="anchor" aria-label="anchor" href="#checking-line-assumptions"><i class="fas fa-link"></i></a>
 </h2>
 <div id="step-1-where-you-should-be" class="section level3 unnumbered">
 <h3>STEP 1: Where you should be<a class="anchor" aria-label="anchor" href="#step-1-where-you-should-be"><i class="fas fa-link"></i></a>
@@ -145,14 +181,14 @@ your model object:</li>
 </ul>
 </li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ols_plot_resid_stud_fit</span><span class="op">(</span><span class="va">FullModel</span><span class="op">)</span></span>
-<span><span class="fu">ols_test_f</span><span class="op">(</span><span class="va">FullModel</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_plot_resid_stud_fit.html">ols_plot_resid_stud_fit</a></span><span class="op">(</span><span class="va">FullModel</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_test_f.html">ols_test_f</a></span><span class="op">(</span><span class="va">FullModel</span><span class="op">)</span></span></code></pre></div>
 <p><br></p>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:im-P4-EqualVar"></span>
 <img src="index_images/im_P4_EqualVar.png" alt="*Examples of equal variance*" width="90%"><p class="caption">
-Figure 2.1: <em>Examples of equal variance</em>
+Figure 0.20: <em>Examples of equal variance</em>
 </p>
 </div>
 <ul>
@@ -194,7 +230,7 @@ this in step 4.</li>
 </ul>
 </li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mydata</span><span class="op">$</span><span class="va">log_response</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">log</a></span><span class="op">(</span><span class="va">mydata</span><span class="op">$</span><span class="va">response</span><span class="op">)</span></span></code></pre></div>
 <p><br><br></p>
 <hr>
@@ -263,7 +299,7 @@ you are only looking at the partial effect from that predictor</li>
 </ul>
 </li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Code to make residual plots for each numeric predictor</span></span>
 <span><span class="co"># repeat for each numeric predictor</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/residuals.html">residuals</a></span><span class="op">(</span><span class="va">FullModel</span><span class="op">)</span> <span class="op">~</span> <span class="va">mydata</span><span class="op">$</span><span class="va">predictor1</span>, pch<span class="op">=</span><span class="fl">16</span><span class="op">)</span>;<span class="fu"><a href="https://rdrr.io/r/graphics/abline.html">abline</a></span><span class="op">(</span>h<span class="op">=</span><span class="fl">0</span><span class="op">)</span></span>
@@ -272,7 +308,7 @@ you are only looking at the partial effect from that predictor</li>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:im-P4-Linearity"></span>
 <img src="index_images/im_P4_linearity.png" alt="*Examples of linearity*" width="90%"><p class="caption">
-Figure 2.2: <em>Examples of linearity</em>
+Figure 0.21: <em>Examples of linearity</em>
 </p>
 </div>
 <p><br></p>
@@ -335,7 +371,7 @@ column and mydata is the name of your dataset.</li>
 </ul>
 </li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mydata</span><span class="op">$</span><span class="va">log_predictor</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">log</a></span><span class="op">(</span><span class="va">mydata</span><span class="op">$</span><span class="va">predictor</span><span class="op">)</span></span></code></pre></div>
 <p><br><br></p>
 <hr>
@@ -420,8 +456,8 @@ if you made changes.</em></p>
 </ul>
 </li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ols_step_best_subset</span><span class="op">(</span><span class="va">YourModel</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://olsrr.rsquaredacademy.com/reference/ols_step_best_subset.html">ols_step_best_subset</a></span><span class="op">(</span><span class="va">YourModel</span><span class="op">)</span></span></code></pre></div>
 <p><br></p>
 <ul>
 <li>
@@ -518,7 +554,7 @@ this.</p>
 <li>
 <p>[1] Add in this code to create a space for your new data,
 where mydata is replaced with the name of your dataset.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># This makes a blank dataframe with one empty row and the correct column names</span></span>
 <span><span class="va">NEWdata</span> <span class="op">&lt;-</span> <span class="va">mydata</span><span class="op">[</span><span class="fl">0</span>,<span class="op">]</span></span>
 <span><span class="va">NEWdata</span><span class="op">[</span><span class="fl">1</span>,<span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span></code></pre></div>
@@ -545,7 +581,7 @@ gender=female)</em>.<br><br>
 <li>
 <p>Add your new predictors into NEWdata using the $ symbol,
 for example like this.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># This makes a blank dataframe with one empty row and the correct column names</span></span>
 <span><span class="va">NEWdata</span><span class="op">$</span><span class="va">gender</span> <span class="op">&lt;-</span> <span class="st">"female"</span></span>
 <span><span class="va">NEWdata</span><span class="op">$</span><span class="va">age</span> <span class="op">&lt;-</span> <span class="fl">22</span></span>
@@ -565,7 +601,7 @@ for example like this.</p>
 <p>Use the predict command to make a 95% confidence interval for
 the mean response and a 95% prediction interval for a new
 observation. E.g.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">FinalModel</span>, newdata <span class="op">=</span> <span class="va">NEWdata</span>, interval <span class="op">=</span> <span class="st">"confidence"</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span><span class="op">(</span><span class="va">FinalModel</span>, newdata <span class="op">=</span> <span class="va">NEWdata</span>, interval <span class="op">=</span> <span class="st">"prediction"</span>, level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></span></code></pre></div>
 <p><br></p>
@@ -732,9 +768,9 @@ statistical knowledge the client wouldn’t have?</li>
 <p><br><br></p>
 </div>
 </div>
-<div id="submit-your-final-project" class="section level2" number="2.1">
+<div id="submit-your-final-project" class="section level2" number="0.5">
 <h2>
-<span class="header-section-number">2.1</span> SUBMIT YOUR FINAL PROJECT<a class="anchor" aria-label="anchor" href="#submit-your-final-project"><i class="fas fa-link"></i></a>
+<span class="header-section-number">0.5</span> SUBMIT YOUR FINAL PROJECT<a class="anchor" aria-label="anchor" href="#submit-your-final-project"><i class="fas fa-link"></i></a>
 </h2>
 <div id="step-10-you-need-to-submit-in-two-places" class="section level3 unnumbered">
 <h3>STEP 10: YOU NEED TO SUBMIT IN TWO PLACES<a class="anchor" aria-label="anchor" href="#step-10-you-need-to-submit-in-two-places"><i class="fas fa-link"></i></a>
@@ -768,9 +804,9 @@ your blog contains your email ID!</p></li>
 </ul>
 </div>
 </div>
-<div id="rubric-5" class="section level2" number="2.2">
+<div id="rubric-5" class="section level2" number="0.6">
 <h2>
-<span class="header-section-number">2.2</span> RUBRIC<a class="anchor" aria-label="anchor" href="#rubric-5"><i class="fas fa-link"></i></a>
+<span class="header-section-number">0.6</span> RUBRIC<a class="anchor" aria-label="anchor" href="#rubric-5"><i class="fas fa-link"></i></a>
 </h2>
 
 </div>
@@ -778,43 +814,45 @@ your blog contains your email ID!</p></li>
 
 
 
-<div id="T1_ProjectsCloud" class="section level2" number="2.3">
-<h2>
-<span class="header-section-number">2.3</span> Projects using posit Cloud<a class="anchor" aria-label="anchor" href="#T1_ProjectsCloud"><i class="fas fa-link"></i></a>
-</h2>
-</div>
-<div id="T1_ProjectsDesktop" class="section level2" number="2.4">
-<h2>
-<span class="header-section-number">2.4</span> Projects on your desktop<a class="anchor" aria-label="anchor" href="#T1_ProjectsDesktop"><i class="fas fa-link"></i></a>
-</h2>
-<div id="how-to-check-you-are-running-your-project" class="section level3" number="2.4.1">
-<h3>
-<span class="header-section-number">2.4.1</span> How to check you are running your project<a class="anchor" aria-label="anchor" href="#how-to-check-you-are-running-your-project"><i class="fas fa-link"></i></a>
-</h3>
-</div>
-<div id="returning-to-your-lab-project" class="section level3" number="2.4.2">
-<h3>
-<span class="header-section-number">2.4.2</span> Returning to your lab project<a class="anchor" aria-label="anchor" href="#returning-to-your-lab-project"><i class="fas fa-link"></i></a>
-</h3>
-<div id="from-your-computer" class="section level4" number="2.4.2.1">
-<h4>
-<span class="header-section-number">2.4.2.1</span> From your computer<a class="anchor" aria-label="anchor" href="#from-your-computer"><i class="fas fa-link"></i></a>
-</h4>
-</div>
-<div id="from-inside-r-studio." class="section level4" number="2.4.2.2">
-<h4>
-<span class="header-section-number">2.4.2.2</span> From inside R-studio.<a class="anchor" aria-label="anchor" href="#from-inside-r-studio."><i class="fas fa-link"></i></a>
-</h4>
 
-</div>
-</div>
-</div>
-<div class="chapter-nav">
-<div class="empty"></div>
-<div class="empty"></div>
+
+
+  <div class="chapter-nav">
+<div class="prev"><a href="Project3.html">Project 3</a></div>
+<div class="next"><a href="T1_Projects.html"><span class="header-section-number">1</span> Projects/Starting each lab</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <div id="book-on-this-page"></div>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#project-4">Project 4</a></li>
+<li><a class="nav-link" href="#aim-of-project-4">Aim of Project 4</a></li>
+<li>
+<a class="nav-link" href="#checking-line-assumptions">Checking LINE assumptions</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#step-1-where-you-should-be">STEP 1: Where you should be</a></li>
+<li><a class="nav-link" href="#step-2-does-your-response-need-transforming">STEP 2: Does your response need transforming?</a></li>
+<li><a class="nav-link" href="#step-3-do-predictors-need-transforming">STEP 3: Do predictors need transforming?</a></li>
+<li><a class="nav-link" href="#step-4-update-your-model-if-needed">STEP 4: Update your model if needed</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#finding-the-best-model">Finding the ‘best’ model</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#step-5-use-best-subsets-to-find-the-optimal-model">STEP 5: Use best subsets to find the optimal model</a></li></ul>
+</li>
+<li>
+<a class="nav-link" href="#your-final-model">Your final model</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#step-6-fitand-check-final-model">STEP 6: Fit,and check final model</a></li>
+<li><a class="nav-link" href="#step-7-use-your-final-model">STEP 7: Use your final model</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#conclusions">Conclusions</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#step-8-write-your-conclusions">STEP 8: Write your conclusions</a></li></ul>
+</li>
+<li>
+<a class="nav-link" href="#blog-write-up">Blog write-up</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#step-9-write-your-distill-blog-post">STEP 9: Write your distill blog post</a></li></ul>
+</li>
+<li>
+<a class="nav-link" href="#submit-your-final-project"><span class="header-section-number">0.5</span> SUBMIT YOUR FINAL PROJECT</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#step-10-you-need-to-submit-in-two-places">STEP 10: YOU NEED TO SUBMIT IN TWO PLACES</a></li></ul>
+</li>
+<li><a class="nav-link" href="#rubric-5"><span class="header-section-number">0.6</span> RUBRIC</a></li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
@@ -823,13 +861,9 @@ your blog contains your email ID!</p></li>
 </div>
     </nav>
 </div>
-</div>
-  
-
-  
 
 </div>
- <!-- .container -->
+</div> <!-- .container -->
 
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 

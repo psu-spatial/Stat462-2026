@@ -12,7 +12,7 @@ details > *:not(summary){
 
 <br>
 
-# Project 4
+# Project 4 {.unnumbered}
 
 ## Aim of Project 4 {.unnumbered}
 
@@ -37,7 +37,7 @@ By the end of this project you should be able to:
 
 ------------------------------------------------------------------------
 
-## Meeting the LINE assumptions {.unnumbered}
+## Checking LINE assumptions {.unnumbered}
 
 ### STEP 1: Where you should be {.unnumbered}
 

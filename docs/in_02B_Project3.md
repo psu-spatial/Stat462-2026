@@ -138,13 +138,9 @@ Note, if you are unsure about whether a predictor fits into one of these categor
 
     -   Click on visual mode. In your report, make a table of size: 5 columns, and one row for each of the variables in your dataset.
 
-    <!-- -->
-
     -   **To make this project fair on people with many predictors, IF** **your dataset contains more than about 8 possible predictors/columns,**
 
         -   For this exercise, just choose your **6-8 most promising candidates** based on your earlier exploratory analysis and make the table for those.
-
-    <!-- -->
 
     -   *For example if I was using the iris data in my project, I might have*
 
@@ -418,7 +414,7 @@ $$
 
         -   A weak effect size (slope) AND low uncertainty?
 
-        -   A weak effect size (slope) AND high uncertainty?\
+        -   A weak effect size (slope) AND high uncertainty?
 
     -   Conduct a T test on your predictor with the strongest slope compared to beta=0
 
