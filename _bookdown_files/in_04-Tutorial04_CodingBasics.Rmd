@@ -1,0 +1,108 @@
+```{r setup, include=FALSE,message=FALSE,warning=FALSE}
+# OPTIONS -----------------------------------------------
+knitr::opts_chunk$set(echo = TRUE, 
+                      warning=FALSE, 
+                      message = FALSE)
+
+# Tutorial packages
+library(vembedr)
+library(skimr)
+library(yarrr)
+library(RColorBrewer)
+library(GGally) 
+library(tidyverse)
+library(plotly)
+library(readxl)
+library(rvest)
+library(biscale)
+library(tidycensus)
+library(cowplot)
+library(units)
+
+
+```
+
+# Coding {#T7_Coding}
+
+
+## Functions / Commands
+
+Three useful facts about commands:
+
+ - Commands, (often called functions), are the verbs of 'speaking R'. They are actions, things you *do*.<br><br>
+ - Commands ALWAYS have parentheses/brackets ( ) after them. It's how you know it's a command.<br><br>
+ - You can look at the help file for any command by typing ? then it's name into the CONSOLE e.g. `?mean`. Or you can go to the help tab next to packages tab, then search for it there. Note, you might have to load the library first! Ever tried getting the instagram help page before you even opened the app? ;)
+
+<br><br>
+
+#### Commands/functions with empty ( )
+
+These commands are often used to launch an interactive command, or to check something on your computer. You still need the ( ) afterwards, but it can be left empty. I typically run these in the console. Examples
+
+-   `Sys.Date( )`\
+-   `getwd( )`
+-   `file.choose( )`
+
+**Task** : Try the commands
+
+-   One by one, copy/paste the three commands above EXACTLY into the console and press enter to run. As needed, look at the helpfiles for each of them. E.g. in the console, run `?Sys.Date`, `?getwd`, `?file.choose`. In your report, make a heading called Code Showcase (if you haven't).
+
+-   In your report, make a heading called Code Showcase (if you haven't already).Below it, create a heading-level-2 called "basic commands". Underneath that, explain what each of the three commands does. Hint, file.choose does NOT open/load any files, or tell you where your project is....
+
+<br><br>
+
+#### Commands that need information/data
+
+Some commands need a little more information. For example, the `data()` command loads an inbuilt dataset into your workspace so we need to tell it which dataset we want. `rnorm()` generates a series of random numbers from a normal distribution, but we need to tell it how many we need Examples
+
+-   `data(mpg)` \# loads the mpg data from package ggplot2.
+-   `summary(mpg)` \# summarise the entire mgp dataset (hint for lab 1, this is how to get the average year!)
+-   `rnorm(20)` \# generates a series of 20 random numbers from a normal distribution
+-   `names(mpg)` \# print the column names of a dataset
+
+
+
+**Test your knowledge** : Using the information above, try these commands. You can write these in the console.
+
+-   Load the *penguins* dataset from the package `palmerpenguins` using the data command. <br>
+-   Summarise the penguins dataset using the `glimpse()` command.
+-   Look at the penguins dataset using the `View()` command. RUN THIS IN THE CONSOLE
+-   Work out the column names of the penguins dataset using the `names()` command.
+
+<br><br>
+
+#### Applying commands to columns & rows of a spreadsheet
+
+Just like Lab 1's 'what's the mean year' question, we often need to apply commands to individual rows or columns in a
+spreadsheet. There are several ways to do this.
+
+-   Use square brackets and the row/column number
+-   Use a \$ and the column name.
+
+For example, from <https://www.statology.org/r-mean-of-column/>, here's how to get that mean year from the mpg data:
+
+```{r, eval=FALSE}
+# First, type View(mpg) into the CONSOLE and it will bring up the spreadsheet.  
+
+#calculate mean using column name, note the $ !
+mean(mpg$year)
+
+#calculate mean using column name (ignore missing values)
+mean(mpg$year, na.rm=TRUE)
+
+#calculate mean using column position, e.g. we're calculating the mean of the Year column (four from left)
+mean(mpg[ , 4], na.rm=TRUE)
+
+```
+
+<br>
+
+**Task** : Using the information above, try these tasks 
+
+-   Calculate the mean of the column flipper_lenth_mm in the penguins dataset <br>
+-   Calculate the MEDIAN body mass in the penguins dataset <br>
+-   Hint 1, you need to spell the column name EXACTLY for it to work, case sensitive, <br>
+-   Hint 2, look back at your names command! <br>
+-   Hint 3, <https://sparkbyexamples.com/r-programming/median-in-r-examples/> <br>
+
+<br><br>
